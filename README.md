@@ -1,2 +1,2 @@
 # SQL
-[Market Basket Analysis using SQL](market_basket_analysis.md)
+[Market Basket Analysis using SQL](market-basket-analysis.md)

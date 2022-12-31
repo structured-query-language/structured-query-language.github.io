@@ -1,3 +1,2 @@
-# structured-query-language.github.io
-SQL
-[Link text Here](match_recognize.md)
+# SQL
+[Market Basket Analysis using SQL](market_basket_analysis.md)

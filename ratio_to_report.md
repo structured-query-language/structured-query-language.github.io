@@ -39,6 +39,13 @@ from scratch.saqib_ali.TRANSACTIONS
 group by transaction_date, channel;
 ```
 
+| TRANSACTION_DATE | CHANNEL | TOTAL_SALES | CHANNEL_PERCENTAGE |
+|------------------|---------|-------------|--------------------|
+| 2022-12-01       | store   | 30          | 0.6                |
+| 2022-12-01       | online  | 20          | 0.4                |
+| 2022-12-02       | store   | 100         | 1                  |
+
+
 # SQL Query without using the RATIO_TO_REPORT for comparision
 ```
 select
@@ -50,3 +57,9 @@ select
 from scratch.saqib_ali.TRANSACTIONS 
 group by transaction_date, channel;
 ```
+
+| TRANSACTION_DATE | CHANNEL | TOTAL_BY_CHANNEL | TOTAL_ONLINE_AND_STORE | CHANNEL_PERCENTAGE |
+|------------------|---------|------------------|------------------------|--------------------|
+| 2022-12-01       | store   | 30               | 50                     | 60%                |
+| 2022-12-01       | online  | 20               | 50                     | 40%                |
+| 2022-12-02       | store   | 100              | 100                    | 100%               |

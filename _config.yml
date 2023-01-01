@@ -1,7 +1,5 @@
 
-title: My Website
-
-author: Some Person
+title: SQL
 
 plugins:
   - jekyll-relative-links

@@ -27,7 +27,7 @@ select * from scratch.saqib_ali.TRANSACTIONS;
 | 7        | 20     | 2022-12-02       | store   |
 
 
-# SQL Query using the RATIO_TO_REPORT
+## SQL Query using the RATIO_TO_REPORT
 ```sql
 select
   transaction_date
@@ -46,7 +46,8 @@ group by transaction_date, channel;
 | 2022-12-02       | store   | 100         | 1                  |
 
 
-# SQL Query without using the RATIO_TO_REPORT for comparision
+
+##SQL Query without using the RATIO_TO_REPORT for comparision
 ```sql
 select
   transaction_date

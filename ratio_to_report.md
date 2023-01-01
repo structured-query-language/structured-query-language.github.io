@@ -16,6 +16,16 @@ insert into scratch.saqib_ali.TRANSACTIONS values (7, 20, '2022-12-02', 'store')
 select * from scratch.saqib_ali.TRANSACTIONS;
 ```
 
+| ORDER_ID | AMOUNT | TRANSACTION_DATE | CHANNEL |
+|----------|--------|------------------|---------|
+| 1        | 10     | 2022-12-01       | store   |
+| 2        | 20     | 2022-12-01       | online  |
+| 3        | 20     | 2022-12-01       | store   |
+| 4        | 20     | 2022-12-02       | store   |
+| 5        | 30     | 2022-12-02       | store   |
+| 6        | 30     | 2022-12-02       | store   |
+| 7        | 20     | 2022-12-02       | store   |
+
 
 # SQL Query using the RATIO_TO_REPORT
 ```

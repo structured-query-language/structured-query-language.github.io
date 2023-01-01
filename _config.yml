@@ -1,6 +1,8 @@
 
 title: SQL
 
+classes: wide
+
 plugins:
   - jekyll-relative-links
 relative_links:

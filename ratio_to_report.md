@@ -1,7 +1,7 @@
 # RATIO_TO_REPORT
 `RATIO_TO_REPORT` is a powerful #snowflakedb Window function that lets you calculate the ratio of a value to the sum of the values in a window. The following query uses the `RATIO_TO_REPORT` function to calculate the percentage of the sales by channel (online vs. store) for each day.
 
-```
+```sql
 create or replace table scratch.saqib_ali.TRANSACTIONS (order_id number, amount number, transaction_date date, channel varchar(20));
 insert into scratch.saqib_ali.TRANSACTIONS values (1, 10, '2022-12-01', 'store');
 insert into scratch.saqib_ali.TRANSACTIONS values (2, 20, '2022-12-01', 'online');
@@ -12,7 +12,7 @@ insert into scratch.saqib_ali.TRANSACTIONS values (6, 30, '2022-12-02', ' store'
 insert into scratch.saqib_ali.TRANSACTIONS values (7, 20, '2022-12-02', 'store');
 ```
 
-```
+```sql
 select * from scratch.saqib_ali.TRANSACTIONS;
 ```
 
@@ -28,7 +28,7 @@ select * from scratch.saqib_ali.TRANSACTIONS;
 
 
 # SQL Query using the RATIO_TO_REPORT
-```
+```sql
 select
   transaction_date
   , channel
@@ -47,7 +47,7 @@ group by transaction_date, channel;
 
 
 # SQL Query without using the RATIO_TO_REPORT for comparision
-```
+```sql
 select
   transaction_date
   , channel

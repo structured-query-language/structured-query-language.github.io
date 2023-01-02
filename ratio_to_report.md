@@ -47,7 +47,7 @@ group by transaction_date, channel;
 
 
 
-## SQL Query without using the RATIO_TO_REPORT for comparision
+## SQL Query without using the RATIO_TO_REPORT for comparison
 ```sql
 select
   transaction_date

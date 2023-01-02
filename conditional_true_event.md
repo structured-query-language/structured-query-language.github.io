@@ -37,6 +37,8 @@ The result shows that out of 510 days (since listed), the closing price of Snowf
 
 ## Same query without using `conditional_true_event`
 
+Without `conditional_true_event` support, we would have to use a CTE to achieve the same results:
+
 ```sql
 with increase_flagged as (
   select 

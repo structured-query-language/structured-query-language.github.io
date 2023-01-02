@@ -4,7 +4,7 @@ Pattern Matching is key to Funnel Analytics. Snowflake's `MATCH_RECOGNIZE` claus
 a series of `ONSITE` page views, and end with a `CHECKOUT_START`. 
 
 
-```
+```sql
 select 
   post_visid_high || ':' || post_visid_low as visitor_id  
   , date_time, referrer, page_url

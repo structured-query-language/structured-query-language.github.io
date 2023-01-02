@@ -35,7 +35,7 @@ where symbol='SNOW';
 
 The result shows that out of 510 days (since listed), the closing price of Snowflake stock was higher than the previous highest value of the stock 259 times. That's is pretty impressive for a Stock!
 
-## Same query without using `conditional_true_event`
+## Same query without using conditional_true_event
 
 Without `conditional_true_event` support, we would have to use a CTE to achieve the same results:
 

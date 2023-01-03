@@ -4,28 +4,22 @@ Pattern Matching is key to anomaly detection and trend analysis. It is quite com
 
 
 ```sql
-USE US_STOCKS_DAILY;
-// use ZEPL_STOCKS;
-SELECT date, close from STOCK_HISTORY where DATE >= '2018-12-10' and DATE <= '2019-08-07' and symbol='OPER'
-order by date ASC;
-
-
 with stocks as
-(select * FROM  US_STOCKS_DAILY.PUBLIC.STOCK_HISTORY WHERE DATE>'2022-01-01')
-select symbol, days_of_increasing_stock_price, STREAK_START_DATE, STREAK_END_DATE
-from stocks
+(select * from  us_stock_market_data_for_data_science.public.stock_history where date>'2022-01-01')
+select symbol, days_of_increasing_stock_price, streak_start_date, streak_end_date
+from us_stock_market_data_for_data_science.public.stock_history
 match_recognize(
 --    limit duration(minute, 400)
     partition by symbol
-    order by DATE
+    order by date
     measures
-        first(DATE) as STREAK_START_DATE,
-        last(DATE) as STREAK_END_DATE,
+        first(date) as streak_start_date,
+        last(date) as streak_end_date,
         count(*) as days_of_increasing_stock_price
-    ONE ROW PER MATCH
-    PATTERN (INCREASE+)
-    DEFINE
-          INCREASE as close > LAG(close)
+    one row per match
+    pattern (increase+)
+    define
+          increase as close > lag(close)
 )
-order by days_of_increasing_stock_price DESC;
+order by days_of_increasing_stock_price desc;
 ```

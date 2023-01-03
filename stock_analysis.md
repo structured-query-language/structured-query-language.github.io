@@ -3,7 +3,7 @@ Pattern Matching is key to anomaly detection and trend analysis. It is quite com
 `MATCH_RECOGNIZE` clause is available in modern Warehouse Databases like #Snowflake and #Azure. Here is a sample query to identify stocks that show an increasing stock price trend for the most number of days. This is a simple example, but regex powered `MATCH_RECOGNIZE` can be used for sophisticated trend analysis.
 
 
-```
+```sql
 USE US_STOCKS_DAILY;
 // use ZEPL_STOCKS;
 SELECT date, close from STOCK_HISTORY where DATE >= '2018-12-10' and DATE <= '2019-08-07' and symbol='OPER'

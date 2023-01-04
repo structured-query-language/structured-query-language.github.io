@@ -9,7 +9,6 @@ with stocks as
 select symbol, days_of_increasing_stock_price, streak_start_date, streak_end_date
 from us_stock_market_data_for_data_science.public.stock_history
 match_recognize(
---    limit duration(minute, 400)
     partition by symbol
     order by date
     measures

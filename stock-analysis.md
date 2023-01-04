@@ -1,3 +1,5 @@
+# Stock Analysis using MATCH_RECOGNIZE
+
 Pattern Matching is key to anomaly detection and trend analysis. It is quite common to query the Data Warehouse to find patterns in data. One commonly overlooked SQL clause that allows detection of patterns in relational data is `MATCH_RECOGNIZE`.
 
 `MATCH_RECOGNIZE` clause is available in modern Warehouse Databases like #Snowflake and #Azure. Here is a sample query to identify stocks that show an increasing stock price trend for the most number of days. This is a simple example, but regex powered `MATCH_RECOGNIZE` can be used for sophisticated trend analysis.

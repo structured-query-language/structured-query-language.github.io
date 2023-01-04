@@ -6,10 +6,6 @@ Pattern Matching is key to anomaly detection and trend analysis. It is quite com
 
 
 ```sql
-with stocks as
-(select * 
-from us_stock_market_data_for_data_science.public.stock_history 
-where date>'2022-01-01')
 select 
   symbol
   , days_of_increasing_stock_price

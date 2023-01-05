@@ -4,3 +4,4 @@
 - [CONDITIONAL_TRUE_EVENT](conditional_true_event.md)
 - [MATCH_RECOGNIZE](match_recognize.md)
 - [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
+- [Sessionization using CONDITONAL_TRUE_EVENT](sessionization.md)

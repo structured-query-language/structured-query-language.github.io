@@ -66,6 +66,7 @@ from clickstream;
 
 ```
 ### Query output with Sessions
+
 | VISITOR_ID | DATE_TIME               | MINUTES_SINCE_LAST_ACTION | SESSION_COUNT |
 |------------|-------------------------|---------------------------|---------------|
 | 2:0        | 2013-09-05 00:22:37.000 |                           | 0             |

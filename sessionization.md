@@ -6,7 +6,7 @@ A session, for example, can be defined by threshold time such as if the next act
 
 ## Sample Clickstream data
 
-```
+```sql
 create or replace table clickstream (post_visid_high number, post_visid_low number, date_time timestamp);
 insert into clickstream values (1,0, '2013-09-04T15:49:49');
 insert into clickstream values (1,0, '2013-09-04T15:49:58');
@@ -25,13 +25,31 @@ insert into clickstream values (1,0, '2013-09-05T01:19:39');
 insert into clickstream values (1,0, '2013-09-05T01:20:03');
 insert into clickstream values (1,0, '2013-09-05T01:20:17');
 insert into clickstream values (1,0, '2013-09-05T02:33:42');
-```
 
-```
 select * from clickstream;
 ```
 
-```
+| POST_VISID_HIGH | POST_VISID_LOW | DATE_TIME               |
+|-----------------|----------------|-------------------------|
+| 1               | 0              | 2013-09-04 15:49:49.000 |
+| 1               | 0              | 2013-09-04 15:49:58.000 |
+| 1               | 0              | 2013-09-04 15:49:49.000 |
+| 1               | 0              | 2013-09-04 15:49:58.000 |
+| 1               | 0              | 2013-09-04 16:37:11.000 |
+| 1               | 0              | 2013-09-04 16:37:18.000 |
+| 1               | 0              | 2013-09-04 16:39:27.000 |
+| 1               | 0              | 2013-09-04 16:43:57.000 |
+| 1               | 0              | 2013-09-04 20:12:03.000 |
+| 1               | 0              | 2013-09-05 00:00:17.000 |
+| 1               | 0              | 2013-09-05 00:20:35.000 |
+| 2               | 0              | 2013-09-05 00:22:37.000 |
+| 2               | 0              | 2013-09-05 01:19:29.000 |
+| 1               | 0              | 2013-09-05 01:19:39.000 |
+| 1               | 0              | 2013-09-05 01:20:03.000 |
+| 1               | 0              | 2013-09-05 01:20:17.000 |
+| 1               | 0              | 2013-09-05 02:33:42.000 |
+
+```sql
 select 
   post_visid_high || ':' || post_visid_low as visitor_id
   , date_time

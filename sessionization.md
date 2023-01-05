@@ -64,18 +64,6 @@ select
     as session_count
 from clickstream;
 
-select 
-  post_visid_high || ':' || post_visid_low as visitor_id
-  , date_time
-  , datediff(
-      minute
-      , lag(date_time) over (partition by visitor_id order by date_time asc)
-      , date_time
-    ) as minutes_since_last_action
-  , conditional_true_event(minutes_since_last_action > 50) 
-      over (partition by visitor_id order by date_time asc)
-    as session_count
-from clickstream;
 ```
 ### Query output with Sessions
 | VISITOR_ID | DATE_TIME               | MINUTES_SINCE_LAST_ACTION | SESSION_COUNT |

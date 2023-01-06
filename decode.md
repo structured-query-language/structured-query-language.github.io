@@ -4,3 +4,4 @@
 
 
 
+How do you implement a if-then-elseif-else-endif in SQL? Most people will opt to use a CASE STATEMENT. While CASE STATEMENT will work, it is not the optimal solution for a if-then-elseif-else-endif or even a if-then-elseif-else-if-else-endif conditional expression. DECODE function is a versatile Snowflake Conditional Expression Function that lets you implement if-then-elseif-else-if-else-endif expression without the use of a CASE STATEMENT. Here is an example:

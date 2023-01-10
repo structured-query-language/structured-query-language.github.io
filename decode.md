@@ -3,5 +3,48 @@
 `IFF` is a conditional expression Snowflake function that evaluates to a Single-level `if-then-else` expression. However `IFF` only allows a single condition. What if you need to implement a `if-then-elseif-else-endif`? Most people will opt to use `CASE STATEMENT`. While `CASE STATEMENT` will do the trick, it is not most optimal solution for a `if-then-elseif-else-endif` or even a `if-then-elseif-else-if-else-endif` conditional expression. `DECODE` function is a versatile Snowflake Conditional Expression Function that lets you implement `if-then-elseif-else-if-else-endif` expression without the use of a `CASE STATEMENT`. Here is an example:
 
 
+## Raw Data
+```
+create or replace table orders (order_date date, item_id number, amount number);
 
-How do you implement a if-then-elseif-else-endif in SQL? Most people will opt to use a CASE STATEMENT. While CASE STATEMENT will work, it is not the optimal solution for a if-then-elseif-else-endif or even a if-then-elseif-else-if-else-endif conditional expression. DECODE function is a versatile Snowflake Conditional Expression Function that lets you implement if-then-elseif-else-if-else-endif expression without the use of a CASE STATEMENT. Here is an example:
+insert into orders values 
+  ('2022-11-21', 1, 20)
+  , ('2022-11-22', 1, 20)
+  , ('2022-11-23', 1, 20)
+  , ('2022-11-23', 1, 20)
+  , ('2022-11-23', 1, 20)
+  , ('2022-11-24', 1, 20)
+  , ('2022-11-25', 1, 20)
+  , ('2022-11-25', 1, 20)
+  , ('2022-11-25', 1, 20)
+  , ('2022-11-25', 1, 20)
+  , ('2022-11-25', 1, 20)
+  , ('2022-11-26', 1, 20)
+  , ('2022-11-27', 1, 20)
+  , ('2022-11-27', 1, 20)
+  , ('2022-11-28', 1, 20)
+  , ('2022-11-29', 1, 20)
+  , ('2022-11-30', 1, 20)
+  , ('2022-11-30', 1, 20);
+```
+## DECODE conditional expression function to implement if-then-elseif-else-endif
+
+```
+select
+  order_date::date
+  , decode(
+    extract('dayofweek_iso', order_date)
+    , 1, '1 - Monday'
+    , 2, '2 - Tuesday'
+    , 3, '3 - Wednesday'
+    , 4, '4 - Thursday'
+    , 5, '5 - Friday'
+    , 6, '6 - Saturday'
+    , 7, '7 - Sunday'
+  ) as day_of_week
+  , sum(amount)
+from orders
+where order_date::date between '2022-11-21' and  '2022-11-27'
+group by 1, 2
+order by day_of_week
+```

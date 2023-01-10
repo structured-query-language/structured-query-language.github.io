@@ -5,3 +5,4 @@
 - [MATCH_RECOGNIZE](match_recognize.md)
 - [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
 - [Sessionization using CONDITONAL_TRUE_EVENT](sessionization.md)
+- [DECODE](decode.md)

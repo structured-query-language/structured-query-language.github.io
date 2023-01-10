@@ -48,3 +48,13 @@ where order_date::date between '2022-11-21' and  '2022-11-27'
 group by 1, 2
 order by day_of_week
 ```
+
+| ORDER_DATE::DATE | DAY_OF_WEEK   | SUM(AMOUNT) |
+|------------------|---------------|-------------|
+| 2022-11-21       | 1 - Monday    | 20          |
+| 2022-11-22       | 2 - Tuesday   | 20          |
+| 2022-11-23       | 3 - Wednesday | 60          |
+| 2022-11-24       | 4 - Thursday  | 20          |
+| 2022-11-25       | 5 - Friday    | 100         |
+| 2022-11-26       | 6 - Saturday  | 20          |
+| 2022-11-27       | 7 - Sunday    | 40          |

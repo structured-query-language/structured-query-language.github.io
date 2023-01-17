@@ -30,7 +30,7 @@ match_recognize(
 ```
 
 
-# Sample raw data
+## Sample raw data
 
 | SESSION_ID                           | URI                          | VISIT_TIMESTAMP |
 |--------------------------------------|------------------------------|-----------------|

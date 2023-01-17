@@ -30,7 +30,7 @@ match_recognize(
 ```
 
 
-# Raw Web Streaming data
+# Sample raw data
 
 | SESSION_ID                           | URI                          | VISIT_TIMESTAMP |
 |--------------------------------------|------------------------------|-----------------|

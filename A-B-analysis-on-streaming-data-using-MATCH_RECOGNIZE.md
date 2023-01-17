@@ -31,6 +31,7 @@ match_recognize(
 
 
 # Raw Web Streaming data
+
 | SESSION_ID                           | URI                          | VISIT_TIMESTAMP |
 |--------------------------------------|------------------------------|-----------------|
 | 022310c3-6f5a-4b65-8de2-df67ae3bcc9c | index.html                   | 19:12:33        |

@@ -14,7 +14,7 @@ All three steps must be completed for a success.
 ## Query
 We will use the following MATCH_RECOGNIZE Query to get the conversion rate for `CAMPAIGN_PAGE_A` vs. `CAMPAIGN_PAGE_B`
 
-```
+```sql
 select session_id, action
 from scratch.saqib_ali.webstream
 match_recognize(

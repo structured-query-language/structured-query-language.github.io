@@ -7,6 +7,3 @@
 - [Sessionization using CONDITONAL_TRUE_EVENT](sessionization.md)
 - [A/B analysis on streaming data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
 - [DECODE](decode.md)
-
-Website:
-https://structured-query-language.github.io/

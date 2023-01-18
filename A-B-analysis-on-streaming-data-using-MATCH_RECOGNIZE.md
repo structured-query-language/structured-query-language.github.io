@@ -11,6 +11,7 @@ In the following example, we have defined the success `PATTERN` as
 
 All three steps must be completed for a success.
 
+## Query
 We will use the following MATCH_RECOGNIZE Query to get the conversion rate for `CAMPAIGN_PAGE_A` vs. `CAMPAIGN_PAGE_B`
 
 ```
@@ -31,8 +32,15 @@ match_recognize(
 );
 ```
 
+## Output resultset
 
-## Sample raw data
+| ACTION          | CONVERSIONS |
+|-----------------|-------------|
+| CAMPAIGN_PAGE_A | 4           |
+| CAMPAIGN_PAGE_B | 1           |
+
+
+## Input raw data
 
 | SESSION_ID                           | URI                          | VISIT_TIMESTAMP |
 |--------------------------------------|------------------------------|-----------------|

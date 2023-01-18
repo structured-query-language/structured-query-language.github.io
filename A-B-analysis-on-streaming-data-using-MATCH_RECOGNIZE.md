@@ -1,4 +1,4 @@
-© Saqib ALi
+&copy; Saqib ALi
 
 # A/B Analysis on Streaming Data
 A/B testing is key to eliminating the guesswork out of website optimization. A/B Analysis on Streaming Data enables data-backed decision in real-time. `MATCH_RECOGNIZE` in SnowflakeDB can be used to perform A/B Analysis on Streaming web analytics data and optimize the Campaigns for higher conversion rates.
@@ -75,5 +75,4 @@ match_recognize(
 | f597f443-4098-4ee4-9538-7076e114085c | plant_a_tree_campaign_b.html | 19:13:31        |
 | f597f443-4098-4ee4-9538-7076e114085c | donate.html                  | 19:13:38        |
 
-
-![image](https://user-images.githubusercontent.com/121721444/213072160-165dcc23-79ce-48b5-8b7f-4ade32a2b480.png)
+![image](https://user-images.githubusercontent.com/121721444/213082729-3658b4e2-691c-4f2a-9fcd-83d2ff795cfd.png)

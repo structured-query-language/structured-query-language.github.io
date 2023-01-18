@@ -2,12 +2,12 @@
 A/B testing is key to eliminating the guesswork out of website optimization. A/B Analysis on Streaming Data enables data-backed decision in real-time. `MATCH_RECOGNIZE` in SnowflakeDB can be used to perform A/B Analysis on Streaming web analytics data and optimize the Campaigns for higher conversion rates.
 
 # A/B Analysis using MATCH_RECOGNIZE
-In the following example, we have defined the success `PATTERN` as 
+In the following example, we have defined the successful conversion `PATTERN` as 
 1. Visitor visits the home page;
 2. Visitor is displayed either `plant_a_tree_campaign_a` or `plant_a_tree_campaign_b`
 3. Visitor makes a donation.
 
-All three steps must be completed for a success.
+All three steps must be completed for a successful conversion.
 
 ## Query
 We will use the following MATCH_RECOGNIZE Query to get the conversion rate for `CAMPAIGN_PAGE_A` vs. `CAMPAIGN_PAGE_B`

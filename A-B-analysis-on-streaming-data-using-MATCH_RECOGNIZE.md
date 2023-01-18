@@ -4,7 +4,7 @@ A/B testing is key to eliminating the guesswork out of website optimization. A/B
 # A/B Analysis using MATCH_RECOGNIZE
 In the following example, we have defined the success `PATTERN` as 
 1. Visitor visits the home page;
-2. Visitor is displayed either `plant_a_tree_campaign_a` or `plant_a_tree_campaign_a`
+2. Visitor is displayed either `plant_a_tree_campaign_a` or `plant_a_tree_campaign_b`
 3. Visitor makes a donation.
 
 All three steps must be completed for a success.

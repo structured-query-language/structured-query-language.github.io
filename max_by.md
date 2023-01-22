@@ -28,10 +28,12 @@ group by session_id;
 | eae477e9-0dad-4450-a08f-5361603f46ec | ["plant_a_tree_campaign_b.html","index.html"]     |
 
 ## Query Highlights
+
 ![image](https://user-images.githubusercontent.com/121721444/213944385-c0cf28bb-6c0d-4eb3-977c-077950902142.png)
 
 
 ## Raw Data
+
 | SESSION_ID                           | URI                          | VISIT_TIMESTAMP |
 |--------------------------------------|------------------------------|-----------------|
 | 022310c3-6f5a-4b65-8de2-df67ae3bcc9c | index.html                   | 19:12:33        |

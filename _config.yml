@@ -12,4 +12,6 @@ include:
   - README.md
   - LICENSE.md
   
- remote_theme: jekyll/minima-dark
+remote_theme: jekyll/minima
+minima:
+  skin: dark

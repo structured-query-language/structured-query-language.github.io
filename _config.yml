@@ -12,6 +12,4 @@ include:
   - README.md
   - LICENSE.md
 
-remote_theme: jekyll/minima
-minima:
-  skin: solarized-dark
+remote_theme: jekyll/minima-solarized

@@ -11,4 +11,4 @@ relative_links:
 include:
   - README.md
   - LICENSE.md
-remote_theme: jekyll/minima-solarized-dark
+remote_theme: jekyll/minima-solarized

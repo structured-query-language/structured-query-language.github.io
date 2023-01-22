@@ -4,7 +4,7 @@ When analyzing Clickstream data, one is often interested in the last few pages v
 
 ## Query
 
-```
+```sql
 select
   session_id
   , max_by(URI, visit_timestamp, 2)

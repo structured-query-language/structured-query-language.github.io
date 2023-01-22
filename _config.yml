@@ -11,5 +11,4 @@ relative_links:
 include:
   - README.md
   - LICENSE.md
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: default
+remote_theme: jekyll/minima-solarized-dark

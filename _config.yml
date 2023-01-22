@@ -12,4 +12,4 @@ include:
   - README.md
   - LICENSE.md
   
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"

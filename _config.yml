@@ -12,4 +12,4 @@ include:
   - README.md
   - LICENSE.md
 
-theme: jekyll-theme-minima
+theme: minima

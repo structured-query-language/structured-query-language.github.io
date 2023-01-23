@@ -3,6 +3,11 @@ title: SQL
 classes: wide
 layout: single
 
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+  collections: true 
+ 
 plugins:
   - jekyll-relative-links
 relative_links:

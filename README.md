@@ -8,3 +8,4 @@
 - [A/B analysis on streaming data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
 - [DECODE](decode.md)
 - [MAX_BY](max_by.md)
+- [MIN_BY](min_by.md)

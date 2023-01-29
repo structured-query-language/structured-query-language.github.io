@@ -9,3 +9,4 @@
 - [DECODE](decode.md)
 - [MAX_BY](max_by.md)
 - [MIN_BY](min_by.md)
+- [Using DECODE in SQL JOIN Predicate](using-decode-in-sql-join-predicate.md)

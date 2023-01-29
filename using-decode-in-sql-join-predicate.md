@@ -9,8 +9,12 @@ select
   , name
 from sat_lead_salesforce
 inner join sat_opportunity_salesforce 
-  on decode(primary_email_num, 1, email_1, 2, email_2, 3, email_3) 
-    = sat_opportunity_salesforce.contact_email;
+  on decode(
+    primary_email_num, 
+    1, email_1, 
+    2, email_2, 
+    3, email_3
+  ) = sat_opportunity_salesforce.contact_email;
 ```
 
 ## Query Output

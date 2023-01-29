@@ -1,5 +1,5 @@
 # DECODE in SQL JOIN predicate
-[DECODE](decode.md) is powerful Snowflake function that can be used to implement `if..then.elseif..then..endif`. It can be used in a SQL JOIN predicate as well as following
+[DECODE](decode.md) is powerful Snowflake function that can be used to implement `if..then.elseif..then..endif`. It can be used in a SQL `JOIN` predicate as well as following
 
 ```sql
 select 

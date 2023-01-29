@@ -63,4 +63,4 @@ order by day_of_week
 ![image](https://user-images.githubusercontent.com/121721444/211611863-53c2ee59-9d38-477d-91ba-fcbcc92e556a.png)
 
 # Related
-
+[Using DECODE in SQL JOIN Predicate](using-decode-in-sql-join-predicate.md)

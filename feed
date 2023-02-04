@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://qi.tc/</id>
   <title>Qi Stream</title>
-  <updated>2023-02-04T15:18:04.024565+00:00</updated>
+  <updated>2023-02-04T17:53:04.649570+00:00</updated>
   <author>
     <name>Saqib Ali</name>
     <email>docbook.xml@gmail.com</email>
@@ -11,30 +11,6 @@
   <link href="https://qi.tc/feed" rel="self" type="application/atom+xml"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator>
   <subtitle>Qi Stream</subtitle>
-  <entry>
-    <id>https://qi.tc/qi/111056</id>
-    <title>AI predicts global warming will exceed 1.5 degrees in 2030s | Stanford News</title>
-    <updated>2023-01-31T03:05:15.771261+01:00</updated>
-    <author>
-      <name>Saqib Ali</name>
-      <email>docbook.xml@gmail.com</email>
-    </author>
-    <content>AI predicts global warming will exceed 1.5 degrees in 2030s | Stanford News</content>
-    <link href="https://qi.tc/qi/111056" rel="alternate" type="text/html"/>
-    <published>2023-01-31T03:05:15.771261+01:00</published>
-  </entry>
-  <entry>
-    <id>https://qi.tc/qi/111058</id>
-    <title>AI fluency sprint | Sydney Business Insights ( SBI )</title>
-    <updated>2023-01-31T03:34:08.321688+01:00</updated>
-    <author>
-      <name>Saqib Ali</name>
-      <email>docbook.xml@gmail.com</email>
-    </author>
-    <content>AI fluency sprint | Sydney Business Insights ( SBI )</content>
-    <link href="https://qi.tc/qi/111058" rel="alternate" type="text/html"/>
-    <published>2023-01-31T03:34:08.321688+01:00</published>
-  </entry>
   <entry>
     <id>https://qi.tc/qi/111060</id>
     <title>政策・メディア研究科 准教授徳井直生研究室の学生が「Machine Learning for Creativity and Design」でArtwork Spotlightsに選出 | 慶應義塾大学 湘南藤沢キャンパス（SFC）</title>
@@ -1330,5 +1306,29 @@
     <content>BarMaid CTO | My #ComputerScience and Engineering Department</content>
     <link href="https://qi.tc/qi/111166" rel="alternate" type="text/html"/>
     <published>2023-02-04T12:04:01.689831+01:00</published>
+  </entry>
+  <entry>
+    <id>https://qi.tc/qi/111168</id>
+    <title>Expert Seminar Series : AI and #MachineLearning for Engineering | @UCBerkeleyExt</title>
+    <updated>2023-02-04T15:35:19.077953+01:00</updated>
+    <author>
+      <name>Saqib Ali</name>
+      <email>docbook.xml@gmail.com</email>
+    </author>
+    <content>Expert Seminar Series : AI and #MachineLearning for Engineering | @UCBerkeleyExt</content>
+    <link href="https://qi.tc/qi/111168" rel="alternate" type="text/html"/>
+    <published>2023-02-04T15:35:19.077953+01:00</published>
+  </entry>
+  <entry>
+    <id>https://qi.tc/qi/111167</id>
+    <title>AI could speed up discovery of new medicines | News | The University of Sheffield</title>
+    <updated>2023-02-04T15:35:19.254658+01:00</updated>
+    <author>
+      <name>Saqib Ali</name>
+      <email>docbook.xml@gmail.com</email>
+    </author>
+    <content>AI could speed up discovery of new medicines | News | The University of Sheffield</content>
+    <link href="https://qi.tc/qi/111167" rel="alternate" type="text/html"/>
+    <published>2023-02-04T15:35:19.254658+01:00</published>
   </entry>
 </feed>

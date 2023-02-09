@@ -1,0 +1,46 @@
+# Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE
+Snowflake currently does not support Correlated pattern definition in MATCH_RECOGNIZE. You will get the following error message:
+
+`Unsupported feature 'Correlated pattern definitions'.`
+
+```sql
+select * from order_customer
+match_recognize(
+    partition by order_number
+    order by load_date
+    one row per match
+    pattern (init modified+ reversed)
+    define
+      init as customer_id = customer_id,
+      modified as customer_id <> init.customer_id,
+      reversed as customer_id = init.customer_id
+);
+```
+
+# Raw Data
+
+| 111 | aaa | 2023-02-09 04:49:41.335 |
+|-----|-----|-------------------------|
+| 111 | bbb | 2023-02-09 04:49:42.338 |
+| 111 | aaa | 2023-02-09 04:49:43.278 |
+| 222 | aaa | 2023-02-09 04:49:44.213 |
+| 222 | bbb | 2023-02-09 04:49:45.254 |
+| 333 | aaa | 2023-02-09 04:49:46.334 |
+| 333 | bbb | 2023-02-09 04:49:47.101 |
+| 333 | ccc | 2023-02-09 04:49:48.196 |
+
+# Generate Raw Data
+
+```sql
+create or replace table order_customer (order_number number, customer_id varchar(80), load_date timestamp);
+insert into order_customer values (111, 'aaa', CURRENT_TIMESTAMP);
+insert into order_customer values (111, 'bbb', CURRENT_TIMESTAMP);
+insert into order_customer values (111, 'aaa', CURRENT_TIMESTAMP);
+insert into order_customer values (222, 'aaa', CURRENT_TIMESTAMP);
+insert into order_customer values (222, 'bbb', CURRENT_TIMESTAMP);
+insert into order_customer values (333, 'aaa', CURRENT_TIMESTAMP);
+insert into order_customer values (333, 'bbb', CURRENT_TIMESTAMP);
+insert into order_customer values (333, 'ccc', CURRENT_TIMESTAMP);
+
+select * from order_customer;
+```

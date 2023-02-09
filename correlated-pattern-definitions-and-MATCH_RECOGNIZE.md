@@ -17,6 +17,9 @@ match_recognize(
 );
 ```
 
+![image](https://user-images.githubusercontent.com/121721444/217823956-a8f2e4ff-aa2f-4be6-a95e-cffa6573ec74.png)
+
+
 # Raw Data
 
 | ORDER_NUM | CUSTOMER | LOAD_DATE               |

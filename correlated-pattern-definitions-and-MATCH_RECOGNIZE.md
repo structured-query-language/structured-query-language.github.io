@@ -1,7 +1,7 @@
 # Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE
-Snowflake currently does not support Correlated pattern definition in MATCH_RECOGNIZE. You will get the following error message:
+Snowflake currently does not support Correlated pattern definition in `MATCH_RECOGNIZE`. You will get the following error message:
 
-`Unsupported feature 'Correlated pattern definitions'.`
+ERROR: `Unsupported feature 'Correlated pattern definitions'.` 
 
 ```sql
 select * from order_customer

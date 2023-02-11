@@ -17,6 +17,22 @@ match_recognize(
 );
 ```
 
+However this query can be re-written using the FIRST_VALUE() function as following:
+
+```sql
+select * from order_customer
+match_recognize(
+    partition by order_number
+    order by load_date
+    one row per match
+    pattern (init modified+ init)
+    define
+      init as customer_id = first_value(customer_id),
+      modified as customer_id <> first_value(customer_id)
+      
+);
+```
+
 ![image](https://user-images.githubusercontent.com/121721444/217828368-7003e644-f0c5-4594-a2c4-757e01f49912.png)
 
 

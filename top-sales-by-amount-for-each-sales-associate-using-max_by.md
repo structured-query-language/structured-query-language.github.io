@@ -20,7 +20,7 @@ group by 1;
 
 ## Query without MAX_BY()
 
-```
+```sql
 with partitioned_data as(
   select 
     sales_associate

@@ -19,4 +19,4 @@ include:
 
 remote_theme: jekyll/minima
 minima:
-  skin: solarized-light
+  skin: solarized-dark

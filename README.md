@@ -11,3 +11,4 @@
 - [MIN_BY](min_by.md)
 - [Using DECODE in SQL JOIN Predicate](using-decode-in-sql-join-predicate.md)
 - [Correlated Pattern Definition and Snowflake's MATCH_RECOGNIZE](correlated-pattern-definitions-and-MATCH_RECOGNIZE.md)
+- [Top sales by amount for each sales associate using MAX_BY() aggregate function](top-sales-by-amount-for-each-sales-associate-using-max_by.md)

@@ -6,7 +6,7 @@ Snowflake recently added support for the max_by() aggregate function. This funct
 ```sql
 select 
   sales_associate
-  , max_by(order_amount, order_amount, 5)
+  , max_by(order_amount, order_amount, 5) as top_five_sales_in_dollars
 from orders
 group by 1;
 ```

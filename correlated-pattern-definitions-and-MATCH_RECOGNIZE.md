@@ -1,7 +1,19 @@
 # Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE
-Snowflake currently does not support Correlated pattern definition in `MATCH_RECOGNIZE`. You will get the following error message:
 
-ERROR: `Unsupported feature 'Correlated pattern definitions'.` 
+I had a need to find out when a Customer changed for an Order and was reverted back. The Order could be assigned to several different Customer before being reverted back to the original Customer. Here is the raw data:
+
+| ORDER_NUM | CUSTOMER | LOAD_DATE               |
+|-----------|----------|-------------------------|
+| 111       | aaa      | 2023-02-09 04:49:41.335 |
+| 111       | bbb      | 2023-02-09 04:49:42.338 |
+| 111       | aaa      | 2023-02-09 04:49:43.278 |
+| 222       | aaa      | 2023-02-09 04:49:44.213 |
+| 222       | bbb      | 2023-02-09 04:49:45.254 |
+| 333       | aaa      | 2023-02-09 04:49:46.334 |
+| 333       | bbb      | 2023-02-09 04:49:47.101 |
+| 333       | ccc      | 2023-02-09 04:49:48.196 |
+
+I developed the following Query in Oracle for this purpose.
 
 ```sql
 select * from order_customer
@@ -17,7 +29,14 @@ match_recognize(
 );
 ```
 
-However this query can be re-written using the FIRST_VALUE() function as following:
+However, when I tried to port it to Snowflake, it turned out that Snowflake currently does not support Correlated pattern definition in `MATCH_RECOGNIZE`. 
+
+Snowflake will throw the following error message:
+
+ERROR: `Unsupported feature 'Correlated pattern definitions'.` 
+
+
+This query can be re-written for Snowflake using the FIRST_VALUE() function as following:
 
 ```sql
 select * from order_customer
@@ -33,18 +52,8 @@ match_recognize(
 );
 ```
 
-# Raw Data
 
-| ORDER_NUM | CUSTOMER | LOAD_DATE               |
-|-----------|----------|-------------------------|
-| 111       | aaa      | 2023-02-09 04:49:41.335 |
-| 111       | bbb      | 2023-02-09 04:49:42.338 |
-| 111       | aaa      | 2023-02-09 04:49:43.278 |
-| 222       | aaa      | 2023-02-09 04:49:44.213 |
-| 222       | bbb      | 2023-02-09 04:49:45.254 |
-| 333       | aaa      | 2023-02-09 04:49:46.334 |
-| 333       | bbb      | 2023-02-09 04:49:47.101 |
-| 333       | ccc      | 2023-02-09 04:49:48.196 |
+
 
 # Generate Raw Data
 

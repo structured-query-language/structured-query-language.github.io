@@ -1,0 +1,19 @@
+# MAX_BY() aggregate function in Snowflake
+Snowflake recently added support for the max_by() aggregate function. This function can used to get the the top metrics by dimension. For e.g. if you need to get the top 5 sales for each Sales Associate you can use the following query:
+
+## Query
+
+```sql
+select 
+  sales_associate
+  , max_by(order_amount, order_amount, 5)
+from orders
+group by 1;
+```
+
+## Query output
+
+| SALES_ASSOCIATE | TOP_FIVE_SALES_IN_DOLLARS       |
+|-----------------|---------------------------------|
+| Anna            | [   199,   50,   20,   3,   2 ] |
+| Chelsea         | [   30,   20,   12,   10,   5 ] |

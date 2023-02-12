@@ -58,7 +58,7 @@ match_recognize(
 
 
 
-# Generate Raw Data
+## Generate Raw Data
 
 ```sql
 create or replace table order_customer (order_number number, customer_id varchar(80), load_date timestamp);
@@ -74,7 +74,7 @@ insert into order_customer values (333, 'ccc', CURRENT_TIMESTAMP);
 select * from order_customer;
 ```
 
-# Screenshots
+## Screenshots
 
 ![image](https://user-images.githubusercontent.com/121721444/217828368-7003e644-f0c5-4594-a2c4-757e01f49912.png)
 

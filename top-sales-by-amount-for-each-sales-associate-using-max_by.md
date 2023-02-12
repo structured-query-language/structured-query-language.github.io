@@ -36,6 +36,9 @@ from partitioned_data
 group by 1
 ```
 
+## Screenshot(s)
+![image](https://user-images.githubusercontent.com/121721444/218340894-7be2cbdd-6e13-4f54-ba3b-0eb653c15d65.png)
+
 
 ## Raw Data
 

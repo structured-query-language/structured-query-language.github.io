@@ -1,6 +1,8 @@
 # Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE
 
-I had a need to find out when a Customer changed for an Order and was reverted back. The Order could be assigned to several different Customer before being reverted back to the original Customer. Here is the raw data:
+`MATCH_RECOGNIZE` is a powerful SQL clause that can be used to find patterns in data. 
+
+We will use `MATCH_RECOGNIZE` to find the Orders where the Customer assignment changed and was reverted back. The Order can be assigned to several different Customer before being reverted back to the Original Customer. Here is the raw data:
 
 | ORDER_NUM | CUSTOMER | LOAD_DATE               |
 |-----------|----------|-------------------------|
@@ -13,7 +15,9 @@ I had a need to find out when a Customer changed for an Order and was reverted b
 | 333       | bbb      | 2023-02-09 04:49:47.101 |
 | 333       | ccc      | 2023-02-09 04:49:48.196 |
 
-I developed the following Query in Oracle for this purpose.
+In the above data, you will notice that Order `111` was initially assigned to Customer `aaa`, changed to Customer `bbb`, and then was reverted back to Customer `aaa`.
+
+The following Oracle MATCH_RECOGNIZE query can be used to identify Order `111`
 
 ```sql
 select * from order_customer
@@ -34,7 +38,6 @@ However, when I tried to port it to Snowflake, it turned out that Snowflake curr
 Snowflake will throw the following error message:
 
 ERROR: `Unsupported feature 'Correlated pattern definitions'.` 
-
 
 This query can be re-written for Snowflake using the FIRST_VALUE() function as following:
 

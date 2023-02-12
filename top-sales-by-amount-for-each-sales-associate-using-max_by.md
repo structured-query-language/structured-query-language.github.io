@@ -17,3 +17,20 @@ group by 1;
 |-----------------|---------------------------------|
 | Anna            | [   199,   50,   20,   3,   2 ] |
 | Chelsea         | [   30,   20,   12,   10,   5 ] |
+
+
+## Raw Data
+
+| ORDER_NUMBER | SALES_ASSOCIATE | ORDER_AMOUNT |
+|--------------|-----------------|--------------|
+| 1            | Chelsea         | 10           |
+| 2            | Chelsea         | 12           |
+| 3            | Chelsea         | 5            |
+| 4            | Chelsea         | 20           |
+| 5            | Chelsea         | 30           |
+| 6            | Anna            | 3            |
+| 7            | Anna            | 2            |
+| 8            | Anna            | 1            |
+| 9            | Anna            | 199          |
+| 10           | Anna            | 50           |
+| 11           | Anna            | 20           |

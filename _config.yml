@@ -10,6 +10,7 @@ titles_from_headings:
  
 plugins:
   - jekyll-relative-links
+  - jekyll-include-cache
 relative_links:
   enabled: true
   collections: true

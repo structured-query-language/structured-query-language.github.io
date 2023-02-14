@@ -18,3 +18,10 @@ include:
   
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single

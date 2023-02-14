@@ -17,5 +17,4 @@ include:
   - README.md
   - LICENSE.md
   
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark"
+remote_theme: mmistakes/minimal-mistakes

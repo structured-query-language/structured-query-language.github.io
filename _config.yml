@@ -1,6 +1,5 @@
 
 title: SQL
-classes: wide
 layout: single
 
 titles_from_headings:
@@ -19,3 +18,4 @@ include:
   - LICENSE.md
   
 remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"

@@ -32,4 +32,4 @@ defaults:
       type: pages
     values:
       layout: single
-      class: wide
+      classes: wide

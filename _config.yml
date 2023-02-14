@@ -25,3 +25,10 @@ defaults:
       type: posts
     values:
       layout: single
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single

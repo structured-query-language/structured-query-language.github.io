@@ -1,4 +1,4 @@
-# Applied overview of the MATCH_RECOGNIZE query syntax
+# Applied overview of MATCH_RECOGNIZE clause
 
 To demonstrate the power of MATCH_RECOGNIZE we will use the Unemployment by State data set from BLS.
 

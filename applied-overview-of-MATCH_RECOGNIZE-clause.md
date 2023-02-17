@@ -18,23 +18,23 @@ The MATCH_RECOGNIZE clause is used to search for a pattern in single field value
 The following example shows the basic structure of a MATCH_RECOGNIZE clause:
 
 ```sql
-SELECT STATE, MONTHS_OF_DECREASING_UNEMPLOYMENT, STREAK_START_DATE, STREAK_END_DATE
-FROM UNEMPLOYMENT_RATE
-MATCH_RECOGNIZE(
-  PARTITION BY STATE
-  ORDER BY YEARMONTH
-  MEASURES
-    FIRST(YEARMONTH) AS STREAK_START_DATE,
-    LAST(YEARMONTH) AS STREAK_END_DATE,
-    COUNT(*) AS MONTHS_OF_DECREASING_UNEMPLOYMENT
+select state, months_of_decreasing_unemployment, streak_start_date, streak_end_date
+from unemployment_rate
+match_recognize(
+  partition by state
+  order by yearmonth
+  measures
+    first(yearmonth) as streak_start_date,
+    last(yearmonth) as streak_end_date,
+    count(*) as months_of_decreasing_unemployment
   
-  ONE ROW PER MATCH
-  PATTERN (DECREASE+$)
-  DEFINE
-    INCREASE AS UNEMPLOYMENT_RATE > LAG(UNEMPLOYMENT_RATE),
-    DECREASE AS UNEMPLOYMENT_RATE < LAG(UNEMPLOYMENT_RATE)
+  one row per match
+  pattern (decrease+$)
+  define
+    increase as unemployment_rate > lag(unemployment_rate),
+    decrease as unemployment_rate < lag(unemployment_rate)
 )
-ORDER BY MONTHS_OF_DECREASING_UNEMPLOYMENT DESC;
+order by months_of_decreasing_unemployment desc;
 ```
 
 

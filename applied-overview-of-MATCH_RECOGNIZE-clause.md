@@ -51,7 +51,7 @@ MEASURES is used to define the projected values from the match using aggregate m
 
 The pattern defines the regular expression of events to be searched over the data stream. Pattern variables are user-defined and separated by spaces. Regex modifiers like ?, + and * can be used to modify the frequency of a variable when matching events.
 
-PATTERN (INIT+ (REVERSAL | MODIFICATION))
+    PATTERN (INIT+ (REVERSAL | MODIFICATION))
 
 The pattern on this example defines a variable INIT at least once, followed by a concatenation of either REVERSAL or MODIFICATION.
 
@@ -64,16 +64,18 @@ Pattern quantifiers are used to change how a pattern is mapped in the data strea
     '^' - Regex Start Anchor
     '$' - Regex End Anchor
 
-INIT REVERSAL+$
+    INIT REVERSAL+$
 
 This example defines INIT 1 time, and REVERSAL 1 or more times, ending in REVERSAL (Regex End Anchor $).
 DEFINE
 
 DEFINE specifies the rules used to match a pattern variable to an event. The rules are Boolean expressions over aggregated values from the sequence of records.
 
+```sql
 DEFINE
   INCREASE AS UNEMPLOYMENT_RATE > LAG(UNEMPLOYMENT_RATE),
   DECREASE AS UNEMPLOYMENT_RATE < LAG(UNEMPLOYMENT_RATE)
+```
 
 This example defines rules INCREASE and DECREASE.
 

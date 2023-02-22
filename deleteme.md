@@ -6,6 +6,8 @@ with `_fivetran_deleted` include in the `hashdiff`, the deleted record gets load
 | 111          | aaa     | TRUE              | 01-02-1999| xyz      |
 
 
+
+
 with `_fivetran_deleted` not include in the hashdiff the deleted record never gets loaded in the Satellite. We will not have a way to tell if the order was deleted or not.
 
 | order_number | item_id | _fivetran_deleted | load_date | hashdiff |

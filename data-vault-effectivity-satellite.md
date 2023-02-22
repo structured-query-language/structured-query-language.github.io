@@ -1,4 +1,4 @@
-# Effectity Satellite
+# Effectivity Satellite
 
 In Data Vault 2.0 Effectivity Satellites are artifacts that are exclusively used to Track the temporal relevance of a relationship based on a Driving Key. As such, they hang from a Link Table.
 

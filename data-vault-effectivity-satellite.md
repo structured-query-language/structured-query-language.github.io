@@ -6,6 +6,7 @@ So what is an Effectivity Satellite?
 For an Effectivity Satellite, a Driving Key needs to be defined. For e.g. let's say we have a Link for Opportunities and relations to Accounts. The Account on Opportunity can change overtime. A common scenario is that the Opportunity is Assigned to a Global Parent account (e.g. Seagate Technology), and may get re-assigned to the Account Subsidiary (e.g. Lyve Labs) and get re-assigned to the Global Parent (Seagate Technology) at a later date
 
 This will be tracked in the LINK as following:
+
 | LINK_OPPORTUNITY_ACCOUNT_HASHKEY | HUB_OPPORTUNITY_HASHKEY | OPPORTUNITY_NUMBER | HUB_ACCOUNT_HASHKEY | ACCOUNT            | LOAD_DATE           |
 |----------------------------------|-------------------------|--------------------|---------------------|--------------------|---------------------|
 | 8913b4fa                         | c89470                  | 111                | e184de02            | Lyve Labs          | 2023-02-21 14:43:05 |
@@ -14,6 +15,7 @@ This will be tracked in the LINK as following:
 Now the 3rd step, i.e. 111 switching back to Seagate Technology will not be captured in this LINK as a new row in this LINK
 
 An Effectivity SAT can be used to Track effectivity (temporal relevance) of the aforementioned Opportunity to Account relationships.
+
 | LINK_OPPORTUNITY_ACCOUNT_HASHKEY | HUB_OPPORTUNITY_HASHKEY | OPPORTUNITY_NUMBER | HUB_ACCOUNT_HASHKEY | ACCOUNT            | START_DATE          | END_DATE            | LOAD_DATE           |
 |----------------------------------|-------------------------|--------------------|---------------------|--------------------|---------------------|---------------------|---------------------|
 | 8913b4fa                         | c89470                  | 111                | e184de02            | Lyve Labs          | 2023-02-21 14:43:05 | 9999-12-31 0:00:00  | 2023-02-21 14:43:05 |
@@ -24,7 +26,7 @@ An Effectivity SAT can be used to Track effectivity (temporal relevance) of the 
 | 8cee5f97                         | c89470                  | 111                | 92b3503             | Seagate Technology | 2023-02-21 15:44:42 | 9999-12-31 0:00:00  | 2023-02-21 15:44:42 |
 | 8913b4fa                         | c89470                  | 111                | e184de02            | Lyve Labs          | 2023-02-21 15:38:30 | 2023-02-21 15:44:42 | 2023-02-21 15:44:42 |
 
-    When the relationship is first recorded only 1 record is inserted (highlighted in green)
-    When there is a change in a relationship it must be based on one of the participants of the relationship– the driver, we track its change vs the other keys in the relationship. To do that we end_date one record and insert a new "active record"; i.e. 2 records inserted. (highlighted in red)
+1. When the relationship is first recorded only 1 record is inserted (highlighted in green)
+2. When there is a change in a relationship it must be based on one of the participants of the relationship– the driver, we track its change vs the other keys in the relationship. To do that we end_date one record and insert a new "active record"; i.e. 2 records inserted. (highlighted in red)
 
  

@@ -9,6 +9,8 @@ For an Effectivity Satellite, a Driving Key needs to be defined. For e.g. let's 
 
 This will be tracked in the LINK as following:
 
+## LINK_OPPORTINUTY_ACCOUNT
+
 | LINK_HK  |OPPORTUNITY_HK| OPPORTUNITY| ACCOUNT_HK | ACCOUNT            | LOAD_DATE           |
 |----------|--------------|------------|------------|--------------------|---------------------|
 | 8913b4fa | c89470       | 111        | e184de02   | Lyve Labs          | 2023-02-21 14:43:05 |
@@ -17,6 +19,9 @@ This will be tracked in the LINK as following:
 Now the 3rd step, i.e. 111 switching back to Seagate Technology will not be captured in this LINK as a new row in this LINK
 
 An Effectivity SAT can be used to Track effectivity (temporal relevance) of the aforementioned Opportunity to Account relationships.
+
+
+## SATE_OPPORTINUTY_ACCOUNT
 
 | LINK_HK |OPPORTUNITY_HK|OPPORTUNITY|ACCOUNT_HK|ACCOUNT           |START_DATE         |END_DATE           |LOAD_DATE          |
 |---------|--------------|-----------|----------|------------------|-------------------|-------------------|-------------------|
@@ -28,7 +33,7 @@ An Effectivity SAT can be used to Track effectivity (temporal relevance) of the 
 | 8cee5f97|c89470        | 111       | 92b3503  |Seagate Technology|2023-02-21 15:44:42|9999-12-31 0:00:00 |2023-02-21 15:44:42|
 | 8913b4fa|c89470        | 111       | e184de02 |Lyve Labs         |2023-02-21 15:38:30|2023-02-21 15:44:42|2023-02-21 15:44:42|
 
-1. When the relationship is first recorded only 1 record is inserted (highlighted in green)
-2. When there is a change in a relationship it must be based on one of the participants of the relationship– the driver, we track its change vs the other keys in the relationship. To do that we end_date one record and insert a new "active record"; i.e. 2 records inserted. (highlighted in red)
+1. When the relationship is first recorded only 1 record is inserted (row 1 in the above table)
+2. When there is a change in a relationship it must be based on the driving key (OPPORTUNITY), we track its change vs the Secondary Foreign Key in the Relationship (ACCOUNT). To do that we end_date one record and insert a new "active record"; i.e. 2 records inserted. (row 2 and 3 in the above table)
 
  

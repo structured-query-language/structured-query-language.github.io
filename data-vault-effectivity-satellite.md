@@ -18,15 +18,15 @@ Now the 3rd step, i.e. 111 switching back to Seagate Technology will not be capt
 
 An Effectivity SAT can be used to Track effectivity (temporal relevance) of the aforementioned Opportunity to Account relationships.
 
-| LINK_HK  | OPPORUNITY_HK | OPPORTUNITY_NUM | ACCOUNT_HK | ACCOUNT            | START_DATE          | END_DATE            | LOAD_DATE           |
-|----------|---------------|-----------------|------------|--------------------|---------------------|---------------------|---------------------|
-| 8913b4fa | c89470        | 111             | e184de02   | Lyve Labs          | 2023-02-21 14:43:05 | 9999-12-31 0:00:00  | 2023-02-21 14:43:05 |
-| 8cee5f97 | c89470        | 111             | 92b3503    | Seagate Technology | 2023-02-21 14:53:57 | 9999-12-31 0:00:00  | 2023-02-21 14:53:57 |
-| 8913b4fa | c89470        | 111             | e184de02   | Lyve Labs          | 2023-02-21 14:43:05 | 2023-02-21 14:53:57 | 2023-02-21 14:53:57 |
-| 8cee5f97 | c89470        | 111             | 92b3503    | Seagate Technology | 2023-02-21 14:53:57 | 2023-02-21 15:00:31 | 2023-02-21 15:00:31 |
-| 8913b4fa | c89470        | 111             | e184de02   | Lyve Labs          | 2023-02-21 15:38:30 | 9999-12-31 0:00:00  | 2023-02-21 15:38:30 |
-| 8cee5f97 | c89470        | 111             | 92b3503    | Seagate Technology | 2023-02-21 15:44:42 | 9999-12-31 0:00:00  | 2023-02-21 15:44:42 |
-| 8913b4fa | c89470        | 111             | e184de02   | Lyve Labs          | 2023-02-21 15:38:30 | 2023-02-21 15:44:42 | 2023-02-21 15:44:42 |
+| LINK_HK | OPPORUNITY_HK |OPPORTUNITY|ACCOUNT_HK|ACCOUNT            |START_DATE         |END_DATE           |LOAD_DATE          |
+|---------|---------------|-----------|----------|------------------|-------------------|-------------------|-------------------|
+| 8913b4fa| c89470        | 111       | e184de02 |Lyve Labs         |2023-02-21 14:43:05|9999-12-31 0:00:00 |2023-02-21 14:43:05|
+| 8cee5f97| c89470        | 111       | 92b3503  |Seagate Technology|2023-02-21 14:53:57|9999-12-31 0:00:00 |2023-02-21 14:53:57|
+| 8913b4fa| c89470        | 111       | e184de02 |Lyve Labs         |2023-02-21 14:43:05|2023-02-21 14:53:57|2023-02-21 14:53:57|
+| 8cee5f97| c89470        | 111       | 92b3503  |Seagate Technology|2023-02-21 14:53:57|2023-02-21 15:00:31|2023-02-21 15:00:31|
+| 8913b4fa| c89470        | 111       | e184de02 |Lyve Labs         |2023-02-21 15:38:30|9999-12-31 0:00:00 |2023-02-21 15:38:30|
+| 8cee5f97| c89470        | 111       | 92b3503  |Seagate Technology|2023-02-21 15:44:42|9999-12-31 0:00:00 |2023-02-21 15:44:42|
+| 8913b4fa| c89470        | 111       | e184de02 |Lyve Labs         |2023-02-21 15:38:30|2023-02-21 15:44:42|2023-02-21 15:44:42|
 
 1. When the relationship is first recorded only 1 record is inserted (highlighted in green)
 2. When there is a change in a relationship it must be based on one of the participants of the relationship– the driver, we track its change vs the other keys in the relationship. To do that we end_date one record and insert a new "active record"; i.e. 2 records inserted. (highlighted in red)

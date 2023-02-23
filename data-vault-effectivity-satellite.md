@@ -9,10 +9,10 @@ For an Effectivity Satellite, a Driving Key needs to be defined. For e.g. let's 
 
 This will be tracked in the LINK as following:
 
-| LINK_OPPORTUNITY_ACCOUNT_HASHKEY | HUB_OPPORTUNITY_HASHKEY | OPPORTUNITY_NUMBER | HUB_ACCOUNT_HASHKEY | ACCOUNT            | LOAD_DATE           |
-|----------------------------------|-------------------------|--------------------|---------------------|--------------------|---------------------|
-| 8913b4fa                         | c89470                  | 111                | e184de02            | Lyve Labs          | 2023-02-21 14:43:05 |
-| 8cee5f97                         | c89470                  | 111                | 92b3503             | Seagate Technology | 2023-02-21 14:53:57 |
+| LINK_HK  | OPPORUNITY_HK | OPPORTUNITY_NUM | ACCOUNT_HK | ACCOUNT            | LOAD_DATE           |
+|----------|---------------|-----------------|------------|--------------------|---------------------|
+| 8913b4fa | c89470        | 111             | e184de02   | Lyve Labs          | 2023-02-21 14:43:05 |
+| 8cee5f97 | c89470        | 111             | 92b3503    | Seagate Technology | 2023-02-21 14:53:57 |
 
 Now the 3rd step, i.e. 111 switching back to Seagate Technology will not be captured in this LINK as a new row in this LINK
 

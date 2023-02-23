@@ -9,7 +9,7 @@ For an Effectivity Satellite, a Driving Key needs to be defined. For e.g. let's 
 
 This will be tracked in the LINK as following:
 
-## LINK_OPPORTINUTY_ACCOUNT
+## LINK_OPPORTUNITY_ACCOUNT
 
 | LINK_HK  |OPPORTUNITY_HK| OPPORTUNITY| ACCOUNT_HK | ACCOUNT            | LOAD_DATE           |
 |----------|--------------|------------|------------|--------------------|---------------------|
@@ -21,7 +21,7 @@ Now the 3rd step, i.e. 111 switching back to Seagate Technology will not be capt
 An Effectivity SAT can be used to Track effectivity (temporal relevance) of the aforementioned Opportunity to Account relationships.
 
 
-## SATE_OPPORTINUTY_ACCOUNT
+## SATE_OPPORTUNITY_ACCOUNT
 
 | LINK_HK |OPPORTUNITY_HK|OPPORTUNITY|ACCOUNT_HK|ACCOUNT           |START_DATE         |END_DATE           |LOAD_DATE          |
 |---------|--------------|-----------|----------|------------------|-------------------|-------------------|-------------------|

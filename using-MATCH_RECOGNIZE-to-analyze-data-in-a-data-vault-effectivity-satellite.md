@@ -50,6 +50,7 @@ match_recognize(
   
 )
 ```
+
 | CUSTOMER_BK | PAID_SUBSCRIPTION_TIER | PAID_SUBSCRIPTION_START_DATE | BASIC_SUSBCRIPTION_START_DATE |
 |-------------|------------------------|------------------------------|-------------------------------|
 | Scott       | Personal               | 2021-01-01                   | 2021-06-01                    |

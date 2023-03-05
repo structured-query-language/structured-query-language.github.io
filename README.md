@@ -13,3 +13,4 @@
 - [Correlated Pattern Definition and Snowflake's MATCH_RECOGNIZE](correlated-pattern-definitions-and-MATCH_RECOGNIZE.md)
 - [Top sales by amount for each sales associate using MAX_BY() aggregate function](top-sales-by-amount-for-each-sales-associate-using-max_by.md)
 - [Applied overview of MATCH_RECOGNIZE clause](applied-overview-of-MATCH_RECOGNIZE-clause.md)
+- [Using MATCH_RECOGNIZE to analyze data in a Data Vault Effectivity Satellite](using-MATCH_RECOGNIZE-to-analyze-data-in-a-data-vault-effectivity-satellite.md)

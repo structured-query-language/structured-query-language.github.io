@@ -41,8 +41,7 @@ match_recognize(
   measures
     paid.subscription_tier_bk as paid_subscription_tier
     , paid.start_date paid_subscription_start_date
-    , free.start_date basic_susbcription_start_date
-    
+    , free.start_date basic_susbcription_start_date   
   after match skip past last row
   pattern (paid+ free)
   define 
@@ -51,6 +50,12 @@ match_recognize(
   
 )
 ```
+| CUSTOMER_BK | PAID_SUBSCRIPTION_TIER | PAID_SUBSCRIPTION_START_DATE | BASIC_SUSBCRIPTION_START_DATE |
+|-------------|------------------------|------------------------------|-------------------------------|
+| Scott       | Personal               | 2021-01-01                   | 2021-06-01                    |
+| Angela      | Premium                | 2021-02-01                   | 2021-03-01                    |
+
+
 
 There are three tiers of PAID plans-- Personal, Premium and Business. A Customer may switch between these tiers multiple times before finally downgrading to a FREE tier.
 
@@ -59,7 +64,3 @@ There are three tiers of PAID plans-- Personal, Premium and Business. A Customer
 
 The query identified the following Customers that had PAID subscription and then eventually downgraded to a FREE tier
 
-| CUSTOMER_BK | PAID_SUBSCRIPTION_TIER | PAID_SUBSCRIPTION_START_DATE | BASIC_SUSBCRIPTION_START_DATE |
-|-------------|------------------------|------------------------------|-------------------------------|
-| Scott       | Personal               | 2021-01-01                   | 2021-06-01                    |
-| Angela      | Premium                | 2021-02-01                   | 2021-03-01                    |

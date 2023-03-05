@@ -53,3 +53,13 @@ match_recognize(
 ```
 
 There are three types of PAID plans-- Personal, Premium and Business. A Customer may switch between these plans multiple times before finally downgrading to a FREE plan.
+
+
+### Query Output
+
+The query identified the following Customers that had PAID subscription and then eventually downgraded to a FREE tier
+
+| CUSTOMER_BK | PAID_SUBSCRIPTION_TYPE | PAID_SUBSCRIPTION_START_DATE | BASIC_SUSBCRIPTION_START_DATE |
+|-------------|------------------------|------------------------------|-------------------------------|
+| Scott       | Personal               | 2021-01-01                   | 2021-06-01                    |
+| Angela      | Premium                | 2021-02-01                   | 2021-03-01                    |

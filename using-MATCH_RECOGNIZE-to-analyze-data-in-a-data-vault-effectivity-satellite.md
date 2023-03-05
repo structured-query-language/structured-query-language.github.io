@@ -39,9 +39,9 @@ match_recognize(
   partition by customer_bk
   order by start_date
   measures
-    last(paid.subscription_tier_bk) as paid_subscription_tier
-    , first(paid.start_date) paid_subscription_start_date
-    , last(free.start_date) basic_susbcription_start_date
+    paid.subscription_tier_bk as paid_subscription_tier
+    , paid.start_date paid_subscription_start_date
+    , free.start_date basic_susbcription_start_date
     
   after match skip past last row
   pattern (paid+ free)

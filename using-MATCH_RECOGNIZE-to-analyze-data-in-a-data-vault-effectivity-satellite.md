@@ -70,7 +70,7 @@ The query identified the following Customers that had PAID subscription and then
 
 # See also
 1. [Data Vault Effectivity Satellite](data-vault-effectivity-satellite.md) 
-
+2. [Applied overview of MATCH_RECOGNIZE clause](applied-overview-of-MATCH_RECOGNIZE-clause.md)
 
 > <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
 

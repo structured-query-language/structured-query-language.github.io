@@ -22,5 +22,5 @@ A Data Vault Effectivity Satellite hangs from the LINK, and only contains the Dr
 
 The above Effectivity Satellite is used to track the type of subscription a Customer has purchased. The `CUSTOMER_BK` is the Driving Key, and the `SUBSCRIPTION_BK` is the Secondary Foreign Key. The `START_DATE` and the `END_DATE` indicate when the Subscription was purchased and when it was ended. 
 
-> **Note:** Since Data Vault 2.0 is a insert only pattern, we do not update the existing record to set the `END_DATE`, instead we insert a new record with the `END_DATE` set.
+> **Note:** Since Data Vault 2.0 is an insert only pattern, we do not update the existing record to set the `END_DATE`, instead we insert a new record with the `END_DATE` set.
 

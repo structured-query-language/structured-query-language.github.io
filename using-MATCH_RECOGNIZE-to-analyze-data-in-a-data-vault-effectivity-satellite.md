@@ -25,7 +25,7 @@ The above Effectivity Satellite is used to track the subscription tier a Custome
 > **Note:** Since Data Vault 2.0 is an insert only pattern, we do not update the existing record to set the `END_DATE`, instead we insert a new record with the `END_DATE` set.
 
 # Effecivity Satellite and Data Analysis
-The struture of an Effectivity Satellite lends itself to Longitudinal Data Analysis. You can identify patterns, perform timeseries analysis or even use the data directly in statistical learning model. 
+The structure of an Effectivity Satellite lends itself to Longitudinal Data Analysis. You can identify patterns, perform timeseries analysis or even use the data directly in statistical learning model. 
 
 ## MATCH_RECOGNIZE
 One way to analyze data in an Effectivity Satellite is to use SQL's MATCH_RECOGNIZE clause.

@@ -36,5 +36,8 @@ An Effectivity SAT can be used to Track effectivity (temporal relevance) of the 
 1. When the relationship is first recorded only 1 record is inserted (row 1 in the above table)
 2. When there is a change in a relationship it must be based on the driving key (OPPORTUNITY), we track its change vs the Secondary Foreign Key in the Relationship (ACCOUNT). To do that we end_date one record and insert a new "active record"; i.e. 2 records inserted. (row 2 and 3 in the above table)
 
+See Also:
+[Using MATCH_RECOGNIZE to analyze data in a Data Vault Effectivity Satellite](using-MATCH_RECOGNIZE-to-analyze-data-in-a-data-vault-effectivity-satellite.md)
+
 
 > <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>

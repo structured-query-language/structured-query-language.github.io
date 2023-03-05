@@ -30,6 +30,11 @@ The structure of an [Effectivity Satellite](data-vault-effectivity-satellite.md)
 ## MATCH_RECOGNIZE
 One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-satellite.md) is to use SQL's MATCH_RECOGNIZE clause.
 
+MATCH_RECOGNIZE clause in a SQL Query:
+1. Define patterns using REGEX convention
+2. Match longitudinal data against those patterns
+3. Identify records that match the patterns
+
 The following `MATCH_RECOGNIZE` query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer that switched from a PAID Wordpress tier to FREE tier. 
 
 ```sql

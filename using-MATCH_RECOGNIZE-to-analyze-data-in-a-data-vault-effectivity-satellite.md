@@ -6,6 +6,9 @@ Effectivity Satellite is a powerful Data Vault artifact that is used to track th
  
 A Data Vault Effectivity Satellite hangs from the LINK, and only contains the Driving Business Key, Secondary Foreign Key and the Start Date and the End Date for a the Relationship.
 
+
+## Example of an Effectitity Satellite
+
 | CUSTOMER_BK | SUBSCRIPTION_BK | START_DATE | END_DATE   |
 |-------------|-----------------|------------|------------|
 | Scott       | Personal        | 2021-01-01 | 9999-12-31 |

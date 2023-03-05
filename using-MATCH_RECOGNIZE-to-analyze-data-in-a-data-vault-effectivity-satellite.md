@@ -47,16 +47,8 @@ match_recognize(
   define 
     paid as paid.subscription_tier_bk in ('Personal', 'Premium', 'Business'), 
     free as free.subscription_tier_bk = 'Free'
-  
 )
 ```
-
-| CUSTOMER_BK | PAID_SUBSCRIPTION_TIER | PAID_SUBSCRIPTION_START_DATE | BASIC_SUSBCRIPTION_START_DATE |
-|-------------|------------------------|------------------------------|-------------------------------|
-| Scott       | Personal               | 2021-01-01                   | 2021-06-01                    |
-| Angela      | Premium                | 2021-02-01                   | 2021-03-01                    |
-
-
 
 There are three tiers of PAID plans-- Personal, Premium and Business. A Customer may switch between these tiers multiple times before finally downgrading to a FREE tier.
 
@@ -64,6 +56,12 @@ There are three tiers of PAID plans-- Personal, Premium and Business. A Customer
 ### Query Output
 
 The query identified the following Customers that had PAID subscription and then eventually downgraded to a FREE tier
+
+| CUSTOMER_BK | PAID_SUBSCRIPTION_TIER | PAID_SUBSCRIPTION_START_DATE | BASIC_SUSBCRIPTION_START_DATE |
+|-------------|------------------------|------------------------------|-------------------------------|
+| Scott       | Personal               | 2021-01-01                   | 2021-06-01                    |
+| Angela      | Premium                | 2021-02-01                   | 2021-03-01                    |
+
 
 # See also
 1. [Data Vault Effectivity Satellite](data-vault-effectivity-satellite.md) 

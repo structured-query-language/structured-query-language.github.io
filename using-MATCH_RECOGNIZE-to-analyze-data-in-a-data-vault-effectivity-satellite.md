@@ -66,4 +66,8 @@ There are three tiers of PAID plans-- Personal, Premium and Business. A Customer
 The query identified the following Customers that had PAID subscription and then eventually downgraded to a FREE tier
 
 # See also
-[Data Vault Effectivity Satellite](data-vault-effectivity-satellite.md) 
+1. [Data Vault Effectivity Satellite](data-vault-effectivity-satellite.md) 
+
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
+

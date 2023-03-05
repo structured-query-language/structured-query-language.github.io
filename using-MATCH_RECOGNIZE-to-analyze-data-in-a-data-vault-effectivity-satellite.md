@@ -1,5 +1,5 @@
 # MATCH_RECOGNIZE and Data Vault Effectivity Satellite
-Effectivity Satellite is a powerful Data Vault artifact that is used to track the effectivity of a relationship. For e.g. it can be used to track the relationship between:
+[Effectivity Satellite]|(data-vault-effectivity-satellite.md) is a powerful Data Vault artifact that is used to track the effectivity of a relationship. For e.g. it can be used to track the relationship between:
 1. Order and Customer, or 
 2. Opportunity and Account, or 
 3. Subscription Tier and Customer etc. 

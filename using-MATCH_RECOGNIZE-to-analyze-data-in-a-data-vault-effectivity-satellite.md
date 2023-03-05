@@ -4,7 +4,7 @@
 2. Opportunity and Account, or 
 3. Subscription Tier and Customer etc. 
 
-> A Data Vault Effectivity Satellite hangs from the LINK, and only contains the **Driving Business Key**, **Secondary Foreign Key** and the **Start Date** and **End Date** for the given Relationship.
+> A Data Vault [Effectivity Satellite](data-vault-effectivity-satellite.md) hangs from the LINK, and only contains the **Driving Business Key**, **Secondary Foreign Key** and the **Start Date** and **End Date** for the given Relationship.
 
 
 ## Example of an Effectitity Satellite
@@ -20,17 +20,17 @@
 | Angela      | Free                 | 2021-03-01 | 9999-12-31 |
 | Ryan        | Free                 | 2021-03-01 | 9999-12-31 |
 
-The above Effectivity Satellite is used to track the subscription tier a Customer has purchased. The `CUSTOMER_BK` is the Driving Key, and the `SUBSCRIPTION_TIER_BK` is the Secondary Foreign Key. The `START_DATE` and the `END_DATE` indicate when the Subscription was purchased and when it was ended. 
+The above [Effectivity Satellite](data-vault-effectivity-satellite.md) is used to track the subscription tier a Customer has purchased. The `CUSTOMER_BK` is the Driving Key, and the `SUBSCRIPTION_TIER_BK` is the Secondary Foreign Key. The `START_DATE` and the `END_DATE` indicate when the Subscription was purchased and when it was ended. 
 
 > **Note:** Since Data Vault 2.0 is an insert only pattern, we do not update the existing record to set the `END_DATE`, instead we insert a new record with the `END_DATE` set.
 
 # Effecivity Satellite and Data Analysis
-The structure of an Effectivity Satellite lends itself to Longitudinal Data Analysis. You can identify patterns, perform timeseries analysis or even use the data directly in statistical learning model. 
+The structure of an [Effectivity Satellite](data-vault-effectivity-satellite.md) lends itself to Longitudinal Data Analysis. You can identify patterns, perform timeseries analysis or even use the data directly in statistical learning model. 
 
 ## MATCH_RECOGNIZE
-One way to analyze data in an Effectivity Satellite is to use SQL's MATCH_RECOGNIZE clause.
+One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-satellite.md) is to use SQL's MATCH_RECOGNIZE clause.
 
-The following `MATCH_RECOGNIZE` query can be used on the above Effectivity Satellite to identity Customer that switched from a PAID Wordpress tier to FREE tier. 
+The following `MATCH_RECOGNIZE` query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer that switched from a PAID Wordpress tier to FREE tier. 
 
 ```sql
 select * 

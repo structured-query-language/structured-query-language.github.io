@@ -28,14 +28,14 @@ The above [Effectivity Satellite](data-vault-effectivity-satellite.md) is used t
 The structure of an [Effectivity Satellite](data-vault-effectivity-satellite.md) lends itself to Longitudinal Data Analysis. You can identify patterns, perform timeseries analysis or even use the data directly in statistical learning model. 
 
 ## MATCH_RECOGNIZE
-One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-satellite.md) is to use SQL's MATCH_RECOGNIZE clause.
+One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-satellite.md) is to use SQL's [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause.
 
-MATCH_RECOGNIZE clause in a SQL Query:
+[MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause in a SQL Query allows us to:
 1. Define patterns using REGEX convention
 2. Match longitudinal data against those patterns
 3. Identify records that match the patterns
 
-The following `MATCH_RECOGNIZE` query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer that switched from a PAID Wordpress tier to FREE tier. 
+The following [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer that switched from a PAID Wordpress tier to FREE tier. 
 
 ```sql
 select * 

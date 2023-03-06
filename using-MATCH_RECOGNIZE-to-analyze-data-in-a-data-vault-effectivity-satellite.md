@@ -71,6 +71,10 @@ The query identified the following Customers that had PAID subscription and then
 # See also
 1. [Data Vault Effectivity Satellite](data-vault-effectivity-satellite.md) 
 2. [Applied overview of MATCH_RECOGNIZE clause](applied-overview-of-MATCH_RECOGNIZE-clause.md)
+3. [MATCH_RECOGNIZE](match_recognize.md)
+4. [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
+5. [A/B Analysis on Streaming Data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
+6. [Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE](correlated-pattern-definitions-and-MATCH_RECOGNIZE.md)
 
 > <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
 

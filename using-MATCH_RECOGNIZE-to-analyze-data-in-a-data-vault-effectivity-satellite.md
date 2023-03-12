@@ -27,8 +27,11 @@ The above [Effectivity Satellite](data-vault-effectivity-satellite.md) is used t
 # Effecivity Satellite and Data Analysis
 The structure of an [Effectivity Satellite](data-vault-effectivity-satellite.md) lends itself to Longitudinal Data Analysis. You can identify patterns, perform timeseries analysis or even use the data directly in statistical learning model. 
 
-## MATCH_RECOGNIZE
-One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-satellite.md) is to use SQL's [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause.
+## MATCH_RECOGNIZE and pattern recognition
+
+In relational systems, a row pattern recognition task is to detect a sequence of ordered rows from an input table that match a specified pattern. For example, a financial service provider needs to identify sequences of suspicious transactions that match known patterns of criminal activities; an e-commerce site analyzes the steps taken by customers from landing through a social media referrer to a successful purchase.
+
+One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-satellite.md) is to use SQL's pattern matching capability i.e. the [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause.
 
 [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause in a SQL Query allows us to:
 1. Define patterns using REGEX convention

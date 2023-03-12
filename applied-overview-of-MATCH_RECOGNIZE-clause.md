@@ -91,7 +91,7 @@ The following aggregate methods can be used in MEASURES and DEFINE:
     FIRST – The first value aggregated.
     LAST – The last value aggregated so far.
 
-Query Output
+## Query Output
 
 The above MATCH_RECOGNIZE query will produce the following results, which show the States with a Streak decreasing Unemployment Rate.
 Rhode Island has a decreasing Unemployment Rate start July 2021.

@@ -78,3 +78,14 @@ select * from order_customer;
 
 ![image](https://user-images.githubusercontent.com/121721444/217828368-7003e644-f0c5-4594-a2c4-757e01f49912.png)
 
+
+
+# See also
+1. [Applied overview of MATCH_RECOGNIZE clause](applied-overview-of-MATCH_RECOGNIZE-clause.md)
+1. [MATCH_RECOGNIZE](match_recognize.md)
+1. [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
+1. [A/B Analysis on Streaming Data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
+
+

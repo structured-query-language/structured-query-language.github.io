@@ -80,3 +80,7 @@ Based on the above query, we can extract the following Association Rule:
 ```
 
 This doesn't mean that there is correlation between purchase of Infant Milk, Infant Diaper and Coffee. This is just a property if of the Data.
+
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
+

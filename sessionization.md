@@ -89,3 +89,7 @@ from clickstream;
 
 ![image](https://user-images.githubusercontent.com/121721444/210683352-da2f5ca0-d444-4b77-8dd7-b8e65b7f73ca.png)
 
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
+
+

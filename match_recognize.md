@@ -24,3 +24,6 @@ define
 
 
 ![image](https://user-images.githubusercontent.com/121721444/210282428-7fdf6c5d-5b28-475e-b094-51581b4def14.png)
+
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>

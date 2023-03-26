@@ -67,3 +67,7 @@ group by transaction_date, channel;
 | 2022-12-01       | store   | 30               | 50                     | 60%                |
 | 2022-12-01       | online  | 20               | 50                     | 40%                |
 | 2022-12-02       | store   | 100              | 100                    | 100%               |
+
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
+

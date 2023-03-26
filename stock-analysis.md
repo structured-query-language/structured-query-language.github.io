@@ -130,3 +130,8 @@ order by days_of_increasing_stock_price desc;
 | MOD      | 17                             | 2022-07-19        | 2022-08-10      |
 | EMB      | 17                             | 2012-08-20        | 2012-09-12      |
 | LGL      | 17                             | 1998-02-17        | 1998-03-13      |
+
+
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
+

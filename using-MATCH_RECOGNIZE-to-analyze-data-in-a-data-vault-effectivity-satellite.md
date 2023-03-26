@@ -24,7 +24,7 @@ The above [Effectivity Satellite](data-vault-effectivity-satellite.md) is used t
 
 > **Note:** Since Data Vault 2.0 is an insert only pattern, we do not update the existing record to set the `END_DATE`, instead we insert a new record with the `END_DATE` set.
 
-# Effecivity Satellite and Data Analysis
+# Effectivity Satellite and Data Analysis
 The structure of an [Effectivity Satellite](data-vault-effectivity-satellite.md) lends itself to Longitudinal Data Analysis. You can identify patterns, perform timeseries analysis or even use the data directly in statistical learning model. 
 
 ## MATCH_RECOGNIZE and pattern recognition

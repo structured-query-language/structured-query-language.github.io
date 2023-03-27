@@ -39,7 +39,7 @@ Snowflake will throw the following error message:
 
 ERROR: `Unsupported feature 'Correlated pattern definitions'.` 
 
-This query can be re-written for Snowflake using the FIRST_VALUE() function as following:
+This query can be re-written for Snowflake using the `FIRST_VALUE()` function as following:
 
 ```sql
 select * from order_customer

@@ -1,6 +1,6 @@
 # CONDITIONAL_TRUE_EVENT
 
-`CONDITIONAL_TRUE_EVENT` is a powerful, yet underutilized Window Function in #Snowflake. `CONDITIONAL_TRUE_EVENT` let's you cumulatively count the occurrences of a TRUE event in a WINDOW. 
+`CONDITIONAL_TRUE_EVENT` is a powerful, yet underutilized Window Function in Snowflake. `CONDITIONAL_TRUE_EVENT` let's you cumulatively count the occurrences of a TRUE event in a WINDOW. 
 
 Here is a example of how to use it to count number of days the stock price was higher than the previous highest value of the Stock for a given Window.
 

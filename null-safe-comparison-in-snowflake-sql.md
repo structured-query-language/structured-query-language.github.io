@@ -21,7 +21,7 @@ Here is an example with using `distinct from`:
 |----|--------|
 | 1  | angela |
 | 2  | scottt |
-| 3  |        |
+| 3  | NULL   |
 
 
 ## Query using distinct from
@@ -36,7 +36,7 @@ where table_a.name is distinct from table_b.name;
 | ID | NAME  | NAME_2 |
 |----|-------|--------|
 | 2  | scott | scottt |
-| 3  | bob   | null   |
+| 3  | bob   | NULL   |
 > Note that the ID = 3 shows up even though NAME was null TABLE_B for this ID. This is because we used `is distinct from` instead of `<>` or `!=` operator.
 
 

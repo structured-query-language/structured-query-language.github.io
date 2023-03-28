@@ -4,6 +4,26 @@ At times you need to compare data in a null-safe manner. Snowflake has the `dist
 
 Here is an example with using `distinct from`:
 
+## Raw Data
+
+### Table A
+
+| ID | NAME   |
+|----|--------|
+| 1  | angela |
+| 2  | scott  |
+| 3  | bob    |
+
+
+### Table B
+
+| ID | NAME   |
+|----|--------|
+| 1  | angela |
+| 2  | scottt |
+| 3  |        |
+
+
 ```sql
 with table_a as (select 1 as id, 'angela' as name union select 2, 'scott'  union select 3, 'bob')
 , table_b as (select 1 as id, 'angela' as name union select 2, 'scottt'  union select 3, null)

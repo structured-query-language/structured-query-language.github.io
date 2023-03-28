@@ -51,6 +51,7 @@ where table_a.name = table_b.name;
 |----|-------|--------|
 | 2  | scott | scottt |
 
+> Note that the ID = 3 doesn't show up here as the NAME was null TABLE_B for this ID.
 
 
 # Generating Sample Data

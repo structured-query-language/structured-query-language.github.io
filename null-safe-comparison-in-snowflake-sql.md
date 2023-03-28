@@ -4,7 +4,7 @@ At times you need to compare data in a null-safe manner. Snowflake has the `dist
 
 Here is an example with using `distinct from`:
 
-```
+```sql
 with table_a as (select 1 as id, 'angela' as name union select 2, 'scott'  union select 3, 'bob')
 , table_b as (select 1 as id, 'angela' as name union select 2, 'scottt'  union select 3, null)
 
@@ -19,3 +19,8 @@ The output is
 |----|-------|--------|
 | 2  | scott | scottt |
 | 3  | bob   | null   |
+
+
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
+

@@ -24,19 +24,33 @@ Here is an example with using `distinct from`:
 | 3  |        |
 
 
-## Query using the distinct from
+## Query using distinct from
 ```sql
 select * from table_a
 inner join table_b using (id)
 where table_a.name is distinct from table_b.name;
 ```
 
-The output is 
+### Output
 
 | ID | NAME  | NAME_2 |
 |----|-------|--------|
 | 2  | scott | scottt |
 | 3  | bob   | null   |
+
+## Query using =
+```sql
+select * from table_a
+inner join table_b using (id)
+where table_a.name = table_b.name;
+```
+
+### Output
+
+| ID | NAME  | NAME_2 |
+|----|-------|--------|
+| 2  | scott | scottt |
+
 
 
 # Generating Sample Data

@@ -38,7 +38,7 @@ where table_a.name is distinct from table_b.name;
 | 2  | scott | scottt |
 | 3  | bob   | null   |
 
-## Query using =
+## Query using the equal operator (=)
 ```sql
 select * from table_a
 inner join table_b using (id)

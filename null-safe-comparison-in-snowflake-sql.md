@@ -37,12 +37,14 @@ where table_a.name is distinct from table_b.name;
 |----|-------|--------|
 | 2  | scott | scottt |
 | 3  | bob   | null   |
+> Note that the ID = 3 shows up even though NAME was null TABLE_B for this ID. This is because we used `is distinct from` instead of `<>` or `!=` operator.
 
-## Query using the equal operator (=)
+
+## Query using the not-equal operator (<>)
 ```sql
 select * from table_a
 inner join table_b using (id)
-where table_a.name = table_b.name;
+where table_a.name <> table_b.name;
 ```
 
 ### Output

@@ -40,13 +40,15 @@ One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-sat
 2. Match longitudinal data against those patterns
 3. Identify records that match the patterns
 
-In the MATCH_RECOGNIZE clause the pattern is constructed from basic building blocks, called pattern variables, to which operators (quantifiers and other modifiers) like Kleene Star `*` and Kleene Plus `+`  and  can be applied. The whole pattern must be enclosed in paranthesis. For example a pattern can be defined as following:
+### Pattern Definition
+
+In the MATCH_RECOGNIZE clause, the pattern is constructed from basic building blocks, called pattern variables, to which operators (quantifiers and other modifiers) like Kleene Star `*` and Kleene Plus `+`  and  can be applied. The whole pattern must be enclosed in paranthesis. For example a pattern can be defined as following:
 ```
-(paid+ free)
+pattern (initial_subscription_tier modified_subscription_tier+ reveral_of_subscription_tier)
 ```
 
 
-The following [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer that switched from a PAID Wordpress tier to FREE tier. 
+The following [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer(s) that started with Subscription Tier, switched to a different Subscription Tier, and then switched back to the first Subscription Tier they had.
 
 ```sql
 with effectivity_sat as(
@@ -74,7 +76,7 @@ There are three tiers of PAID plans-- Personal, Premium and Business. A Customer
 
 ### Query Output
 
-The query identified the following Customers started with a Subscription Tier, switched to a different Subscription Tier, and then eventually _switched back_ to the original Subscription Tier.
+The query identified the following Customers started with a Premium Subscription Tier, switched to a Free Subscription Tier, and then eventually _switched back_ to the original Subscription Tier (Premium).
 
 | CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION                       |
 |-------------|----------------------|------------|------------|------------------------------|

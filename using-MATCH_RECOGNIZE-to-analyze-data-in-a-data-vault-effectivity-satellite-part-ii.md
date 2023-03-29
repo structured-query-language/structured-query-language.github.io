@@ -51,9 +51,10 @@ pattern (initial_subscription_tier modified_subscription_tier+ reveral_of_subscr
 The following [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer(s) that started with Subscription Tier, switched to a different Subscription Tier, and then switched back to the first Subscription Tier they had.
 
 ```sql
-with effectivity_sat as (
+with effectivity_sat as(
   select * 
-  from sate_customer_subscription where end_date = '9999-12-31'
+  from sate_customer_subscription 
+  where end_date = '9999-12-31'
 ) 
 select * 
 from effectivity_sat
@@ -63,19 +64,19 @@ match_recognize(
   measures
   classifier() as action
   all rows per match  
-  pattern (initial_subscription_tier modified_subscription_tier+ reveral_of_subscription_tier)
+  pattern (init modification+ reversal)
   define 
-    initial_subscription as subscription_tier_bk = first_value(subscription_tier_bk)
-    , change_in_subscription as subscription_tier_bk <> first_value(subscription_tier_bk)
-    , reveral_of_subscription_tier as subscription_tier_bk = first_value(subscription_tier_bk)
+    init as subscription_tier_bk = first_value(subscription_tier_bk)
+    , modification as subscription_tier_bk <> first_value(subscription_tier_bk)
+    , reversal as subscription_tier_bk = first_value(subscription_tier_bk)
 );
 ```
 
-| CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION                       |
-|-------------|----------------------|------------|------------|------------------------------|
-| Angela      | Premium              | 2021-02-01 | 9999-12-31 | INITIAL_SUBSCRIPTION_TIER    |
-| Angela      | Free                 | 2021-03-01 | 9999-12-31 | MODIFIED_SUBSCRIPTION_TIER   |
-| Angela      | Premium              | 2021-05-15 | 9999-12-31 | REVERAL_OF_SUBSCRIPTION_TIER |
+| CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION       |
+|-------------|----------------------|------------|------------|--------------|
+| Angela      | Premium              | 2021-02-01 | 9999-12-31 | INIT         |
+| Angela      | Free                 | 2021-03-01 | 9999-12-31 | MODIFICATION |
+| Angela      | Premium              | 2021-05-15 | 9999-12-31 | REVERSAL     |
 
 
 There are three tiers of PAID plans-- Personal, Premium and Business. A Customer may switch between these tiers multiple times before finally downgrading to a FREE tier.
@@ -85,11 +86,11 @@ There are three tiers of PAID plans-- Personal, Premium and Business. A Customer
 
 The query identified the following Customers started with a Premium Subscription Tier, switched to a Free Subscription Tier, and then eventually _switched back_ to the original Subscription Tier (Premium).
 
-| CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION                       |
-|-------------|----------------------|------------|------------|------------------------------|
-| Angela      | Premium              | 2021-02-01 | 9999-12-31 | INITIAL_SUBSCRIPTION_TIER    |
-| Angela      | Free                 | 2021-03-01 | 9999-12-31 | MODIFIED_SUBSCRIPTION_TIER   |
-| Angela      | Premium              | 2021-05-15 | 9999-12-31 | REVERAL_OF_SUBSCRIPTION_TIER |
+| CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION       |
+|-------------|----------------------|------------|------------|--------------|
+| Angela      | Premium              | 2021-02-01 | 9999-12-31 | INIT         |
+| Angela      | Free                 | 2021-03-01 | 9999-12-31 | MODIFICATION |
+| Angela      | Premium              | 2021-05-15 | 9999-12-31 | REVERSAL     |
 
 
 # See also

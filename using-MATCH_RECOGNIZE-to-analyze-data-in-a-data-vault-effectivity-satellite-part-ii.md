@@ -44,7 +44,7 @@ One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-sat
 
 In the MATCH_RECOGNIZE clause, the pattern is constructed from basic building blocks, called pattern variables, to which operators (quantifiers and other modifiers) like Kleene Star `*` and Kleene Plus `+`  and  can be applied. The whole pattern must be enclosed in paranthesis. For example a pattern can be defined as following:
 ```
-pattern (initial_subscription_tier modified_subscription_tier+ reveral_of_subscription_tier)
+(init modification+ reversal)
 ```
 
 

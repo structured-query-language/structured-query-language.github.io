@@ -18,6 +18,8 @@
 | Angela      | Premium              | 2021-02-01 | 9999-12-31 |
 | Angela      | Premium              | 2021-02-01 | 2021-03-01 |
 | Angela      | Free                 | 2021-03-01 | 9999-12-31 |
+| Angela      | Free                 | 2021-03-01 | 2021-05-15 |
+| Angela      | Premium              | 2021-05-15 | 9999-12-31 |
 | Ryan        | Free                 | 2021-03-01 | 9999-12-31 |
 
 The above [Effectivity Satellite](data-vault-effectivity-satellite.md) is used to track the subscription tier a Customer has purchased. The `CUSTOMER_BK` is the Driving Key, and the `SUBSCRIPTION_TIER_BK` is the Secondary Foreign Key. The `START_DATE` and the `END_DATE` indicate when the Subscription was purchased and when it was ended. 
@@ -47,21 +49,24 @@ In the MATCH_RECOGNIZE clause the pattern is constructed from basic building blo
 The following [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer that switched from a PAID Wordpress tier to FREE tier. 
 
 ```sql
+with effectivity_sat as(
 select * 
-from sate_customer_subscription
+from sate_customer_subscription where end_date = '9999-12-31'
+) 
+select * 
+from effectivity_sat
 match_recognize(
   partition by customer_bk
   order by start_date
   measures
-    paid.subscription_tier_bk as paid_subscription_tier
-    , paid.start_date paid_subscription_start_date
-    , free.start_date basic_susbcription_start_date   
-  after match skip past last row
-  pattern (paid+ free)
+  classifier() as action
+  all rows per match  
+  pattern (initial_subscription_tier modified_subscription_tier+ reveral_of_subscription_tier)
   define 
-    paid as paid.subscription_tier_bk in ('Personal', 'Premium', 'Business'), 
-    free as free.subscription_tier_bk = 'Free'
-)
+    initial_subscription as subscription_tier_bk = first_value(subscription_tier_bk)
+    , change_in_subscription as subscription_tier_bk <> first_value(subscription_tier_bk)
+    , reveral_of_subscription_tier as subscription_tier_bk = first_value(subscription_tier_bk)
+);
 ```
 
 There are three tiers of PAID plans-- Personal, Premium and Business. A Customer may switch between these tiers multiple times before finally downgrading to a FREE tier.
@@ -69,12 +74,13 @@ There are three tiers of PAID plans-- Personal, Premium and Business. A Customer
 
 ### Query Output
 
-The query identified the following Customers that had PAID subscription and then eventually downgraded to a FREE tier
+The query identified the following Customers started with a Subscription Tier, switched to a different Subscription Tier, and then eventually _switched back_ to the original Subscription Tier.
 
-| CUSTOMER_BK | PAID_SUBSCRIPTION_TIER | PAID_SUBSCRIPTION_START_DATE | BASIC_SUSBCRIPTION_START_DATE |
-|-------------|------------------------|------------------------------|-------------------------------|
-| Scott       | Personal               | 2021-01-01                   | 2021-06-01                    |
-| Angela      | Premium                | 2021-02-01                   | 2021-03-01                    |
+| CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION                       |
+|-------------|----------------------|------------|------------|------------------------------|
+| Angela      | Premium              | 2021-02-01 | 9999-12-31 | INITIAL_SUBSCRIPTION_TIER    |
+| Angela      | Free                 | 2021-03-01 | 9999-12-31 | MODIFIED_SUBSCRIPTION_TIER   |
+| Angela      | Premium              | 2021-05-15 | 9999-12-31 | REVERAL_OF_SUBSCRIPTION_TIER |
 
 
 # See also

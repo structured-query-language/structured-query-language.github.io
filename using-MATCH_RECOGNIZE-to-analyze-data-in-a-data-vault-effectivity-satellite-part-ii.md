@@ -70,6 +70,7 @@ match_recognize(
     , reveral_of_subscription_tier as subscription_tier_bk = first_value(subscription_tier_bk)
 );
 ```
+
 | CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION                       |
 |-------------|----------------------|------------|------------|------------------------------|
 | Angela      | Premium              | 2021-02-01 | 9999-12-31 | INITIAL_SUBSCRIPTION_TIER    |

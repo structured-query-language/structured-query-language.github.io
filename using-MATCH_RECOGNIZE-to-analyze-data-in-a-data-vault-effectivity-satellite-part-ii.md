@@ -51,9 +51,9 @@ pattern (initial_subscription_tier modified_subscription_tier+ reveral_of_subscr
 The following [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query can be used on the above [Effectivity Satellite](data-vault-effectivity-satellite.md) to identity Customer(s) that started with Subscription Tier, switched to a different Subscription Tier, and then switched back to the first Subscription Tier they had.
 
 ```sql
-with effectivity_sat as(
-select * 
-from sate_customer_subscription where end_date = '9999-12-31'
+with effectivity_sat as (
+  select * 
+  from sate_customer_subscription where end_date = '9999-12-31'
 ) 
 select * 
 from effectivity_sat
@@ -70,6 +70,12 @@ match_recognize(
     , reveral_of_subscription_tier as subscription_tier_bk = first_value(subscription_tier_bk)
 );
 ```
+| CUSTOMER_BK | SUBSCRIPTION_TIER_BK | START_DATE | END_DATE   | ACTION                       |
+|-------------|----------------------|------------|------------|------------------------------|
+| Angela      | Premium              | 2021-02-01 | 9999-12-31 | INITIAL_SUBSCRIPTION_TIER    |
+| Angela      | Free                 | 2021-03-01 | 9999-12-31 | MODIFIED_SUBSCRIPTION_TIER   |
+| Angela      | Premium              | 2021-05-15 | 9999-12-31 | REVERAL_OF_SUBSCRIPTION_TIER |
+
 
 There are three tiers of PAID plans-- Personal, Premium and Business. A Customer may switch between these tiers multiple times before finally downgrading to a FREE tier.
 

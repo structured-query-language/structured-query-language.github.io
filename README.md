@@ -16,3 +16,4 @@
 - [Data Vault Effectivity Satellite](data-vault-effectivity-satellite.md) 
 - [Using MATCH_RECOGNIZE to analyze data in a Data Vault Effectivity Satellite](using-MATCH_RECOGNIZE-to-analyze-data-in-a-data-vault-effectivity-satellite.md)
 - [NULL-safe comparison in Snowflake SQL](null-safe-comparison-in-snowflake-sql.md)
+- [Using MATCH_RECOGNIZE to analyze data in a Data Vault Effectivity Satellite](using-MATCH_RECOGNIZE-to-analyze-data-in-a-data-vault-effectivity-satellite-part-ii.md)

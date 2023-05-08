@@ -29,3 +29,5 @@ group by sales_associate;
 | Scott           | 50                | 26.2295           | 13.2231514654   |
 | Angela          | 33.3333           | 32.7869           | 24.7934089202   |
 | Bob             | 16.6667           | 40.9836           | 61.9835223004   |
+
+> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>

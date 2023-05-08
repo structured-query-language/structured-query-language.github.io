@@ -25,6 +25,7 @@ group by sales_associate;
 ```
 
 ## Output
+
 | SALES_ASSOCIATE | NUMBER_OF_SALES_% | AMOUNT_OF_SALES_% | MEAN_OF_SALES_% |
 |-----------------|-------------------|-------------------|-----------------|
 | Scott           | 50                | 26.2295           | 13.2231514654   |

@@ -11,3 +11,9 @@ select
 from sales
 group by sales_associate;
 ```
+
+| SALES_ASSOCIATE | NUMBER_OF_SALES_% | AMOUNT_OF_SALES_% | MEAN_OF_SALES_% |
+|-----------------|-------------------|-------------------|-----------------|
+| Scott           | 50                | 26.2295           | 13.2231514654   |
+| Angela          | 33.3333           | 32.7869           | 24.7934089202   |
+| Bob             | 16.6667           | 40.9836           | 61.9835223004   |

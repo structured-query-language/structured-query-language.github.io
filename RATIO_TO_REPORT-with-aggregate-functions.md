@@ -3,14 +3,14 @@
 
 ##### Input Data
 
-| TRANSACTION_ID | AMOUNT | SALES_ASSOCIATE |
-|----------------|--------|-----------------|
-| 1              | 100    | Scott           |
-| 2              | 200    | Scott           |
-| 3              | 20     | Scott           |
-| 4              | 200    | Angela          |
-| 5              | 200    | Angela          |
-| 6              | 500    | Bob             |
+| TRANSACTION_ID | AMOUNT | ASSOCIATE|
+|----------------|--------|----------|
+| 1              | 100    | Scott    |
+| 2              | 200    | Scott    |
+| 3              | 20     | Scott    |
+| 4              | 200    | Angela   |
+| 5              | 200    | Angela   |
+| 6              | 500    | Bob      |
 
 #### RATIO_TO_REPORT query
 
@@ -26,10 +26,10 @@ group by sales_associate;
 
 ### Output
 
-| SALES_ASSOCIATE | NUMBER_OF_SALES_% | AMOUNT_OF_SALES_% | MEAN_OF_SALES_% |
-|-----------------|-------------------|-------------------|-----------------|
-| Scott           | 50                | 26.2295           | 13.2231514654   |
-| Angela          | 33.3333           | 32.7869           | 24.7934089202   |
-| Bob             | 16.6667           | 40.9836           | 61.9835223004   |
+| ASSOCIATE | NUMBER_OF_SALES_% | AMOUNT_OF_SALES_% |
+|-----------|-------------------|-------------------|
+| Scott     | 50                | 26.2295           |
+| Angela    | 33.3333           | 32.7869           |
+| Bob       | 16.6667           | 40.9836           |
 
 > <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>

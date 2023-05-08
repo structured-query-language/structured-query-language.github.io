@@ -1,7 +1,7 @@
 # RATIO_TO_REPORT
 `RATIO_TO_REPORT` is a powerful Snowflake function that lets you calculate the ratio of a value to the various aggregations of data. The following query, for example, uses `RATIO_TO_REPORT` to calculate the Number of Sales, Amount of Sales and Average Sales as a Percentage for each Sales Associate
 
-## Input Data
+##### Input Data
 
 | TRANSACTION_ID | AMOUNT | SALES_ASSOCIATE |
 |----------------|--------|-----------------|
@@ -12,7 +12,7 @@
 | 5              | 200    | Angela          |
 | 6              | 500    | Bob             |
 
-## RATIO_TO_REPORT query
+#### RATIO_TO_REPORT query
 
 ```sql
 select 
@@ -24,7 +24,7 @@ from sales
 group by sales_associate;
 ```
 
-## Output
+### Output
 
 | SALES_ASSOCIATE | NUMBER_OF_SALES_% | AMOUNT_OF_SALES_% | MEAN_OF_SALES_% |
 |-----------------|-------------------|-------------------|-----------------|

@@ -32,4 +32,3 @@ group by sales_associate;
 | Angela    | 33.3333           | 32.7869           |
 | Bob       | 16.6667           | 40.9836           |
 
-> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>

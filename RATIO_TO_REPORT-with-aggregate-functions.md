@@ -18,7 +18,7 @@
 select 
  sales_associate
  , 100 * ratio_to_report(count(*)) over() as "NUMBER_OF_SALES_%"
- , 100 *ratio_to_report(sum(amount)) over() as "AMOUNT_OF_SALES_%"
+ , 100 * ratio_to_report(sum(amount)) over() as "AMOUNT_OF_SALES_%"
  , 100 * ratio_to_report(avg(amount)) over() as "MEAN_OF_SALES_%"
 from sales
 group by sales_associate;

@@ -3,33 +3,3 @@ title: SQL
 
 titles_from_headings:
   enabled:     true
-  strip_title: true
-  collections: true 
- 
-plugins:
-  - jekyll-relative-links
-  - jekyll-include-cache
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - README.md
-  - LICENSE.md
-  
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark"
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      classes: wide

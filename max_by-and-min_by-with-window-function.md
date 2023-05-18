@@ -26,13 +26,13 @@ select distinct
   , max_by(order_amount, order_amount, 2) 
     over (partition by sales_associate) as top_2_sales_by_amount
   , min_by(order_amount, order_amount, 2)
-    over (partition by sales_associate) as lowest_2_sales_in_dollars
+    over (partition by sales_associate) as lowest_2_sales_by_amount
 from orders;
 ```
 
 ## Output
 
-| SALES_ASSOCIATE | TOP_2_SALES_BY_AMOUNT | LOWEST_2_SALES_IN_DOLLARS |
+| SALES_ASSOCIATE | TOP_2_SALES_BY_AMOUNT | LOWEST_2_SALES_BY_AMOUNT |
 |-----------------|-----------------------|---------------------------|
 | Chelsea         | [   30,   20 ]        | [   5,   10 ]             |
 | Anna            | [   199,   50 ]       | [   1,   2 ]              |

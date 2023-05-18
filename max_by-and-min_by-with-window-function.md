@@ -29,6 +29,7 @@ from orders;
 ```
 
 ## Output
+
 | SALES_ASSOCIATE | TOP_2_SALES_BY_AMOUNT | LOWEST_2_SALES_IN_DOLLARS |
 |-----------------|-----------------------|---------------------------|
 | Chelsea         | [   30,   20 ]        | [   5,   10 ]             |

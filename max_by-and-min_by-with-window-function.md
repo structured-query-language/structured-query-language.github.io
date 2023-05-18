@@ -23,8 +23,10 @@
 ```sql
 select distinct
   sales_associate
-  , max_by(order_amount, order_amount, 2)  over (partition by sales_associate) as top_2_sales_by_amount
-  , min_by(order_amount, order_amount, 2)  over (partition by sales_associate) as lowest_2_sales_in_dollars
+  , max_by(order_amount, order_amount, 2) 
+    over (partition by sales_associate) as top_2_sales_by_amount
+  , min_by(order_amount, order_amount, 2)
+    over (partition by sales_associate) as lowest_2_sales_in_dollars
 from orders;
 ```
 

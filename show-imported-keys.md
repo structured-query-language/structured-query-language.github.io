@@ -1,4 +1,4 @@
-# Getting Foreign Keys on Tables
+# Getting Foreign Keys on Tables in Snowflakes
 
 ## Create tables with Foreign Keys in Snowflake
 

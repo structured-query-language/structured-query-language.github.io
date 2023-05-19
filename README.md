@@ -20,3 +20,4 @@
 - [RATIO_TO_REPORT with Aggregate Functions](RATIO_TO_REPORT-with-aggregate-functions.md)
 - [MAX_BY() and MIN_BY() with Window Function](max_by-and-min_by-with-window-function.md)
 - [SHOW IMPORTED KEYS](show-imported-keys.md)
+- [Getting Foreign Keys on Tables in Snowflakes](show-imported-keys.md)

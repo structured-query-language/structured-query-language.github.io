@@ -2,7 +2,7 @@
 
 ## Create tables with Foreign Keys in Snowflake
 
-```
+```sql
 use scratch.saqib_ali;
 create or replace table customers(
   customer_id int

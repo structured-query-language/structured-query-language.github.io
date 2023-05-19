@@ -1,5 +1,7 @@
 # Getting Foreign Keys on Tables
 
+## Create tables with Foreign Keys in Snowflake
+
 ```
 use scratch.saqib_ali;
 create or replace table customers(

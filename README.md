@@ -19,3 +19,4 @@
 - [Using MATCH_RECOGNIZE to analyze data in a Data Vault Effectivity Satellite - Part II](using-MATCH_RECOGNIZE-to-analyze-data-in-a-data-vault-effectivity-satellite-part-ii.md)
 - [RATIO_TO_REPORT with Aggregate Functions](RATIO_TO_REPORT-with-aggregate-functions.md)
 - [MAX_BY() and MIN_BY() with Window Function](max_by-and-min_by-with-window-function.md)
+- [SHOW IMPORTED KEYS](show-imported-keys.md)

@@ -30,8 +30,6 @@ create or replace table orders(
 SHOW IMPORTED KEYS;
 ```
 
-## Query Output
-
 | created_on                    | pk_database_name | pk_schema_name | pk_table_name | pk_column_name | fk_database_name | fk_schema_name | fk_table_name    | fk_column_name | key_sequence | update_rule | delete_rule | fk_name              | pk_name     | deferrability  | rely  | comment |
 |-------------------------------|------------------|----------------|---------------|----------------|------------------|----------------|------------------|----------------|--------------|-------------|-------------|----------------------|-------------|----------------|-------|---------|
 | 2023-05-20 08:33:08.878 -0700 | SCRATCH          | SAQIB_ALI      | CUSTOMERS     | CUSTOMER_ID    | SCRATCH          | SAQIB_ALI      | CUSTOMER_ADDRESS | CUSTOMER_ID    | 1            | NO ACTION   | NO ACTION   | CUSTOMER_FOREING_KEY | PRIMARY_KEY | NOT DEFERRABLE | FALSE |         |

@@ -21,4 +21,5 @@
 - [MAX_BY() and MIN_BY() with Window Function](max_by-and-min_by-with-window-function.md)
 - [SHOW IMPORTED KEYS](show-imported-keys.md)
 - [Getting Foreign Keys on Tables in Snowflakes](show-imported-keys.md)
-- [How to find column names in a FK constraint](show-imported-keys.md)
+- [How to find column names in a FK constraint?](show-imported-keys.md)
+- [How to get the column names for a foreign key constraint?](show-imported-keys.md)

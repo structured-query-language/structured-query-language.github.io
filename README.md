@@ -23,3 +23,4 @@
 - [Getting Foreign Keys on Tables in Snowflakes](show-imported-keys.md)
 - [How to find column names in a FK constraint?](show-imported-keys.md)
 - [How to get the column names for a foreign key constraint?](show-imported-keys.md)
+- [List Foreign Keys in Snowflake](show-imported-keys.md)

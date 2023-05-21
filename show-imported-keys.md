@@ -1,6 +1,8 @@
 # Getting Foreign Keys on Tables in Snowflake
 
 
+## Entity Relationship (ER) Diagram with Primary Keys and Foreign Key constraints
+
 ![SFDC Opportunity-2023-05-21](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/57134e23-6eed-4424-8f04-c95d8dd2175b)
 
 ## Create tables with Foreign Keys in Snowflake

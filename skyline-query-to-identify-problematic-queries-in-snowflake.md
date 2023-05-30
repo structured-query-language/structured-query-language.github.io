@@ -4,6 +4,7 @@ Selecting the correct Warehouse size in Snowflake can be tricky. If your queries
 
 ![image](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/bce0ffe5-fee2-4d8e-964d-935b5f714b4c)
 
+## Skyline Query
 
 ```sql
 with query_history as (
@@ -29,3 +30,9 @@ where not exists ( -- Skyline query to identify worst performing queries
 );
 ```
 
+## Query Output
+
+| QUERY_TEXT        | bytes_spilled_to_remote_storage (GB) | WAREHOUSE_SIZE |
+|-------------------|--------------------------------------|----------------|
+| select * from ... | 4                                    | 1              |
+| select * from ... | 5                                    | 4              |

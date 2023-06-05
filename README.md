@@ -27,3 +27,6 @@
 - [List Foreign Keys in Snowflake](show-imported-keys.md)
 - [Skyline query to identify problematic queries in Snowflake](skyline-query-to-identify-problematic-queries-in-snowflake.md)
 - [Maximum Vector Problem as a solution to identifying problematic queries in Snowflake](skyline-query-to-identify-problematic-queries-in-snowflake.md)
+- [Skyline Query](skyline-query-pareto-set-maxima.md)
+- [Pareto Front](skyline-query-pareto-set-maxima.md)
+- [Pareto Set](skyline-query-pareto-set-maxima.md)

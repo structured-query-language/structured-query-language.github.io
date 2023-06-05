@@ -40,3 +40,38 @@ where not exists (
 
 
 ![image](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/62ca294d-82b6-4418-a21a-334b182462ad)
+
+## Skyline in Python
+
+```python
+#!pip install paretoset
+ 
+from paretoset import paretoset
+import pandas as pd
+import matplotlib.pyplot as plt
+
+hotels = pd.DataFrame({"price": [400, 380, 340, 300, 280, 260, 200, 180, 140, 120, 60], 
+                       "distance_to_destination": [4, 24, 14, 36, 26, 8, 40, 20, 34, 28, 16]})
+skyline = paretoset(hotels, sense=["min", "min"])
+skyline_hotels = hotels[skyline]
+
+
+
+plt.scatter(hotels.loc[:, 'price'], hotels.loc[:, 'distance_to_destination'], alpha=0.5)
+plt.scatter(skyline_hotels.loc[:, 'price'], skyline_hotels.loc[:, 'distance_to_destination'], alpha=0.1, s=300)
+plt.plot(skyline_hotels.loc[:, 'price'], skyline_hotels.loc[:, 'distance_to_destination'], alpha=0.1)
+plt.xlabel("price")
+plt.ylabel("distance to destination")
+
+plt.gca().invert_xaxis()
+plt.gca().invert_yaxis()
+plt.show()
+
+print(skyline_hotels)
+```
+
+|hotel|price|distance_to_destination|
+|-----|-----|-----------------------|
+| 0   |400  |                     4 |
+| 5   |260  |                     8 |
+| 10  |60   |                    16 |

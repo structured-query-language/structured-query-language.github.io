@@ -30,3 +30,4 @@
 - [Skyline Query](skyline-query-pareto-set-maxima.md)
 - [Pareto Front](skyline-query-pareto-set-maxima.md)
 - [Pareto Set](skyline-query-pareto-set-maxima.md)
+- [Pareto Frontier](skyline-query-pareto-set-maxima.md)

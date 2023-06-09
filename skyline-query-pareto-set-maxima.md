@@ -1,5 +1,5 @@
 # Skyline Query
-Skyline, also known as Pareto Frontier or Pareto Set in Business Management or Maxima in Computional Geometry, is a usefuk technique in multi-criteria analysis and decision support.  Skyline aims to identity points in n-dimensions that are not dominated by any other point. In other words, a Skyline is formed using points that are best in at least one dimension and at least as good as other best points in every other dimension. The following plot illustrates a Skyline in 2-dimensional space
+Skyline, also known as Pareto Frontier or Pareto Set in Business Management or Maxima in Computional Geometry, is a useful technique in multi-criteria analysis and decision support.  Skyline aims to identify points in n-dimensions that are not dominated by any other point. In other words, a Skyline is formed using points that are best in at least one dimension and at least as good as other best points in every other dimension. The following plot illustrates a Skyline in 2-dimensional space
 
 ![image](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/62ca294d-82b6-4418-a21a-334b182462ad)
 

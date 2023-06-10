@@ -84,6 +84,3 @@ The query identified the following Customers that had PAID subscription and then
 1. [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
 1. [A/B Analysis on Streaming Data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
 1. [Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE](correlated-pattern-definitions-and-MATCH_RECOGNIZE.md)
-
-> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
-

@@ -1,4 +1,4 @@
-# Skyline query to identify problematic queries in Snowflake
+# Skyline Query to identify problematic queries in Snowflake
 
 Selecting the correct Warehouse size in Snowflake can be tricky. If your queries are spilling over to the Remote Storage then you either need to re-write the query or increase the Warehouse size. But how do you identify these problematic queries that are running on undersized Warehouse? Identifying these queries is a Maximum Vector problem that be solved using [Skyline queries](skyline-query-pareto-set-maxima.md). A [Skyline query](skyline-query-pareto-set-maxima.md) finds points in a vector space that dominate other points. Here is how a [Skyline Query](skyline-query-pareto-set-maxima.md) can be used to identify Snowflake queries that are problematic.
 

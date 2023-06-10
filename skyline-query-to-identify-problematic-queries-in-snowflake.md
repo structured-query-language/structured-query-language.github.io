@@ -36,3 +36,7 @@ where not exists ( -- Skyline query to identify worst performing queries
 |-------------------|--------------------------------------|----------------|
 | select * from ... | 4                                    | 1              |
 | select * from ... | 5                                    | 4              |
+
+
+# See also
+[Skyline Query](skyline-query-pareto-set-maxima.md)

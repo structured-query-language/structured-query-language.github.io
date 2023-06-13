@@ -80,4 +80,5 @@ print(skyline_hotels)
 | 5   |260  |                     8 |
 | 10  |60   |                    16 |
 
+# See also
 [Skyline Query to identify problematic queries in Snowflake](skyline-query-to-identify-problematic-queries-in-snowflake.md)

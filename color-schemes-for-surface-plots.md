@@ -39,3 +39,10 @@ trisurf = ax.plot_trisurf(skyline_hotels.loc[:, 'price'], skyline_hotels.loc[:, 
 #### RGBA value: (0.39, 0.96, 0.6, 0.19)  Edge-color: #4D5185
 ![image](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/a6313673-3908-4d5b-8214-04a977b9af8c)
 
+
+-----
+
+#### RGBA value: (0.45, 1.0, 0.09, 0.24)  Edge-color: #757017
+![image](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/e32ef930-0323-4393-8aa4-26a42c3dc53a)
+
+

@@ -1,3 +1,10 @@
+# Data Wrangling in Snowflake using Python Anoymous Procedures
+
+With Snowflake recently releasing support for Anonymous Procedures and the ability to return Tabular data from Python Procedure, you can now utilize the power of Python and Pandas to Wrangle Snowflake data and return the data in a Tabular format.
+
+Snowflake Anonymous Procedures
+- You don't need to have a role with CREATE PROCEDURE schema privileges 
+- The procedure runs with caller's permissions
 
 
 

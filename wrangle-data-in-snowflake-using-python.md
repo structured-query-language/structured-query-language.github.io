@@ -13,7 +13,7 @@ With Snowflake Anonymous Procedures
 Here is an example on how to use Anonymous Procedures with Python Pandas to filter data. This is a simple example but you can do anytype of data wrangling that Python will support.
 
 ```sql
-with wrangle_data_with_pandas as PROCEDURE (table_name VARCHAR , key_name VARCHAR)
+with wrangle_data_with_pandas as PROCEDURE (table_name VARCHAR, channel VARCHAR)
 returns TABLE()
 language python
 runtime_version = '3.10'

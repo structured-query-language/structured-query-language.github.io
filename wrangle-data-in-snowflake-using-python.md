@@ -14,12 +14,12 @@ returns TABLE()
 language python
 runtime_version = '3.10'
 packages = ('snowflake-snowpark-python')
-handler = 'wrangle_data_with_pandas_defintion'
+handler = 'wrangle_data_with_pandas_definition'
 as
 $$
 import pandas
 
-def wrangle_data_with_pandas_defintion(session, table_name, channel):
+def wrangle_data_with_pandas_definition(session, table_name, channel):
   
   
   # Read the data from the Snowflake table into a Snowflake Dataframe

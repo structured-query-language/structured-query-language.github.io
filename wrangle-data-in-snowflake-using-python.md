@@ -10,7 +10,7 @@ With Snowflake Anonymous Procedures
 
 
 ## Sample Anonymous Procedure
-Here is an example on how to use Anonymous Procedures with Python Pandas to filter data. This is a simple usecase but you can do anytype of data wrangling that Python will support.
+Here is an example on how to use Anonymous Procedures with Python Pandas to filter data. This is a simple example but you can do anytype of data wrangling that Python will support.
 
 ```sql
 with wrangle_data_with_pandas as PROCEDURE (table_name VARCHAR , key_name VARCHAR)

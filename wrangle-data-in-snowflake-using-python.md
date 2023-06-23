@@ -13,17 +13,17 @@ With Snowflake Anonymous Procedures
 Here is an example on how to use Anonymous Procedures with Python Pandas to filter data. This is a simple example but you can do anytype of data wrangling that Python will support.
 
 ```sql
-with wrangle_data_with_pandas as PROCEDURE (table_name VARCHAR, channel VARCHAR)
+with wrangle_data_using_pandas as PROCEDURE (table_name VARCHAR, channel VARCHAR)
 returns TABLE()
 language python
 runtime_version = '3.10'
 packages = ('snowflake-snowpark-python')
-handler = 'wrangle_data_with_pandas_definition'
+handler = 'wrangle_data_using_pandas_definition'
 as
 $$
 import pandas
 
-def wrangle_data_with_pandas_definition(session, table_name, channel):
+def wrangle_data_using_pandas_definition(session, table_name, channel):
   
   
   # Read the data from the Snowflake table into a Snowflake Dataframe
@@ -42,7 +42,7 @@ def wrangle_data_with_pandas_definition(session, table_name, channel):
   return df_snowflake_filtered
   
 $$
-call wrangle_data_with_pandas('scratch.saqib_ali.transactions', 'online')
+call wrangle_data_using_pandas('scratch.saqib_ali.transactions', 'store')
 ;
 ```
 

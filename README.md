@@ -33,3 +33,4 @@
 - [Pareto Frontier](skyline-query-pareto-set-maxima.md)
 - [Color Schemes for Surface Plots](color-schemes-for-surface-plots.md)
 - [Wrangle data in Snowflake using Python](wrangle-data-in-snowflake-using-python.md)
+- [Data Metric Function in Snowflake](data-metric-function-in-snowflake.md)

@@ -1,11 +1,12 @@
 # Data Metric Function in Snowflake
 Data Metric Functions allow you to automate data quality validation and monitoring. DMFs are defined as following:
 
-## Create a metric to count null values
+## Create a Data Metric Function to count null values
 ```sql
+
 CREATE DATA METRIC FUNCTION IF NOT EXISTS count_of_nulls (ARG_T TABLE (ARG_C STRING)) RETURNS NUMBER
 AS
-  'SELECT COUNT IF(ARG C IS NULL) from ARG T';
+  'SELECT COUNT IF(ARG_C IS NULL) from ARG_T';
 
 -- Attach metric to the EMAIL COL column
 ALTER TABLE some_table ADD DATA METRIC FUNCTION count_of_nulls ON (EMAIL_COL);
@@ -13,10 +14,10 @@ ALTER TABLE some_table ADD DATA METRIC FUNCTION count_of_nulls ON (EMAIL_COL);
 -- Tell Snowflake to evaluate the function every 1 minute
 ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = '1 MINUTE';
 
-- View the metric to verify EMAIL COL doesn't include nulls
+-- View the metric to verify EMAIL COL doesn't include nulls
 SELECT to_number (VALUE) as count, TABLE_NAME, COLUMN_NAMES,
 FROM db.schema.data_metric_results
-WHERE COLUMN_NAME = 'EMAIL COL'
+WHERE COLUMN_NAME = 'EMAIL_COL'
 ORDER BY SCHEDULED_TIME DESC;
 ```
 

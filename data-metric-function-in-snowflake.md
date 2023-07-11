@@ -3,7 +3,7 @@ Data Metric Functions allow you to automate data quality validation and monitori
 
 ## Create a metric to count null values
 ```sql
-CREATE DATA METRIC FUNCTION IF NOT EXISTS count of nulls (ARG_T TABLE (ARG_C STRING)) RETURNS NUMBER
+CREATE DATA METRIC FUNCTION IF NOT EXISTS count_of_nulls (ARG_T TABLE (ARG_C STRING)) RETURNS NUMBER
 AS
   'SELECT COUNT IF(ARG C IS NULL) from ARG T';
 

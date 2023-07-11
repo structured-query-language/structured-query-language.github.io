@@ -1,9 +1,9 @@
 # Data Metric Function in Snowflake
-Data Metric Functions allow you to automate data quality validation and monitoring. DMFs are defined as following:
+Data Metric Functions (DMF) allow you to automate data quality validation and monitoring. DMFs are defined as following:
 
 ## Create a Data Metric Function to count null values
-```sql
 
+```sql
 CREATE DATA METRIC FUNCTION IF NOT EXISTS count_of_nulls (ARG_T TABLE (ARG_C STRING)) RETURNS NUMBER
 AS
   'SELECT COUNT IF(ARG_C IS NULL) from ARG_T';
@@ -23,7 +23,7 @@ ORDER BY SCHEDULED_TIME DESC;
 
 
 
-DMFs allow you to:
+Data Metric Functions allow you to:
 
 1. Create custom quality metric rules as a reusable functions
 2. Apply rules to one or more columns
@@ -32,7 +32,7 @@ DMFs allow you to:
 5. Metrics are executed by the serverless backend, no need to keep your warehouse running
 6. View and manage all of your quality metrics in a single place
 
-Creating a DMF is as simple as creating a UDF.  The function takes a new TABLE data type with one or more column arguments and returns a single result value.
+Creating a Data Metric Function is as simple as creating a UDF.  The function takes a new TABLE data type with one or more column arguments and returns a single result value.
 
 ```sql
 CREATE DATA METRIC FUNCTION IF NOT EXISTS count_of_nulls (
@@ -42,14 +42,14 @@ AS
 ;
 ```
 
-All DMFs are added to your warehouse so other users can reuse them in a consistent manner without having to recreate the same rules over and over.
+All Data Metric Functions are added to your warehouse so other users can reuse them in a consistent manner without having to recreate the same rules over and over.
 
 You can see which metrics are available by running:
 
 ```sql
 SHOW DATA METRIC FUNCTIONS IN MY_DB.MY_SCHEMA;
 ```
-Now you need to attach the DMF to the columns you want to evaluate, like this:
+Now you need to attach the Data Metric Function to the columns you want to evaluate, like this:
 
 ```sql
 ALTER TABLE some_table ADD DATA METRIC FUNCTION count_of_nulls ON (EMAIL_COL);

@@ -25,7 +25,7 @@ ORDER BY SCHEDULED_TIME DESC;
 DMFs allow you to:
 
 1. Create custom quality metric rules as a reusable functions
-2. Apply rules to one of more columns
+2. Apply rules to one or more columns
 3. Specific how frequently you want the quality metrics to be calculated
 4. Execute metric functions ad-hoc (for testing) or incorporate into your pipelines
 5. Metrics are executed by the serverless backend, no need to keep your warehouse running
@@ -61,7 +61,7 @@ Next, you set the interval at which metrics should be calculated. This is config
 ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = ‘1 MINUTE’’;
 ```
 
-You can then query the metrics results by querying the DATA_METRIC_RESULTS table from schema where tables to be validated reside.
+You can then query the metrics results by querying the `DATA_METRIC_RESULTS` table from schema where tables to be validated reside.
 
 ```sql
 SELECT to_number(VALUE) as count, TABLE_NAME, COLUMN_NAMES, 

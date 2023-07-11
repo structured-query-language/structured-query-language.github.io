@@ -59,7 +59,7 @@ ALTER TABLE some_table ADD DATA METRIC FUNCTION count_of_nulls ON (EMAIL_COL);
 Next, you set the interval at which metrics should be calculated. This is configured at the table level and can be as frequent as 1 minute.
 
 ```sql
-ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = ‘1 MINUTE’’;
+ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = '1 MINUTE';
 ```
 
 You can then query the metrics results by querying the `DATA_METRIC_RESULTS` table from schema where tables to be validated reside.
@@ -67,7 +67,7 @@ You can then query the metrics results by querying the `DATA_METRIC_RESULTS` tab
 ```sql
 SELECT to_number(VALUE) as count, TABLE_NAME, COLUMN_NAMES, 
 FROM my_db.my_schema.data_metric_results
-WHERE COLUMN_NAME = ‘EMAIL_COL’
+WHERE COLUMN_NAME = 'EMAIL_COL'
 ORDER BY SCHEDULED_TIME DESC;
 ```
 

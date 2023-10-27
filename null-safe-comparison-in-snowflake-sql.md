@@ -37,6 +37,7 @@ where table_a.name is distinct from table_b.name;
 |----|-------|--------|
 | 2  | scott | scottt |
 | 3  | bob   | NULL   |
+
 > Note that the ID = 3 shows up even though NAME was null TABLE_B for this ID. This is because we used `is distinct from` instead of `<>` or `!=` operator.
 
 

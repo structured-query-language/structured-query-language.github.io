@@ -4,6 +4,6 @@ title: SQL
 titles_from_headings:
   enabled:     true
   
-theme: minima
+remote_theme: jekyll/minima
 minima:
   skin: dark

@@ -1,4 +1,4 @@
-# Using query_hash and query_parameterized_hash in Snowflake to indentify queries eating up a Warehouse
+# What's eating up your Snowflake Virtual Warehouse?
 
 Managing Warehouses in Snowflake can be tricky. At times you will have badly written queries that are being executed multiple times on a Warehouse. This eats up the Warehouse, and other queries get queued up. A badly written query that only gets executed once is not the problem, but if it gets executed over and over then it becomes a problem. To address this, you need to first identify queries that have a longer execution time and are being executed multiple times.
 

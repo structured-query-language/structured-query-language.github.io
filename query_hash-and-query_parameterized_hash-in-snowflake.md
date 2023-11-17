@@ -18,33 +18,39 @@ Identifying queries that have a longer execution time and are executed multiple 
 ```sql
 with query_history as (
   select 
-    query_text
-    , bytes_spilled_to_remote_storage
-    , decode(warehouse_size, 'X-Small', 1, 'Small', 2, 'Medium', 3, 'Large', 4, 'X-Large', 5) as warehouse_size
-    from snowflake.account_usage.query_history
-    where warehouse_size is not null and bytes_spilled_to_remote_storage > 1000
-    order by start_time desc
-    limit 10000
+    query_parameterized_hash
+    , avg(execution_time/60000) as avg_execution_time_in_minutes
+    , count(query_id) as number_of_times_executed
+from snowflake.account_usage.query_history
+where warehouse_name ilike '{WAREHOUSE_NAME}' -- Warehouse name without the curly braces
+  and start_time >=   DATEADD(hour ,-24, sysdate())
+  and not query_text ilike any ('commit%', 'show terse%', 'begin%', 'use%', 'create sequence%') -- exclude certain types of queries
+group by all
 )
-select 
-  query_text 
-  , bytes_spilled_to_remote_storage
-  , warehouse_size
-from query_history as o
-where not exists ( -- Skyline query to identify worst performing queries
-  select 1
-  from query_history as i
-  where i.warehouse_size <= o.warehouse_size and i.bytes_spilled_to_remote_storage >= o.bytes_spilled_to_remote_storage
-  and (i.warehouse_size < o.warehouse_size or i.bytes_spilled_to_remote_storage > o.bytes_spilled_to_remote_storage)
-);
+, skyline as ( -- using Skyline Query to get the worst performing queries that get executed multiple times.
+  select * from query_history as o
+  where not exists (
+    select 1
+    from query_history as i
+    where i.avg_execution_time_in_minutes >= o.avg_execution_time_in_minutes and i.number_of_times_executed >= o.number_of_times_executed 
+      and (i.avg_execution_time_in_minutes > o.avg_execution_time_in_minutes or i.number_of_times_executed > o.number_of_times_executed)
+  )
+)
+select distinct 
+  left(query_text, 200)
+  , avg_execution_time_in_minutes
+  , number_of_times_executed
+from skyline
+inner join snowflake.account_usage.query_history using (query_parameterized_hash)
+;
 ```
 
 ## Query Output
 
-| QUERY_TEXT        | bytes_spilled_to_remote_storage (GB) | WAREHOUSE_SIZE |
-|-------------------|--------------------------------------|----------------|
-| select * from ... | 4                                    | 1              |
-| select * from ... | 5                                    | 4              |
+| QUERY_TEXT        | avg_execution_time_in_minutes        | number_of_times_executed |
+|-------------------|--------------------------------------|--------------------------|
+| select * from ... | 14                                   | 53                       |
+| select * from ... | 18                                   | 38                      |
 
 
 # See also

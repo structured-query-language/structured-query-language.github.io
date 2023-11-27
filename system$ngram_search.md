@@ -44,51 +44,19 @@ select system$ngram_search('customer', 999);
   "schema" : "TPCH_SF1",
   "domain" : "TABLE",
   "name" : "CUSTOMER"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCH_SF100",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCH_SF10",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCDS_SF100TCL",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER_ADDRESS"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCDS_SF100TCL",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCDS_SF100TCL",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER_DEMOGRAPHICS"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCH_SF1000",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCDS_SF10TCL",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER_DEMOGRAPHICS"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCDS_SF10TCL",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER"
-}, {
-  "database" : "SNOWFLAKE_SAMPLE_DATA",
-  "schema" : "TPCDS_SF10TCL",
-  "domain" : "TABLE",
-  "name" : "CUSTOMER_ADDRESS"
-} ]
+},
+…
+
 ```
+
+## Converting system$ngram_search output to a table
+```sql
+select 
+  value:database::string
+  , value:schema::string
+  , value:domain::string
+  , value:name::string 
+from table (FLATTEN (input => parse_json(system$ngram_search('customer', 5))));
+```
+
 

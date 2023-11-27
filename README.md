@@ -35,3 +35,4 @@
 - [Wrangle data in Snowflake using Python](wrangle-data-in-snowflake-using-python.md)
 - [Data Metric Function in Snowflake](data-metric-function-in-snowflake.md)
 - [What’s eating up your Snowflake Virtual Warehouse?](query_hash-and-query_parameterized_hash-in-snowflake.md)
+- [system$ngram_search](system$ngram_search.md)

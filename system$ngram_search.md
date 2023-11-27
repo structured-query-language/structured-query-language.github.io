@@ -1,4 +1,4 @@
-# Searching for objects across databases in Snowflake
+# Searching for objects across Databases in Snowflake
 
 Snowflake's INFORMATION_SCHEMA provides a metadata access to all the objects in a Database. You can look for TABLES, SCHEMAs etc. However the INFORMATION_SCHEMA is at the Database level i.e. you have to query the INFORMATION_SCHEMA of a DATABASE.
 

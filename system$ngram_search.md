@@ -1,8 +1,8 @@
 # Searching for objects across Databases in Snowflake
 
-Snowflake's `INFORMATION_SCHEMA` provides a metadata access to all the objects in a Database. You can look for TABLES, SCHEMAs etc. However the `INFORMATION_SCHEMA` is at the Database level i.e. you have to query the `INFORMATION_SCHEMA` of a `DATABASE`.
+Snowflake's `INFORMATION_SCHEMA` provides a metadata access to all the objects in a Database. You can look for TABLES, SCHEMAs etc. However the `INFORMATION_SCHEMA` is at the Database level i.e. you can only search at the Database level.
 
-What if you need to find objects like tables and you want to look across all the databases? Snowflake provides an easy way to achieve this using the `system$ngram_search` Function in Snowflake. 
+What if you need to find objects across all the databases in your Snowflake? Snowflake provides an easy way to achieve this using the `system$ngram_search` Function in Snowflake. 
 
 
 ## system$ngram_search Syntax

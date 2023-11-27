@@ -59,4 +59,21 @@ select
 from table (FLATTEN (input => parse_json(system$ngram_search('customer', 5))));
 ```
 
+### Query Output
 
+| VALUE:DATABASE::STRING | VALUE:SCHEMA::STRING | VALUE:DOMAIN::STRING | VALUE:NAME::STRING         |
+|------------------------|----------------------|----------------------|----------------------------|
+| SCRATCH                | SAQIB_ALI            | TABLE                | ORDER_CUSTOMER             |
+| SCRATCH                | SAQIB_ALI            | TABLE                | SATE_CUSTOMER_SUBSCRIPTION |
+| SCRATCH                | SAQIB_ALI            | TABLE                | CUSTOMERS                  |
+| SCRATCH                | SAQIB_ALI            | TABLE                | CUSTOMER_ADDRESS           |
+| SNOWFLAKE_SAMPLE_DATA  | TPCH_SF1             | TABLE                | CUSTOMER                   |
+| SNOWFLAKE_SAMPLE_DATA  | TPCH_SF100           | TABLE                | CUSTOMER                   |
+| SNOWFLAKE_SAMPLE_DATA  | TPCH_SF10            | TABLE                | CUSTOMER                   |
+| SNOWFLAKE_SAMPLE_DATA  | TPCDS_SF100TCL       | TABLE                | CUSTOMER_ADDRESS           |
+| SNOWFLAKE_SAMPLE_DATA  | TPCDS_SF100TCL       | TABLE                | CUSTOMER                   |
+| SNOWFLAKE_SAMPLE_DATA  | TPCDS_SF100TCL       | TABLE                | CUSTOMER_DEMOGRAPHICS      |
+| SNOWFLAKE_SAMPLE_DATA  | TPCH_SF1000          | TABLE                | CUSTOMER                   |
+| SNOWFLAKE_SAMPLE_DATA  | TPCDS_SF10TCL        | TABLE                | CUSTOMER_DEMOGRAPHICS      |
+| SNOWFLAKE_SAMPLE_DATA  | TPCDS_SF10TCL        | TABLE                | CUSTOMER                   |
+| SNOWFLAKE_SAMPLE_DATA  | TPCDS_SF10TCL        | TABLE                | CUSTOMER_ADDRESS           |

@@ -11,7 +11,7 @@ select system$ngram_search('{search string}', {number of objects to return});
 ```
 
 ## system$ngram_search Example
-The above query will list all the databases, schemas and tables that have the string `customer` in it:
+The following query will list all the databases, schemas and tables that have the string `customer` in it:
 
 ```sql
 select system$ngram_search('customer', 999);

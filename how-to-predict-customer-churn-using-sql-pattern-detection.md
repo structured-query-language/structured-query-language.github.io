@@ -1,6 +1,7 @@
 # How to Predict Customer Churn Using SQL Pattern Detection
 
 
+## MATCH_RECOGNIZE query
 ```sql
 select *
 from active_users

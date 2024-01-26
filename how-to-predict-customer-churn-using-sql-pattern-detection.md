@@ -8,7 +8,7 @@ The criteria for predicting a Churn are:
 
 Based on this criteria we were able to craft a `MATCH_RECOGNIZE` query in Snowflake to get the list of accounts that exhibit this behaviour.
 
-SQL’s MATCH_RECOGNIZE Clause SQL is a great way to perform analysis on your data. It. SQL is used in many cases to analyze data in data lake, however, when it comes to pattern detection, SQL traditionally hasn’t been used. Introduction of `MATCH_RECOGNIZE` changed that. `MATCH_RECOGNIZE` allows you to detect patterns in rows of data.
+SQL’s MATCH_RECOGNIZE Clause SQL is a great way to perform analysis on your data. SQL is used in many cases to analyze data in data lake, however, when it comes to pattern detection, SQL traditionally hasn’t been used. Introduction of `MATCH_RECOGNIZE` changed that. `MATCH_RECOGNIZE`  clause can perform Pattern Matching over a set of rows.
 
 ## MATCH_RECOGNIZE SQL query
 

@@ -2,6 +2,14 @@
 
 I recently had a opportunity to work with usage data for a SaaS based Cloud IDE. This Cloud IDE is used by major companies globally. Our goal of the analysis was to figure out if we can predict Customer Churn using the Usage data for the last few months. The nature of the IDE is that the usage at a Customer fluctuates drastically based on the project requirements. However we wanted to identify the Customer with Downtrend in Usage. A sustained Downtrend in Usage _could_ indicate the Customer phasing out the Cloud IDEA and/or switching to a different IDE. 
 
+The criteria for predicting a Churn are:
+1. Downtrend in Usage for 3 or more months.
+2. No Uptrend followed by an Downtrend.
+
+Based on this criteria we were able to craft a `MATCH_RECOGNIZE` query in Snowflake to get the list of accounts that exhibit this behaviour.
+
+SQL’s MATCH_RECOGNIZE Clause SQL is a great way to perform analysis on your data. It. SQL is used in many cases to analyze data in data lake, however, when it comes to pattern detection, SQL traditionally hasn’t been used. Introduction of `MATCH_RECOGNIZE` changed that. `MATCH_RECOGNIZE` allows you to detect patterns in rows of data.
+
 ## MATCH_RECOGNIZE SQL query
 
 ```sql

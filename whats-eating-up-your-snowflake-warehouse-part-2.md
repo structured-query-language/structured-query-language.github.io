@@ -56,3 +56,9 @@ The `MEASURES` part is used to define the output structure.
 |query_parameterized_hash|query_text|execution_time_in_mins|start_time|
 |------------------------|----------|----------------------|----------|
 |56e30c043…              |select …… |2.2                   |…|
+|56e30c043…              |select …… |2.4                   |…|
+|56e30c043…              |select …… |2.7                   |…|
+|56e30c043…              |select …… |3.0                   |…|
+|3b54fe894…              |select …… |1.2                   |…|
+|3b54fe894…              |select …… |2.2                   |…|
+|3b54fe894…              |select …… |4.0                   |…|

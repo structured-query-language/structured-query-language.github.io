@@ -1,6 +1,6 @@
 # What’s eating up your Snowflake Virtual Warehouse - Part II
 
-Managing Virtual Warehouses in Snowflake can be tricky. Most queries will become slower as the data grows. However they should not get worse by a large magnitude. Queries that are becoming slower at a rapid pace are usually the problematic ones. To identify such queries we can use `query_parameterized_hash` and a `match_recognize` query in Snowflake.
+Managing Snowflake cost can be tricky. Most queries will become slower as the data grows. However they should not get worse by a large magnitude. Queries that are becoming slower at a rapid pace by a large magnitude are usually the problematic ones. These queries should be identified and optimized. To identify such queries we can use `query_parameterized_hash` and a `match_recognize` query in Snowflake.
 
 ## query_hash and query_parameterized_hash in Snowflake query_history
 Snowflake produces a unique hash for each query. The `query_hash` column contains a hash value that is computed, based on the canonicalized text of the SQL statement. Repeated queries that have exactly the same query text have the same `query_hash` values. Whereas, `query_parameterized_hash` contains a hash value that is computed based on the parameterized query, which means the version of the query after literals are parameterized. For e.g., the following two queries will produce the same `query_parameterized_hash`

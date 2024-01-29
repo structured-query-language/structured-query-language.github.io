@@ -1,6 +1,6 @@
 # What’s eating up your Snowflake Virtual Warehouse - Part II
 
-Managing Virtual Warehouses in Snowflake can be tricky. Most queries will become slower as the data in your Warehouse grows. However they should not get worse by a large magnitude. Queries that gte executed multiple times, and are becoming slower at a rapid pace usually eat up the Warehouse. To address this, you need to first identify queries that are getting worse over a short period of time.
+Managing Virtual Warehouses in Snowflake can be tricky. Most queries will become slower as the data grows. However they should not get worse by a large magnitude. Queries that gte executed multiple times, and are becoming slower at a rapid pace usually eat up the Warehouse. To address this, you need to first identify queries that are getting worse over a short period of time.
 
 ## query_hash and query_parameterized_hash in Snowflake query_history
 To identify such queries you can use the newly released `query_hash` and `query_parameterized_hash` in Snowflake. Snowflake produces a unique hash for each query. The `query_hash` column contains a hash value that is computed, based on the canonicalized text of the SQL statement. Repeated queries that have exactly the same query text have the same `query_hash` values. Whereas, `query_parameterized_hash` contains a hash value that is computed based on the parameterized query, which means the version of the query after literals are parameterized. For e.g., the following two queries will produce the same `query_parameterized_hash`
@@ -12,7 +12,7 @@ select * from customers where full_name = 'Ali';
 
 ## match_recognize
 
-Armed with `query_parameterized_hash` we will write a `match_recognize` query to identify queries that are getting worse progressively.  Snowflake’s `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern. In our case, we need a identify a sequence of execution of the same query where the execution time is increasing.
+Armed with `query_parameterized_hash` we will write a `match_recognize` query to identify queries that are getting worse progressively.  Snowflake’s `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern. In our case, we need a identify a sequence of execution of the same query where the execution time is increasing each time the query is executed.
 
 ### match_recognize SQL query
 
@@ -45,13 +45,13 @@ order by query_parameterized_hash, start_time asc;
 
 The `MATCH_RECOGNIZE` clause has several different parts. The `DEFINE` part contains the variable definition, which can later be used in the other parts. We defined the following variables:
 
-1. `UPTREND` – We defined as the execution_time_in_mins greater than the previous execution of the same queriy. We are also ignoring small increases of 5% in execution time i.e. multiplying by 1.05.
+1. `UPTREND` – We defined as the `execution_time_in_mins` greater than the previous execution of the same query. We are also ignoring small increases of 5% or less in execution times by multiplying by `1.05`.
  
 The `pattern` we used is the following: `UPTREND{3,}$`
 
-It means that we are looking for queries that whose execution time increased in progression  3 or more times, and the `$` indicates that latest execution time is also slower that the previous one
+It means that we are looking for queries that whose execution time increased in progression 3 or more times, and the `$` indicates that latest execution time is also slower that the previous one
 
-The `MEASURES` part is used to define the output structure.
+The above `match_recognize` query will produce the following output:
 
 |query_parameterized_hash|query_text|execution_time_in_mins|start_time|
 |------------------------|----------|----------------------|----------|

@@ -1,6 +1,6 @@
 # What’s eating up your Snowflake Virtual Warehouse - Part II
 
-Managing Virtual Warehouses in Snowflake can be tricky. Most queries will become slower as the data grows. However they should not get worse by a large magnitude. Queries that are becoming slower at a rapid pace are usually the problematic ones. To identify such queries we can use `query_parameterized_hash` and a `match_recognize` query in Snwoflake.
+Managing Virtual Warehouses in Snowflake can be tricky. Most queries will become slower as the data grows. However they should not get worse by a large magnitude. Queries that are becoming slower at a rapid pace are usually the problematic ones. To identify such queries we can use `query_parameterized_hash` and a `match_recognize` query in Snowflake.
 
 ## query_hash and query_parameterized_hash in Snowflake query_history
 Snowflake produces a unique hash for each query. The `query_hash` column contains a hash value that is computed, based on the canonicalized text of the SQL statement. Repeated queries that have exactly the same query text have the same `query_hash` values. Whereas, `query_parameterized_hash` contains a hash value that is computed based on the parameterized query, which means the version of the query after literals are parameterized. For e.g., the following two queries will produce the same `query_parameterized_hash`
@@ -15,6 +15,8 @@ select * from customers where full_name = 'Ali';
 Armed with `query_parameterized_hash` we will write a `match_recognize` query to identify queries that are getting worse progressively.  Snowflake’s `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern. In our case, we need a identify a sequence of execution of the same query where the execution time is increasing each time the query is executed.
 
 ### match_recognize SQL query
+
+The following `match_recognize` can be used to identify queries that are progessively getting worse rapidly. 
 
 ```sql
 with query_history as (

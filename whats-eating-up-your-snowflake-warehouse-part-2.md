@@ -45,7 +45,7 @@ order by query_parameterized_hash, start_time asc;
 
 The `MATCH_RECOGNIZE` clause has several different parts. The `DEFINE` part contains the variable definition, which can later be used in the other parts. We defined the following variables:
 
-    UPTREND – We defined as the execution_time_in_mins greater than the previous execution of the same queriy. We are also ignoring small increases of 5% in execution time i.e. multiplying by 1.05
+1. `UPTREND` – We defined as the execution_time_in_mins greater than the previous execution of the same queriy. We are also ignoring small increases of 5% in execution time i.e. multiplying by 1.05.
  
 The `pattern` we used is the following: `UPTREND{3,}$`
 

@@ -11,6 +11,7 @@ select * from customers where full_name = 'Ali';
 ```
 
 ## match_recognize
+
 Armed with `query_parameterized_hash` we will write a `match_recognize` query to identify queries that are getting worse progressively.  Snowflake’s `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern. In our case, we need a identify a sequence of execution of the same query where the execution time is increasing.
 
 ### match_recognize SQL query
@@ -41,6 +42,7 @@ DEFINE
 order by query_parameterized_hash, start_time asc;
 ;
 ```
+
 The `MATCH_RECOGNIZE` clause has several different parts. The `DEFINE` part contains the variable definition, which can later be used in the other parts. We defined the following variables:
 
     UPTREND – We defined as the execution_time_in_mins greater than the previous execution of the same queriy. We are also ignoring small increases of 5% in execution time i.e. multiplying by 1.05

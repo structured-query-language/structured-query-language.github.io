@@ -36,7 +36,17 @@ partition by query_parameterized_hash order by start_time asc
 all rows per match
 pattern (UPTREND{3,}$)
 DEFINE
-  UPTREND AS execution_time_in_mins  > lag(execution_time_in_mins) * 1.0
+  UPTREND AS execution_time_in_mins  > lag(execution_time_in_mins) * 1.05
 )
 order by query_parameterized_hash, start_time asc;
 ;
+```
+The `MATCH_RECOGNIZE` clause has several different parts. The `DEFINE` part contains the variable definition, which can later be used in the other parts. We defined the following variables:
+
+    UPTREND – We defined as the execution_time_in_mins greater than the previous execution of the same queriy. We are also ignoring small increases of 5% in execution time i.e. multiplying by 1.05
+ 
+The `pattern` we used is the following: `UPTREND{3,}$`
+
+It means that we are looking for queries that whose execution time increased in progression  3 or more times, and the `$` indicates that latest execution time is also slower that the previous one
+
+The `MEASURES` part is used to define the output structure. You can see that the variables are used so we will know when the drop started, and the number of entities in the start and end of the drop.  Here are some example results:

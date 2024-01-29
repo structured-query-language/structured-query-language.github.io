@@ -51,4 +51,8 @@ The `pattern` we used is the following: `UPTREND{3,}$`
 
 It means that we are looking for queries that whose execution time increased in progression  3 or more times, and the `$` indicates that latest execution time is also slower that the previous one
 
-The `MEASURES` part is used to define the output structure. You can see that the variables are used so we will know when the drop started, and the number of entities in the start and end of the drop.  Here are some example results:
+The `MEASURES` part is used to define the output structure.
+
+|query_parameterized_hash|query_text|execution_time_in_mins|start_time|
+|------------------------|----------|----------------------|----------|
+|56e30c043…              |select …… |2.2                   |…|

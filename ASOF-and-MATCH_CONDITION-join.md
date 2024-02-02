@@ -53,7 +53,8 @@ select
   , price * number_of_shares as value
 from stock_portfolio
 asof join stock_prices
-match_condition (stock_portfolio.transaction_timestamp >= stock_prices.stock_price_asof) on stock_prices.symbol = stock_portfolio.symbol ;
+  match_condition (stock_portfolio.transaction_timestamp >= stock_prices.stock_price_asof)
+  on stock_prices.symbol = stock_portfolio.symbol ;
 ```
 
 This attaches the value of the holding at that time to each row.

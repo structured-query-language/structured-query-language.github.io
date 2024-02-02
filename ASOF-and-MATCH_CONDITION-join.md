@@ -42,7 +42,7 @@ We have another table `stock_portfolio` containing portfolio holdings at various
 | TSLA   | 86.00            | 2024-02-02 15:06:48.475 |
 | TSLA   | 60.00            | 2024-02-02 15:23:12.587 |
 
-| Notice that the `transaction_timestamp` from `stock_portfolio` does not align with the `stock_price_asof` in the `stock_prices` table.
+> Notice that the `transaction_timestamp` from `stock_portfolio` does not align with the `stock_price_asof` in the `stock_prices` table.
 
 ## ASOF Joins in Snowflake
 

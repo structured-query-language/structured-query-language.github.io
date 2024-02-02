@@ -12,8 +12,9 @@ More generally, however, ASOF joins embody some common temporal analytic semanti
 
 Let’s start with a Stock Portofolio example. 
 
-### stock_prices
 We have a table `stock_prices` of stock prices with timestamps:
+
+### stock_prices
 
 | SYMBOL | PRICE | STOCK_PRICE_ASOF        |
 |--------|-------|-------------------------|
@@ -29,8 +30,9 @@ We have a table `stock_prices` of stock prices with timestamps:
 | TSLA   | 9.44  | 2024-02-02 15:23:07.893 |
 | TSLA   | 9.13  | 2024-02-02 15:23:21.083 |
 
-### stock_portfolio
 We have another table `stock_portfolio` containing portfolio holdings at various points in time:
+
+### stock_portfolio
 
 | SYMBOL | NUMBER_OF_SHARES | TRANSACTION_TIMESTAMP   |
 |--------|------------------|-------------------------|

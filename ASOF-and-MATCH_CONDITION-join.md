@@ -13,7 +13,7 @@ More generally, however, ASOF joins embody some common temporal analytic semanti
 Let’s start with a Stock Portofolio example. 
 
 ### stock_prices
-We have a table `stock_price` of stock prices with timestamps:
+We have a table `stock_prices` of stock prices with timestamps:
 
 | SYMBOL | PRICE | STOCK_PRICE_ASOF        |
 |--------|-------|-------------------------|

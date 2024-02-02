@@ -37,7 +37,7 @@ We have another table `stock_portfolio` containing portfolio holdings at various
 | TSLA   | 60.00            | 2024-02-02 15:23:12.587 |
 
 
-## ASOF Joins
+## ASOF Joins in Snowflake
 
 We can compute the value of each holding at that point in time by finding the most recent price before the holding’s timestamp by using an AsOf Join.
 

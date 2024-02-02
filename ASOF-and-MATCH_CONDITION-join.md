@@ -8,7 +8,7 @@ One of the problems that ASOF joins are used to solve is finding the value of a 
 
 More generally, however, ASOF joins embody some common temporal analytic semantics, which can be cumbersome and slow to implement in standard SQL.
 
-## Portfolio Example Data Set
+## Stock Portfolio Example Data Set
 
 Let’s start with a Stock Portofolio example. Suppose we have a table `stock_price` of stock prices with timestamps:
 

@@ -10,7 +10,10 @@ More generally, however, ASOF joins embody some common temporal analytic semanti
 
 ## Stock Portfolio Example Data Set
 
-Let’s start with a Stock Portofolio example. Suppose we have a table `stock_price` of stock prices with timestamps:
+Let’s start with a Stock Portofolio example. 
+
+### stock_prices
+We have a table `stock_price` of stock prices with timestamps:
 
 | SYMBOL | PRICE | STOCK_PRICE_ASOF        |
 |--------|-------|-------------------------|
@@ -26,6 +29,7 @@ Let’s start with a Stock Portofolio example. Suppose we have a table `stock_pr
 | TSLA   | 9.44  | 2024-02-02 15:23:07.893 |
 | TSLA   | 9.13  | 2024-02-02 15:23:21.083 |
 
+### stock_portfolio
 We have another table `stock_portfolio` containing portfolio holdings at various points in time:
 
 | SYMBOL | NUMBER_OF_SHARES | TRANSACTION_TIMESTAMP   |
@@ -70,4 +74,4 @@ This attaches the value of the holding at that time to each row.
 | TSLA   | 9.44        | 60.00            | 2024-02-02 15:23:12.587 | 2024-02-02 15:23:07.893 | 566.4000 |
 
 
-It essentially executes a function defined by looking up nearby values in the prices table. 
+It essentially executes a function defined by looking up nearby values in the `stock_prices` table. 

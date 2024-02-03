@@ -10,3 +10,7 @@ minima:
 
 header_pages:
   - README.md
+
+author:
+  name: John Smith
+  email: "john.smith@foobar.com"

@@ -42,7 +42,7 @@ We have another table `stock_portfolio` containing portfolio holdings at various
 | TSLA   | 86.00            | 2024-02-02 15:06:48.475 |
 | TSLA   | 60.00            | 2024-02-02 15:23:12.587 |
 
-> Notice that the `transaction_timestamp` from `stock_portfolio` does not align with the `stock_price_asof` in the `stock_prices` table.
+> Note that the `transaction_timestamp` from `stock_portfolio` does not align with the `stock_price_asof` in the `stock_prices` table.
 
 ## ASOF Joins in Snowflake
 
@@ -78,3 +78,46 @@ This attaches the value of the holding at that time to each row.
 
 
 It essentially executes a function defined by looking up nearby values in the `stock_prices` table. 
+
+## Windowing Alternative
+
+Standard SQL can implement this kind of join, but you need to use an `effectivity` table using a windowing function as following:
+
+```sql
+with stock_price_effectivity as (
+  select 
+    symbol
+    , stock_price_asof as start_time
+    , lead (stock_price_asof) over (partition by symbol order by start_time asc) as end_time 
+    , price
+  from stock_prices
+)   
+
+select 
+  stock_portfolio.symbol
+  , price
+  , number_of_shares * price as value from state
+inner join stock_portfolio
+on state.symbol = stock_portfolio.symbol
+  and stock_portfolio.transaction_timestamp between start_time and end_time;
+```
+
+> Note that we are first calculating the `effectivity` or `state` of stock price at each of the interval using the `stock_price_asof` timestamp. This is an expensive operation.
+
+Here what the output of the `stock_price_effectivity` will look like:
+
+| SYMBOL | START_TIME              | END_TIME                | PRICE |
+|--------|-------------------------|-------------------------|-------|
+| TSLA   | 2024-02-02 14:29:10.753 | 2024-02-02 14:29:52.806 | 9.93  |
+| TSLA   | 2024-02-02 14:29:52.806 | 2024-02-02 14:30:43.379 | 9.62  |
+| TSLA   | 2024-02-02 14:30:43.379 | 2024-02-02 14:32:35.397 | 9.61  |
+| TSLA   | 2024-02-02 14:32:35.397 | 2024-02-02 14:41:38.263 | 9.93  |
+| TSLA   | 2024-02-02 14:41:38.263 | 2024-02-02 14:45:00.480 | 9.68  |
+| TSLA   | 2024-02-02 14:45:00.480 | 2024-02-02 14:45:32.556 | 9.05  |
+| TSLA   | 2024-02-02 14:45:32.556 | 2024-02-02 15:04:29.979 | 9.06  |
+| TSLA   | 2024-02-02 15:04:29.979 | 2024-02-02 15:06:40.404 | 9.88  |
+| TSLA   | 2024-02-02 15:06:40.404 | 2024-02-02 15:23:07.893 | 9.72  |
+| TSLA   | 2024-02-02 15:23:07.893 | 2024-02-02 15:23:21.083 | 9.44  |
+| TSLA   | 2024-02-02 15:23:21.083 |                         | 9.13  |
+
+

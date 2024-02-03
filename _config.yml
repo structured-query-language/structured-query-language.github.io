@@ -5,3 +5,5 @@ titles_from_headings:
   enabled:     true
   
 theme: minima
+minima:
+  skin: dark

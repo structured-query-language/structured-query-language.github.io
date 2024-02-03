@@ -6,7 +6,7 @@ titles_from_headings:
   
 remote_theme: jekyll/minima
 minima:
-  skin: solarized-dark
+  skin: solarized
 
 header_pages:
   - README.md

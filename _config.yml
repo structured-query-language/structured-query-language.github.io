@@ -7,3 +7,6 @@ titles_from_headings:
 theme: minima
 minima:
   skin: dark
+
+header_pages:
+  - about.md

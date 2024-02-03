@@ -2,7 +2,7 @@
 title: SQL
 
 titles_from_headings:
-  enabled:     true
+  enabled:     false
   
 remote_theme: jekyll/minima
 minima:

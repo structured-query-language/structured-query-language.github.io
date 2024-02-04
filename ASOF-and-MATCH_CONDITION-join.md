@@ -105,8 +105,7 @@ on state.symbol = stock_portfolio.symbol
 > Note that we are first calculating the `effectivity` or `state` of stock price at each of the interval using the `stock_price_asof` timestamp. This is an expensive operation.
 
 
-Here what the output of the `stock_price_effectivity` will look like:
-
+Here is what the output of the `stock_price_effectivity` will look like:
 
 | SYMBOL | START_TIME              | END_TIME                | PRICE |
 |--------|-------------------------|-------------------------|-------|

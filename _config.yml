@@ -12,3 +12,5 @@ minima:
 
 header_pages:
   - README.md
+
+repository: https://github.com/jekyll/jekyll

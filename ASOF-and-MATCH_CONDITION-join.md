@@ -81,7 +81,7 @@ It essentially executes a function defined by looking up nearby values in the `s
 
 ## Windowing Alternative
 
-Standard SQL can implement this kind of join, but you need to use an `effectivity` table using a windowing function as following:
+Standard SQL can implement this kind of join, but you need to use an `effectivity` aka `state` table using a windowing function as following:
 
 ```sql
 with stock_price_effectivity as (

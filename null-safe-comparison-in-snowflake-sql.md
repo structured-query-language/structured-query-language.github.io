@@ -1,6 +1,6 @@
 # Null-safe comparison in Snowflake
 
-At times you need to compare data in a null-safe manner. Snowflake has the `distinct from` that allows you to do null-safe comparison.
+At times you need to compare data in a null-safe manner. Snowflake has the `is distinct from` and `is not distinct from` that allows you to do null-safe comparison.
 
 Here is an example with using `distinct from`:
 

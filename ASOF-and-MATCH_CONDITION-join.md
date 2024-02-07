@@ -1,4 +1,4 @@
-# ASOF and MATCH_CONDITION join in Snowflake
+# SQL ASOF join in Snowflake
 
 ## What is an ASOF Join?
 

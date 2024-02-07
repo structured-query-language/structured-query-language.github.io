@@ -68,6 +68,3 @@ select * from table_a
 inner join table_b using (id)
 where table_a.name is distinct from table_b.name;
 ```
-
-> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
-

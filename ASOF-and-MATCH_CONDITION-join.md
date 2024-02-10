@@ -96,9 +96,9 @@ with stock_price_effectivity as (
 select 
   stock_portfolio.symbol
   , price
-  , number_of_shares * price as value from state
-inner join stock_portfolio
-on state.symbol = stock_portfolio.symbol
+  , number_of_shares * price as value
+from state
+inner join stock_portfolio on state.symbol = stock_portfolio.symbol
   and stock_portfolio.transaction_timestamp between start_time and end_time;
 ```
 

@@ -5,7 +5,7 @@ ASOF JOIN in Snowflake joins two different time-series measures. For each row in
 1. The timestamp is the closest to the first timestamp.
 2. The timestamp is strictly prior or after or equal to the first timestamp.
 
-`ASOF JOIN` can take the timestamp of from `Table A` and find an event in `Table B` where the timestamp is closest to the timestamp of the event from `Table A` corresponding to the closest match condition. Equal timestamp values are the closest if available. 
+`ASOF JOIN` can take the timestamp of from `Table A` and find an entry in `Table B` where the timestamp is closest to the timestamp of the event from `Table A` corresponding to the closest match condition. Equal timestamp values are the closest if available. 
 
 ## Example
 

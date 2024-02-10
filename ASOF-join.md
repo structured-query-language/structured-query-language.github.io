@@ -39,10 +39,8 @@ We have another table `stock_portfolio` containing portfolio holdings at various
 
 > Note that the `transaction_timestamp` from `stock_portfolio` does not align with the `stock_price_asof` in the `stock_prices` table.
 
-## ASOF Query
-An ASOF JOIN query can look like the following:
-
 ### SQL Query
+An ASOF JOIN query can look like the following:
 
 ```sql
 select 
@@ -59,8 +57,6 @@ asof join stock_prices
 ```
 
 This is the JOIN result:
-
-### Query Output
 
 | SYMBOL | STOCK_PRICE | NUMBER_OF_SHARES | TRANSACTION_TIMESTAMP   | STOCK_PRICE_ASOF        | VALUE    |
 |--------|-------------|------------------|-------------------------|-------------------------|----------|

@@ -42,5 +42,5 @@
 - [SQL ASOF join in Snowflake](ASOF-and-MATCH_CONDITION-join.md)
 - [ASOF join Snowflake](ASOF-and-MATCH_CONDITION-join.md)
 - [Snowflake ASOF join](ASOF-and-MATCH_CONDITION-join.md)
-- [ASOF join](ASOF-and-MATCH_CONDITION-join.md)
+- [ASOF join](ASOF-join.md)
 - [SQL ASOF join](ASOF-and-MATCH_CONDITION-join.md)

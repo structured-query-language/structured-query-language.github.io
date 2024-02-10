@@ -83,3 +83,7 @@ This attaches the value of the holding at that time to each row.
 
 
 It essentially executes a function defined by looking up nearby values in the `stock_prices` table. 
+
+# See also
+- [SQL ASOF join in Snowflake](ASOF-and-MATCH_CONDITION-join.md)
+- [ASOF join](ASOF-join.md)

@@ -39,6 +39,6 @@
 - [system$ngram_search](system$ngram_search.md)
 - [Searching for objects across Databases in Snowflake](system$ngram_search.md)
 - [How to Predict Customer Churn Using SQL Pattern Detection](how-to-predict-customer-churn-using-sql-pattern-detection.md)
-- [SQL ASOF join in Snowflake](ASOF-and-MATCH_CONDITION-join.md)
+- [Snowflake ASOF join](ASOF-and-MATCH_CONDITION-join.md)
 - [ASOF join Snowflake](ASOF-join-snowflake.md)
 - [ASOF join](ASOF-join.md)

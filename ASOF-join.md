@@ -2,9 +2,8 @@
 
 ASOF JOIN in Snowflake joins two different time-series measures. For each row in the first time-series, the ASOF JOIN takes from the second time-series a timestamp that meets both of the following criteria:
 
-> The timestamp is the closest to the first timestamp.
-
-> The timestamp is strictly prior or after or equal to the first timestamp.
+1. The timestamp is the closest to the first timestamp.
+2. The timestamp is strictly prior or after or equal to the first timestamp.
 
 ## Example
 
@@ -72,5 +71,5 @@ The result has all rows from the `stock_portfolio` table joined with rows from t
 
 This query returns all rows from the bids table joined with records from the asks table that meet both the following criterion:
 
-    The stock column of the two tables has the same value
-    The timestamp of the asks record is prior to or equal to the timestamp of the bids record.
+The stock column of the two tables has the same value
+The timestamp of the `stock_prices` record is prior to or equal to the timestamp of the `stock_portfolio` record.

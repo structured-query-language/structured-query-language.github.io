@@ -124,3 +124,5 @@ Here is what the output of the `stock_price_effectivity` will look like:
 ## See Also
 - [ASOF join Snowflake](ASOF-join-snowflake.md)
 - [ASOF join](ASOF-join.md)
+- [Perform joins on timeseries data using ASOF JOIN in Snowflake](perform-joins-on-timeseries-data-using-ASOF-JOIN-in-snowflake.md)
+

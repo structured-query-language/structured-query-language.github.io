@@ -2,11 +2,11 @@
 
 ## What is an ASOF Join?
 
-Time series data is not always perfectly aligned. Timestamps may be slightly off, or there may be a delay between cause and effect. This can make connecting two sets of ordered data challenging. ASOF joins are a tool for solving this and other similar problems.
+Time series data is not always perfectly aligned. Timestamps may be slightly off, or there may be a delay between cause and effect. This can make connecting two sets of ordered data challenging. [ASOF joins](ASOF-join.md) are a tool for solving this and other similar problems.
 
-One of the problems that ASOF joins are used to solve is finding the value of a varying property at a specific point in time. 
+One of the problems that [ASOF joins](ASOF-join.md) are used to solve is finding the value of a varying property at a specific point in time. 
 
-More generally, however, ASOF joins embody some common temporal analytic semantics, which can be cumbersome and slow to implement in standard SQL.
+More generally, however, [ASOF joins](ASOF-join.md) embody some common temporal analytic semantics, which can be cumbersome and slow to implement in standard SQL.
 
 ## Stock Portfolio Example Data Set
 
@@ -46,7 +46,7 @@ We have another table `stock_portfolio` containing portfolio holdings at various
 
 ## ASOF Joins in Snowflake
 
-We can compute the value of each holding at that point in time by finding the most recent price before the holding’s timestamp by using an AsOf Join.
+We can compute the value of each holding at that point in time by finding the most recent price before the holding’s timestamp by using an [ASOF join](ASOF-join.md).
 
 ### SQL Query
 

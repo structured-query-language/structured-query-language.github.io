@@ -32,10 +32,10 @@ group by 1;
 | ORDER_NUMBER | LISTAGG(ITEM, ', ')                                       |
 |--------------|-----------------------------------------------------------|
 | 3            | infant formula, infant diaper, coffee, coke               |
-| 7            | infant formula, infant diaper, moutnain dew, coke, coffee |
+| 7            | infant formula, infant diaper, mountain dew, coke, coffee |
 | 1            | bread, infant formula                                     |
 | 4            | bread, infant formula, infant diaper, coffee              |
-| 6            | infant formula, infant diaper, moutnain dew               |
+| 6            | infant formula, infant diaper, mountain dew               |
 | 5            | infant formula, infant diaper, coke                       |
 | 2            | bread, infant diaper, coffee, eggs                        |
 
@@ -68,7 +68,7 @@ group by third_item;
 
 | THIRD_ITEM   | FREQUENCY |
 |--------------|-----------|
-| moutnain dew | 2         |
+| mountain dew | 2         |
 | coke         | 3         |
 | coffee       | 3         |
 | bread        | 1         |

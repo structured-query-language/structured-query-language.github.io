@@ -56,7 +56,3 @@ select
 from increase_flagged  
 where symbol='SNOW';
 ```
-
-
-> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
-

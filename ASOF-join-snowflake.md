@@ -2,13 +2,13 @@
 
 ## What Is an ASOF Join?
 
-An ASOF (or "as of") join is a type of join operation used when analyzing two sets of time-series data. It essentially matches each record from one table with the nearest—but not necessarily equal—value from another table based on a chosen column. Snowflake supports this out of the box using using the ASOF keyword
+An ASOF (or "as of") join is a type of join operation used when analyzing two sets of time-series data. It essentially matches each record from one table with the nearest—but not necessarily equal—value from another table based on a chosen column. Snowflake supports this out of the box using using the [ASOF](ASOF-join.md) keyword
 
-The chosen column needs to have some concept of range for the ASOF operation to work. You may think of it as being the "closest value," but not exceeding the comparison. In Snowflake it works for Timestamp and Numeric valued columns. 
+The chosen column needs to have some concept of range for the [ASOF](ASOF-join.md) operation to work. You may think of it as being the "closest value," but not exceeding the comparison. In Snowflake it works for Timestamp and Numeric valued columns. 
 
 ## Understanding ASOF Joins
 
-ASOF joins are a powerful tool when dealing with time-series data. In simple terms, an ASOF join will, for each row in the left table, find a corresponding single row in the right table where the key value is less than or equal to the key in the left table.
+[ASOF joins](ASOF-join.md) are a powerful tool when dealing with time-series data. In simple terms, an [ASOF join](ASOF-join.md) will, for each row in the left table, find a corresponding single row in the right table where the key value is less than or equal to the key in the left table.
 
 This is a common operation when dealing with financial data, sensor readings, or other types of time-series data where readings might not align perfectly by timestamp.
 
@@ -20,7 +20,7 @@ This simple example becomes a lot more complex when we start comparing temperatu
 
 ### Step 1: Prepare your data
 
-Ensure your data is in the correct format for the ASOF join. You'll need a timestamp or other monotonically increasing column to use as a key for the join.
+Ensure your data is in the correct format for the [ASOF join](ASOF-join.md). You'll need a timestamp or other monotonically increasing column to use as a key for the join.
 
 Suppose you have two tables, `stock_prices` and `stock_portfolio`, each containing a timestamp column, and you want to join them by stock and the nearest timestamp.
 

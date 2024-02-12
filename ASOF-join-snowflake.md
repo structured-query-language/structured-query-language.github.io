@@ -87,3 +87,4 @@ It essentially executes a function defined by looking up nearby values in the `s
 # See also
 - [SQL ASOF join in Snowflake](ASOF-and-MATCH_CONDITION-join.md)
 - [ASOF join](ASOF-join.md)
+- [Perform joins on timeseries data using ASOF JOIN in Snowflake](perform-joins-on-timeseries-data-using-ASOF-JOIN-in-snowflake.md)

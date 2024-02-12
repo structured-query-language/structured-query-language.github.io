@@ -1,6 +1,6 @@
 # ASOF JOIN
 
-ASOF JOIN in Snowflake joins two different time-series measures. For each row in the first time-series, the `ASOF JOIN` takes from the second time-series a timestamp that meets both of the following criteria:
+`ASOF JOIN` joins two different time-series measures. For each row in the first time-series, the `ASOF JOIN` takes from the second time-series a timestamp that meets both of the following criteria:
 
 1. The timestamp is the closest to the first timestamp.
 2. The timestamp is strictly prior or after or equal to the first timestamp.

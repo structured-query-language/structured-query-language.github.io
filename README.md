@@ -42,3 +42,4 @@
 - [Snowflake ASOF join](ASOF-and-MATCH_CONDITION-join.md)
 - [ASOF join Snowflake](ASOF-join-snowflake.md)
 - [ASOF join](ASOF-join.md)
+- [](perform-joins-on-timeseries-data-using-ASOF-JOIN-in-snowflake.md)

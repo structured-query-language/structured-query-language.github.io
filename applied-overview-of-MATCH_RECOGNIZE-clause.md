@@ -1,5 +1,7 @@
 # Applied overview of MATCH_RECOGNIZE clause
 
+SQL MATCH_RECOGNIZE clause can perform Pattern Matching over a set of rows. MATCH_RECOGNIZE does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern
+
 To demonstrate the power of MATCH_RECOGNIZE we will use the Unemployment by State data set from BLS.
 
 ## Analysis Goal
@@ -10,7 +12,7 @@ Sample of Unemployment data from BLS
 
 Analysis Approach
 
-We will use MATCH_RECOGNIZE in Snowflake to find the decreasing Unemployment Rate pattern PARTITIONed by State
+We will use MATCH_RECOGNIZE to find the decreasing Unemployment Rate pattern PARTITIONed by State
 Enter MATCH_RECOGNIZE
 
 The MATCH_RECOGNIZE clause is used to search for a pattern in single field value spanning over multiple records. This clause enables you to define patterns using regular expressions and aggregate methods to verify and extract values from the match.

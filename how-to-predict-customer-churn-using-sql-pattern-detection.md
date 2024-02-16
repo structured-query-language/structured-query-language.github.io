@@ -6,9 +6,9 @@ The criteria for predicting a Churn are:
 1. Downtrend in Usage for 3 or more months.
 2. No Uptrend followed by an Downtrend.
 
-Based on this criteria we were able to craft a `MATCH_RECOGNIZE` query in Snowflake to get the list of accounts that exhibit this behaviour.
+Based on this criteria we were able to craft a [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query in Snowflake to get the list of accounts that exhibit this behaviour.
 
-SQL’s MATCH_RECOGNIZE Clause SQL is a great way to perform analysis on your data. SQL is used in many cases to analyze data in data lake, however, when it comes to pattern detection, SQL traditionally hasn’t been used. Introduction of `MATCH_RECOGNIZE` changed that. `MATCH_RECOGNIZE`  clause can perform Pattern Matching over a set of rows.
+SQL’s MATCH_RECOGNIZE Clause SQL is a great way to perform analysis on your data. SQL is used in many cases to analyze data in data lake, however, when it comes to pattern detection, SQL traditionally hasn’t been used. Introduction of [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) changed that. [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause can perform Pattern Matching over a set of rows.
 
 ## MATCH_RECOGNIZE SQL query
 

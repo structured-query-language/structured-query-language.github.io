@@ -1,8 +1,8 @@
 # Stock Analysis using MATCH_RECOGNIZE
 
-Pattern Matching is key to anomaly detection and trend analysis. It is quite common to query the Data Warehouse to find patterns in data. One commonly overlooked SQL clause that allows detection of patterns in relational data is `MATCH_RECOGNIZE`.
+Pattern Matching is key to anomaly detection and trend analysis. It is quite common to query the Data Warehouse to find patterns in data. One commonly overlooked SQL clause that allows detection of patterns in relational data is [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md).
 
-`MATCH_RECOGNIZE` clause is available in modern Warehouse Databases like #Snowflake and #Azure. Here is a sample query to identify stocks that show an increasing stock price trend for the most number of days. This is a simple example, but regex powered `MATCH_RECOGNIZE` can be used for sophisticated trend analysis.
+[MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause is available in modern Warehouse Databases like #Snowflake and #Azure. Here is a sample query to identify stocks that show an increasing stock price trend for the most number of days. This is a simple example, but regex powered [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) can be used for sophisticated trend analysis.
 
 
 ```sql
@@ -130,8 +130,3 @@ order by days_of_increasing_stock_price desc;
 | MOD      | 17                             | 2022-07-19        | 2022-08-10      |
 | EMB      | 17                             | 2012-08-20        | 2012-09-12      |
 | LGL      | 17                             | 1998-02-17        | 1998-03-13      |
-
-
-
-> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
-

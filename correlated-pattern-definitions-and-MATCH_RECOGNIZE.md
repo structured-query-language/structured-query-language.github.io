@@ -1,8 +1,8 @@
 # Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE
 
-`MATCH_RECOGNIZE` is a powerful SQL clause that can be used to find patterns in data. 
+[MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) is a powerful SQL clause that can be used to find patterns in data. 
 
-We will use `MATCH_RECOGNIZE` to find the Orders where the Customer assignment changed and was reverted back. The Order can be assigned to several different Customer before being reverted back to the Original Customer. Here is the raw data:
+We will use [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) to find the Orders where the Customer assignment changed and was reverted back. The Order can be assigned to several different Customer before being reverted back to the Original Customer. Here is the raw data:
 
 | ORDER_NUM | CUSTOMER | LOAD_DATE               |
 |-----------|----------|-------------------------|
@@ -85,7 +85,3 @@ select * from order_customer;
 1. [MATCH_RECOGNIZE](match_recognize.md)
 1. [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
 1. [A/B Analysis on Streaming Data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
-
-> <a href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}">Edit this page on GitHub</a>
-
-

@@ -1,13 +1,14 @@
 # ASOF JOIN
 
-In the realm of data analysis, particularly when dealing with time-series data, traditional joins often fall short. Imagine analyzing customer behavior throughout their purchasing history. You need to connect their actions (purchases) with relevant product information, but timestamps might not line up perfectly. This is where the ASOF join emerges as a powerful tool.
+In the realm of data analysis, particularly when dealing with time-series data, traditional joins often fall short. Imagine analyzing customer behavior throughout their purchasing history. You need to connect their actions (purchases) with relevant product information, but timestamps might not line up perfectly. This is where the `ASOF join` emerges as a powerful tool.
 
 ## What is an ASOF Join?
 
 Think of it as a "closest match" join. Unlike traditional joins that seek exact matches, ASOF joins pair records based on proximity in time. For each row in the left table (think purchases), it finds the closest (not necessarily equal) timestamped record in the right table (product information) that exists before or at the same time.
 
-Essentially, ASOF allows you to ask questions like: "For each purchase, what was the product price as of the purchase date?"
-Why Use ASOF Join?
+Essentially, `ASOF` allows you to ask questions like: "For each purchase, what was the product price as of the purchase date?"
+
+## Why Use ASOF Join?
 
 Here are some compelling reasons to embrace ASOF joins:
 

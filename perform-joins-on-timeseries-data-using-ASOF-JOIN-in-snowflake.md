@@ -1,6 +1,8 @@
 ---
 image:
   background: pueblosquare.png
+category: [category1, category2]
+tags: [tag1, tag2, tag3]
 ---
 
 # Perform joins on timeseries data using ASOF JOIN in Snowflake

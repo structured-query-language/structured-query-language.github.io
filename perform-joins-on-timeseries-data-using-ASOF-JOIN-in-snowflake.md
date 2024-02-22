@@ -1,6 +1,8 @@
+---
 image:
   background: pueblosquare.png
-  
+---
+
 # Perform joins on timeseries data using ASOF JOIN in Snowflake
 
 Combining two or more tables using values from a related column is one of the most common tasks when analyzing data. This is typically done by matching the values in the related column(s).

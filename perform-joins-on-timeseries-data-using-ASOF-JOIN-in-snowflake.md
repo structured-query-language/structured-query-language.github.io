@@ -1,4 +1,5 @@
 ---
+layout: post
 image:
   background: pueblosquare.png
 category: [category1, category2]

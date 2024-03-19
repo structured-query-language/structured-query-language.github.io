@@ -11,6 +11,8 @@
 
 ## SQL
 
+In the following query, a table of sessionized data is produced for `page_visits`, and only ranges that meet or overlap are sessionized:
+
 ```sql
 with page_visits_range as (
   select

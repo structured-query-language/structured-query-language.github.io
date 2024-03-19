@@ -1,7 +1,13 @@
+# Sessionization using RANGE_SESSIONIZE in Google BigQuery
 
-## page_visit table
+Google recently added a new Table Function called RANGE_SESSIONIZE to Google BigQuery. RANGE_SESSIONIZE allows you to sessionize temporal data. Timestamps from events that either meet or overlap form one session.
+
+
+## Input data
 
 We would like sessionize the following website logs based on the continous time spent on the website and the pages visited during that session.
+
+### page_visits table
 
 | user_id | page_url      | entry_time          | exit_time           |
 |---------|---------------|---------------------|---------------------|

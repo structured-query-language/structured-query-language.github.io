@@ -42,3 +42,4 @@
 - [ASOF join Snowflake](ASOF-join-snowflake.md)
 - [ASOF join](ASOF-join.md)
 - [Perform joins on timeseries data using ASOF JOIN in Snowflake](perform-joins-on-timeseries-data-using-ASOF-JOIN-in-snowflake.md)
+- [Sessionization using RANGE_SESSIONIZE in Google Big Query](sessionization-using-RANGE_SESSIONIZE-in-google-big-query.md)

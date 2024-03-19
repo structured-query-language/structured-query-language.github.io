@@ -1,6 +1,8 @@
 
 ## page_visit table
 
+We would like sessionize the following website logs based on the continous time spent on the website and the pages visited during that session.
+
 | user_id | page_url      | entry_time          | exit_time           |
 |---------|---------------|---------------------|---------------------|
 | saqib   | /index        | 2024-03-19 17:13:19 | 2024-03-19 17:16:19 |

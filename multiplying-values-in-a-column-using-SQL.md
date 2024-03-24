@@ -1,4 +1,4 @@
-
+# Multiplying values in a column using SQL
 
 ```sql
 with recursive test_data as (

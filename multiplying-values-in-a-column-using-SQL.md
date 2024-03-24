@@ -30,3 +30,9 @@ order by array_index desc limit 1
 ;
 
 ```
+
+### Query output
+
+| multiplied | array_index | number_array |
+|------------|-------------|--------------|
+| -15        | 3           | "[1,-3,5]"   |

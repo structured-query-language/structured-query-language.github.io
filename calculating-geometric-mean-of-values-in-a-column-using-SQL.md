@@ -4,7 +4,7 @@
 with recursive test_data as (
   SELECT 1 AS col1 
   UNION ALL
-  SELECT -3 
+  SELECT 3
   UNION ALL
   SELECT 5
 )
@@ -12,7 +12,7 @@ with recursive test_data as (
   SELECT array_agg(col1) as number_array 
   FROM test_data
 )
-, multiply as ( -- Recursize CTE
+, multiply as (
   select 
     number_array[0] as multiplied
     , 1 as array_index
@@ -25,14 +25,13 @@ with recursive test_data as (
     , number_array 
   from multiply where array_index < array_length(number_array)  
 )
-select * from multiply
-order by array_index desc limit 1
-;
-
+select power(multiplied, 1/array_index) as geometric_mean
+from multiply
+order by array_index desc limit 1;
 ```
 
 ### Query output
 
-| multiplied | array_index | number_array |
-|------------|-------------|--------------|
-| -15        | 3           | "[1,-3,5]"   |
+|geometric_mean|
+|--------------|
+|2.46621207433047|

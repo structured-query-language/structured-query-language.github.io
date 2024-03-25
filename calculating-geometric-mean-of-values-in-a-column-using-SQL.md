@@ -1,5 +1,8 @@
 # Calculating Geometric Mean of values in a column using SQL
 
+To calculate the Geometric Mean, you have to first multiply all values and then take the nth root of that number, where n is the number of values in the column. There is no function in SQL to calculate the geometric mean. However the following recursive CTE can be used to calculate the Geometric Mean of a column of data.
+
+## Recursive CTE SQL
 ```sql
 with recursive test_data as (
   SELECT 1 AS col1 

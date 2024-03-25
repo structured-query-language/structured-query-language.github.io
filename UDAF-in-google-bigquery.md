@@ -1,25 +1,23 @@
 # User Defined Aggregate Functions (UDAF) in Google Bigquery
 
+User Defined Aggregate Functions (UDAF) are now available in Google BigQuery. Here is an example of defining a UDAF to calculate the Geometric Mean of a column of data. 
+
 
 ```sql
-CREATE AGGREGATE FUNCTION ScaledSum(
-  dividend DOUBLE,
-  divisor DOUBLE NOT AGGREGATE)
+CREATE AGGREGATE FUNCTION geometric_mean(
+  col1 DOUBLE
+)
 RETURNS DOUBLE
 AS
 (
-  SUM (dividend) / divisor
+  EXP(SUM(LN(col1))/COUNT(col1))
 );
 
-with test_data as (
-  SELECT 1 AS col1 
-  UNION ALL
-  SELECT 3 
-  UNION ALL
-  SELECT 5
-
+with recursive test_data as (
+  SELECT cast (col1 as INT64) as col1
+  FROM UNNEST(GENERATE_ARRAY(1, 20)) col1
 )
-SELECT ScaledSum(col1, 2) AS scaled_sum
+SELECT geometric_mean(col1) AS geo_mean
 FROM test_data;
 ```
 

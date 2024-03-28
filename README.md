@@ -45,3 +45,4 @@
 - [Sessionization using RANGE_SESSIONIZE in Google Big Query](sessionization-using-RANGE_SESSIONIZE-in-google-big-query.md)
 - [User Defined Aggregate Functions (UDAF) in Google BigQuery](UDAF-in-google-bigquery.md)
 - [Calculating Geometric Mean of values in a column using SQL](calculating-geometric-mean-of-values-in-a-column-using-SQL.md)
+- [](NULL-safe-greatest-and-least-in-Snowflake.md)

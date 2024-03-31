@@ -59,7 +59,8 @@ SHOW DATA METRIC FUNCTIONS IN <DATABASE_NAME>.<SCHEMA_NAME>;
 Now you need to attach the Data Metric Function to the columns you want to evaluate, like this:
 
 ```sql
-ALTER TABLE some_table ADD DATA METRIC FUNCTION count_of_nulls ON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS);
+ALTER TABLE some_table
+  ADD DATA METRIC FUNCTION count_of_nulls ON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS);
 ```
 
 

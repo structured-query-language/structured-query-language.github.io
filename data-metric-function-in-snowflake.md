@@ -43,8 +43,9 @@ Creating a Data Metric Function is as simple as creating a UDF.  The function ta
 CREATE DATA METRIC FUNCTION IF NOT EXISTS count_of_nulls (
   ARG_T TABLE (ARG_C1 STRING, ARG_C2 STRING, ARG_C3 STRING ) ) RETURNS NUMBER
 AS
-  ‘SELECT COUNT_IF(ARG_C2 IS NULL OR ARG_C2 IS NULL  OR ARG_C3 IS NULL  ) from ARG_T’
-;
+$$
+SELECT COUNT_IF(ARG_C2 IS NULL OR ARG_C2 IS NULL  OR ARG_C3 IS NULL  ) from ARG_T’;
+$$;
 ```
 
 All Data Metric Functions are added to your warehouse so other users can reuse them in a consistent manner without having to recreate the same rules over and over.

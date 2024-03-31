@@ -55,11 +55,12 @@ You can see which metrics are available by running:
 ```sql
 SHOW DATA METRIC FUNCTIONS IN <DATABASE_NAME>.<SCHEMA_NAME>;
 ```
+## Attaching custom Data Metric Function to a Table
 
-Now you need to attach the Data Metric Function to the columns you want to evaluate, like this:
+You attach the custom Data Metric Function to the columns you want to evaluate:
 
 ```sql
-ALTER TABLE some_table
+ALTER TABLE CUSTOMER_DIM
   ADD DATA METRIC FUNCTION count_of_nulls ON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS);
 ```
 
@@ -70,19 +71,10 @@ Next, you set the interval at which metrics should be calculated. This is config
 ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = '1 HOUR';
 ```
 
-You can then query the metrics results by querying the `DATA_METRIC_RESULTS` table from schema where tables to be validated reside.
-
-```sql
-SELECT to_number(VALUE) as count, TABLE_NAME, COLUMN_NAMES, 
-FROM my_db.my_schema.data_metric_results
-WHERE COLUMN_NAME = 'EMAIL_COL'
-ORDER BY SCHEDULED_TIME DESC;
-```
-
 You can test DMFs by executing them ad-hoc or include them directly in your data pipelines running on Snowflake for in-line validation. This is how you execute a DMF:
 
 ``` sql
 SELECT MY_DB.DATA_METRICS.count_of_nulls (
-  SELECT email_col FROM CUSTOMERS
+  SELECT FIRST_NAME, LAST_NAME, EMAIL_ADDRESS FROM CUSTOMER_DIM
 ) AS VALUE;
 ```

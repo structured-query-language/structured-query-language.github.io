@@ -16,24 +16,26 @@ Snowflake has the following DMF pre-defined:
 4. `UNIQUE_COUNT`
 5. `ROW_COUNT`
 
-## Attaching a pre-defined Data Metric Fuction to a Table
+## Attaching a pre-defined Data Metric Function to a Table
 
-The following `ALTER` will add a build-in Data Metric Function to the `EMAIL_ADDRESS` column in the `CUSTOMER_DIM` table
+The following `ALTER` will attach a built-in Data Metric Function `NULL_COUNT` to the `EMAIL_ADDRESS` column in the `CUSTOMER_DIM` table
 
 ```sql
-
--- Attach metric to the EMAIL_ADDRESS column
 ALTER TABLE customer_dim ADD DATA METRIC FUNCTION NULL_COUNT ON (EMAIL_ADDRESS);
+```
 
--- Tell Snowflake to evaluate the function every 1 hour
+Tell Snowflake to evaluate the DMF every hour:
+```sql
 ALTER TABLE customer_dim SET DATA_METRIC_SCHEDULE = '1 HOUR';
+```
 
-
+Inpect the quality metrics:
+```sql
 SELECT * FROM SNOWFLAKE.LOCAL.DATA_QUALITY_MONITORING_RESULTS
 ```
 
 
-
+## Defining Custom Data Metric Functions (DMF)
 
 Creating a Data Metric Function is as simple as creating a UDF.  The function takes a new TABLE data type with one or more column arguments and returns a single result value.
 
@@ -63,7 +65,7 @@ ALTER TABLE some_table ADD DATA METRIC FUNCTION count_of_nulls ON (FIRST_NAME, L
 Next, you set the interval at which metrics should be calculated. This is configured at the table level and can be as frequent as 1 minute.
 
 ```sql
-ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = '1 HOU';
+ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = '1 HOUR';
 ```
 
 You can then query the metrics results by querying the `DATA_METRIC_RESULTS` table from schema where tables to be validated reside.

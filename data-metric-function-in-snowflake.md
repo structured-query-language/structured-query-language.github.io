@@ -40,11 +40,14 @@ SELECT * FROM SNOWFLAKE.LOCAL.DATA_QUALITY_MONITORING_RESULTS
 Creating a Data Metric Function is as simple as creating a UDF.  The function takes a new TABLE data type with one or more column arguments and returns a single result value.
 
 ```sql
-CREATE DATA METRIC FUNCTION IF NOT EXISTS count_of_nulls (
-  ARG_T TABLE (ARG_C1 STRING, ARG_C2 STRING, ARG_C3 STRING ) ) RETURNS NUMBER
+CREATE DATA METRIC FUNCTION count_of_nulls(
+  ARG_T TABLE (ARG_C1 STRING, ARG_C2 STRING, ARG_C3 STRING)
+)
+RETURNS NUMBER
 AS
 $$
-SELECT COUNT_IF(ARG_C2 IS NULL OR ARG_C2 IS NULL  OR ARG_C3 IS NULL  ) from ARG_T;
+SELECT COUNT_IF(ARG_C2 IS NULL OR ARG_C2 IS NULL OR ARG_C3 IS NULL)
+from ARG_T;
 $$;
 ```
 

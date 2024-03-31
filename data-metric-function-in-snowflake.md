@@ -79,7 +79,7 @@ You attach the custom Data Metric Function to the columns you want to evaluate:
 
 ```sql
 ALTER TABLE CUSTOMER_DIM
-  ADD DATA METRIC FUNCTION count_of_nulls ON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS);
+  ADD DATA METRIC FUNCTION count_of_nulls ON (SELECT FIRST_NAME, LAST_NAME, EMAIL_ADDRESS FROM CUSTOMER_DIM);
 ```
 
 

@@ -10,11 +10,11 @@ Data Metric Functions (DMF) allow you to automate data quality validation and mo
 
 Snowflake has the following DMF pre-defined:
 
-1. FRESHNESS
-2. NULL_COUNT
-3. DUPLICATE_COUNT
-4. UNIQUE_COUNT
-5. ROW_COUNT
+1. `FRESHNESS`
+2. `NULL_COUNT`
+3. `DUPLICATE_COUNT`
+4. `UNIQUE_COUNT`
+5. `ROW_COUNT`
 
 ## Attaching a pre-defined Data Metric Fuction to a Table
 

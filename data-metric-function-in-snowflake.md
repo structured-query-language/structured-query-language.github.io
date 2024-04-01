@@ -85,14 +85,13 @@ ALTER TABLE CUSTOMER_DIM
   ADD DATA METRIC FUNCTION count_of_nulls ON (SELECT FIRST_NAME, LAST_NAME, EMAIL_ADDRESS FROM CUSTOMER_DIM);
 ```
 
-
 Next, you set the interval at which metrics should be calculated. This is configured at the table level and can be as frequent as 1 minute.
 
 ```sql
 ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = '1 HOUR';
 ```
 
-You can test DMFs by executing them ad-hoc or include them directly in your data pipelines running on Snowflake for in-line validation. This is how you execute a DMF:
+You can test a customer DMFs by executing them ad-hoc or include them directly in your data pipelines running on Snowflake for in-line validation. This is how you execute a DMF:
 
 ``` sql
 SELECT scratch.saqib_ali.count_of_nulls (

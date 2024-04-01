@@ -8,6 +8,8 @@ Data Metric Functions (DMF) allow you to automate data quality validation and mo
 5. Metrics are executed by the serverless backend, no need to keep your warehouse running
 6. View and manage all of your quality metrics in a single place
 
+## Pre-defined Data Metric Functions (DMF) in Snowflake
+
 Snowflake has the following DMF pre-defined:
 
 1. `FRESHNESS`
@@ -16,7 +18,7 @@ Snowflake has the following DMF pre-defined:
 4. `UNIQUE_COUNT`
 5. `ROW_COUNT`
 
-## Trying out pre-defined DMF
+### Trying out pre-defined DMF
 
 You can use try out the pre-defined DMF functions in Snowflake as following:
 ```sql
@@ -31,7 +33,7 @@ select snowflake.core.duplicate_count(select email_address from customer_dim);
 select snowflake.core.unique_count(select email_address from customer_dim);
 ```
 
-## Attaching a pre-defined Data Metric Function to a Table
+### Attaching a pre-defined Data Metric Function to a Table
 
 The following `ALTER` will attach a built-in Data Metric Function `NULL_COUNT` to the `EMAIL_ADDRESS` column in the `CUSTOMER_DIM` table
 

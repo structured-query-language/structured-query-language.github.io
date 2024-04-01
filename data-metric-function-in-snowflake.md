@@ -49,8 +49,9 @@ Inpect the quality metrics:
 SELECT * FROM SNOWFLAKE.LOCAL.DATA_QUALITY_MONITORING_RESULTS
 ```
 
+## Custom Data Metric Functions
 
-## Defining Custom Data Metric Functions (DMF)
+### Defining a Custom Data Metric Functions (DMF)
 
 Creating a Data Metric Function is as simple as creating a UDF.  The function takes a new TABLE data type with one or more column arguments and returns a single result value.
 
@@ -73,7 +74,7 @@ You can see which metrics are available by running:
 ```sql
 SHOW DATA METRIC FUNCTIONS IN <DATABASE_NAME>.<SCHEMA_NAME>;
 ```
-## Attaching custom Data Metric Function to a Table
+### Attaching custom Data Metric Function to a Table
 
 You attach the custom Data Metric Function to the columns you want to evaluate:
 
@@ -92,7 +93,7 @@ ALTER TABLE some_table SET DATA_METRIC_SCHEDULE = '1 HOUR';
 You can test DMFs by executing them ad-hoc or include them directly in your data pipelines running on Snowflake for in-line validation. This is how you execute a DMF:
 
 ``` sql
-SELECT MY_DB.DATA_METRICS.count_of_nulls (
+SELECT scratch.saqib_ali.count_of_nulls (
   SELECT FIRST_NAME, LAST_NAME, EMAIL_ADDRESS FROM CUSTOMER_DIM
 ) AS VALUE;
 ```

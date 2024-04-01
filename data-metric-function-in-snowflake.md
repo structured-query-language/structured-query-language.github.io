@@ -53,7 +53,7 @@ SELECT * FROM SNOWFLAKE.LOCAL.DATA_QUALITY_MONITORING_RESULTS
 
 ## Custom Data Metric Functions
 
-### Defining a Custom Data Metric Functions (DMF)
+### Defining a custom Data Metric Functions (DMF)
 
 Creating a Data Metric Function is as simple as creating a UDF.  The function takes a new TABLE data type with one or more column arguments and returns a single result value.
 

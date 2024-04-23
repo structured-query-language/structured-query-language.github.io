@@ -5,25 +5,29 @@ User Defined Aggregate Functions (UDAF) are now available in Google BigQuery. He
 ### Defining the UDAF
 
 ```sql
-CREATE AGGREGATE FUNCTION geometric_mean(
-  col1 DOUBLE
+CREATE TEMP AGGREGATE FUNCTION geometric_mean(
+  column_values float64
 )
-RETURNS DOUBLE
+RETURNS float64
 AS
 (
-  EXP(SUM(LN(col1))/COUNT(col1))
+  EXP(SUM(LN(column_values))/COUNT(column_values))
 );
+
+with test_data as (
+  SELECT 1 AS col1 
+  UNION ALL
+  SELECT 3
+  UNION ALL
+  SELECT 5
+)
+select geometric_mean(col1) from test_data;
 ```
 
 ### Calling the UDAF 
 
 ```sql
-with recursive test_data as (
-  SELECT cast (col1 as INT64) as col1
-  FROM UNNEST(GENERATE_ARRAY(1, 20)) col1
-)
-SELECT geometric_mean(col1) AS geo_mean
-FROM test_data;
+select geometric_mean(col1) from test_data;
 ```
 
 

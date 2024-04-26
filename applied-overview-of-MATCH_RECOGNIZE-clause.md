@@ -102,8 +102,13 @@ We see that Rhode Island has a decreasing Unemployment Rate starting July 2021.
 
 
 
-# See also
-1. [MATCH_RECOGNIZE](match_recognize.md)
-1. [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
-1. [A/B Analysis on Streaming Data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
-1. [Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE](correlated-pattern-definitions-and-MATCH_RECOGNIZE.md)
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

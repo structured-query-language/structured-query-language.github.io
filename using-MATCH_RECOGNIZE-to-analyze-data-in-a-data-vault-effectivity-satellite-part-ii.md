@@ -93,10 +93,13 @@ The query identified the following Customers started with a Premium Subscription
 | Angela      | Premium              | 2021-05-15 | 9999-12-31 | REVERSAL     |
 
 
-# See also
-1. [Data Vault Effectivity Satellite](data-vault-effectivity-satellite.md) 
-1. [Applied overview of MATCH_RECOGNIZE clause](applied-overview-of-MATCH_RECOGNIZE-clause.md)
-1. [MATCH_RECOGNIZE](match_recognize.md)
-1. [Stock Analysis using MATCH_RECOGNIZE](stock-analysis.md)
-1. [A/B Analysis on Streaming Data using MATCH_RECOGNIZE](A-B-analysis-on-streaming-data-using-MATCH_RECOGNIZE.md)
-1. [Correlated pattern definitions and Snowflake's MATCH_RECOGNIZE](correlated-pattern-definitions-and-MATCH_RECOGNIZE.md)
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

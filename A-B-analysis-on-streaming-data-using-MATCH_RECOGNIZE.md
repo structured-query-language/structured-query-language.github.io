@@ -78,3 +78,16 @@ match_recognize(
 ![image](https://user-images.githubusercontent.com/121721444/213082729-3658b4e2-691c-4f2a-9fcd-83d2ff795cfd.png)
 ## Screenshot 2
 ![image](https://user-images.githubusercontent.com/121721444/213083242-d4f3cd17-cff7-47f1-8c0c-2824ea19666b.png)
+
+
+See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MACTCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

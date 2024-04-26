@@ -64,3 +64,19 @@ The above `match_recognize` query will produce the following output:
 |3b54fe894…              |select …… |1.2                   |…|
 |3b54fe894…              |select …… |2.2                   |…|
 |3b54fe894…              |select …… |4.0                   |…|
+
+
+
+
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+

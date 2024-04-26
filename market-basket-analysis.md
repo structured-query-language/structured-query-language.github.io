@@ -1,4 +1,4 @@
-# Association Rule Mining
+# Association Rule Mining using MATCH_RECOGNIZE
 What is the most frequently bought item with Infant Formula and Infant Diapers? Association Rule Mining is a key to Market Basket Analysis. While Association Rule Mining is a complex topic, we can use SQL to figure out what items most frequently bought together. 
 
 ## Association Rule

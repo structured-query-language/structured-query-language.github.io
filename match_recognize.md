@@ -24,3 +24,14 @@ define
 
 
 ![image](https://user-images.githubusercontent.com/121721444/210282428-7fdf6c5d-5b28-475e-b094-51581b4def14.png)
+
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

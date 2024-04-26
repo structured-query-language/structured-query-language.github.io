@@ -2,7 +2,7 @@
 
 SQL MATCH_RECOGNIZE clause can perform Pattern Matching over a set of rows. MATCH_RECOGNIZE does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern
 
-To demonstrate the power of MATCH_RECOGNIZE we will use the Unemployment by State data set from BLS.
+To demonstrate the power of `MATCH_RECOGNIZE` we will use the Unemployment by State data set from BLS.
 
 ## Analysis Goal
 The goal of this analysis to take a look at the Unemployment data set and identify the States that are showing a decreasing Unemployment to date, and identify the State with the longest streak of decrease in Unemployment, month over month.

@@ -1,4 +1,4 @@
-# What’s eating up your Snowflake Virtual Warehouse - Part II
+# What’s eating up your Snowflake Virtual Warehouse - Part II featuring MATCH_RECOGNIZE
 
 Managing Snowflake cost can be tricky. Most queries will become slower as the data grows. However they should not get worse by a large magnitude. Queries that are becoming slower at a rapid pace by a large magnitude are usually the problematic ones. These queries should be identified and optimized. To identify the problematic queries we can use `query_parameterized_hash` and a `match_recognize` query in Snowflake.
 

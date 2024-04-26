@@ -80,3 +80,14 @@ Based on the above query, we can extract the following Association Rule:
 ```
 
 This doesn't mean that there is correlation between purchase of Infant Milk, Infant Diaper and Coffee. This is just a property if of the Data.
+
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

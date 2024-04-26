@@ -82,7 +82,7 @@ match_recognize(
 See also:
 <ul id="recent-articles">
 {% for page in site.pages %}
-    {% if page.title contains "MACTCH_RECOGNIZE" %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
     <li>
     <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
     </li>

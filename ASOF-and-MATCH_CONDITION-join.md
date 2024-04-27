@@ -121,8 +121,13 @@ Here is what the output of the `stock_price_effectivity` will look like:
 | TSLA   | 2024-02-02 15:23:07.893 | 2024-02-02 15:23:21.083 | 9.44  |
 | TSLA   | 2024-02-02 15:23:21.083 |                         | 9.13  |
 
-## See Also
-- [ASOF join Snowflake](ASOF-join-snowflake.md)
-- [ASOF join](ASOF-join.md)
-- [Perform joins on timeseries data using ASOF JOIN in Snowflake](perform-joins-on-timeseries-data-using-ASOF-JOIN-in-snowflake.md)
-
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

@@ -87,7 +87,7 @@ It essentially executes a function defined by looking up nearby values in the `s
 # See also:
 <ul id="recent-articles">
 {% for page in site.pages %}
-    {% if page.title contains "MATCH_RECOGNIZE" %}
+    {% if page.title contains "ASOF" %}
     <li>
     <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
     </li>

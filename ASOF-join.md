@@ -93,8 +93,13 @@ This query returns all rows from the bids table joined with records from the ask
 The stock column of the two tables has the same value
 The timestamp of the `stock_prices` record is prior to or equal to the timestamp of the `stock_portfolio` record.
 
-# Also see
-- [SQL ASOF join in Snowflake](ASOF-and-MATCH_CONDITION-join.md)
-- [ASOF join Snowflake](ASOF-join-snowflake.md)
-- [Perform joins on timeseries data using ASOF JOIN in Snowflake](perform-joins-on-timeseries-data-using-ASOF-JOIN-in-snowflake.md)
-
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "ASOF" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

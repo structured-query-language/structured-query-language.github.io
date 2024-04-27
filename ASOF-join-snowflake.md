@@ -84,7 +84,13 @@ This attaches the value of the holding at that time to each row.
 
 It essentially executes a function defined by looking up nearby values in the `stock_prices` table. 
 
-# See also
-- [SQL ASOF join in Snowflake](ASOF-and-MATCH_CONDITION-join.md)
-- [ASOF join](ASOF-join.md)
-- [Perform joins on timeseries data using ASOF JOIN in Snowflake](perform-joins-on-timeseries-data-using-ASOF-JOIN-in-snowflake.md)
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

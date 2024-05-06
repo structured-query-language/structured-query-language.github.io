@@ -41,6 +41,21 @@ order by months_of_decreasing_unemployment desc;
 
 
 # MATCH_RECOGNIZE Query Syntax
+
+```
+SELECT ...
+FROM ...
+MATCH_RECOGNIZE (
+  PARTITION BY ... -- Optional, used to partition the data
+  ORDER BY ...      -- Defines the row sequence order
+  MEASURES ...      -- Allows you to compute values based on the pattern
+  ONE ROW PER MATCH -- Optional, outputs one row per match
+  AFTER MATCH SKIP  -- Optional, skips rows after a match
+    TO NEXT ...     -- Clause to define where to resume pattern matching
+  PATTERN (...)     -- Defines the pattern to detect
+  DEFINED AS ...    -- Defines conditions for the pattern elements
+)
+
 ## PARTITION BY
 
 PARTITION BY allows the match to be keyed and partitioned over a column name. A match will happen over every unique key specified by the partition statement. This enables a single query to be matched over all the keys and generate separate matches, one to every key.

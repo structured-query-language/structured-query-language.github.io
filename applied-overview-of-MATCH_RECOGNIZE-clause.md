@@ -55,6 +55,7 @@ MATCH_RECOGNIZE (
   PATTERN (...)     -- Defines the pattern to detect
   DEFINED AS ...    -- Defines conditions for the pattern elements
 )
+```
 
 ## PARTITION BY
 

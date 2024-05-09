@@ -1,4 +1,4 @@
-# ANY keyword in the Snowflake's PIVOT IN list
+# Support for ANY keyword in the Snowflake's PIVOT IN list
 
 ## Input Data
 
@@ -9,7 +9,7 @@
 | Groucho Marx | Comedy | 4      |
 | Harpo Marx   | Comedy | 3      |
 
-## Using ANY keyword
+## Dynamic PIVOT using the ANY keyword in the IN list
 ```sql
 select *
 from performance_reviews
@@ -23,7 +23,8 @@ pivot (avg(rating) for skill in (ANY))
 | Harpo Marx   |        | 3      |
 
 
-## Using a Subquery
+## Dynamic Pivot using a Subquery in the IN list
+
 ```sql
 select *
 from performance_reviews

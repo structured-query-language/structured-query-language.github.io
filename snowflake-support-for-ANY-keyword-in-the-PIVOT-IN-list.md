@@ -15,6 +15,7 @@ select *
 from performance_reviews
 pivot (avg(rating) for skill in (ANY))
 ```
+
 ### Query Output
 | Name         | Acting | Comedy |
 |--------------|--------|--------|

@@ -17,6 +17,7 @@ pivot (avg(rating) for skill in (ANY))
 ```
 
 ### Query Output
+
 | Name         | Acting | Comedy |
 |--------------|--------|--------|
 | Groucho Marx | 5      | 4.5    |

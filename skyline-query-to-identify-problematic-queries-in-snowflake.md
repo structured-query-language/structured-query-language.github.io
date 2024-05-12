@@ -39,4 +39,12 @@ where not exists ( -- Skyline query to identify worst performing queries
 
 
 # See also
-[Skyline Query](skyline-query-pareto-set-maxima.md)
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "Skyline" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

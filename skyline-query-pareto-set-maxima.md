@@ -81,4 +81,12 @@ print(skyline_hotels)
 | 10  |60   |                    16 |
 
 # See also
-[Skyline Query to identify problematic queries in Snowflake](skyline-query-to-identify-problematic-queries-in-snowflake.md)
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "Skyline" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

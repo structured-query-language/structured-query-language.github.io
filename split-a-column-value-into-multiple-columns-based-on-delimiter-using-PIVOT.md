@@ -1,15 +1,15 @@
 # Split a column value into multiple columns based on delimiter using PIVOT
 
-Recently I had to work with a table that had all the data in a single comma delimted column. The data looked as following:
+## Input Data
 
 | ROW_VALUE                                      |
 |------------------------------------------------|
 | Bob,CSE 510,CSE 594,CSE 310                    |
 | Angela,CSE 580,CSE 594,CSE 320,CSE 510,CSE 310 |
 
-One way is to to use split() function in Snowflake. But it doesn't work well when the number of the fields in the comma delimited field is dynamic. 
 
-So I ended up using the [Dynamic PIVOT](snowflake-support-for-ANY-keyword-in-the-PIVOT-IN-list.md) instead
+
+## Query
 
 ```sql
 with unpivoted_data as (
@@ -22,7 +22,7 @@ from unpivoted_data
 pivot (min(value) for index in (ANY));
 ```
 
-The query will output something like this:
+### Query Output
 
 | SEQ | 1      | 2       | 3       | 4       | 5       | 6       |
 |-----|--------|---------|---------|---------|---------|---------|

@@ -38,3 +38,16 @@ pivot (avg(rating) for skill in (select skill from performance_reviews where rat
 |--------------|--------|--------|
 | Groucho Marx | 5      | 4.5    |
 | Harpo Marx   |        | 3      |
+
+
+
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "PIVOT" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

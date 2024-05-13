@@ -9,7 +9,7 @@ Recently I had to work with a table that had all the data in a single comma deli
 
 One way is to to use split() function in Snowflake. But it doesn't work well when the number of the fields in the comma delimited field is dynamic. 
 
-So I ended up using the Dynamic PIVOT instead
+So I ended up using the [Dynamic PIVOT](snowflake-support-for-ANY-keyword-in-the-PIVOT-IN-list.md) instead
 
 ```sql
 with unpivoted_data as (

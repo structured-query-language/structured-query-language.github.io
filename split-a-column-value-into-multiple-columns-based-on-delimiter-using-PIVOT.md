@@ -1,4 +1,4 @@
-# Split a column value into multiple columns based on delimiter in Snowflake
+# Split a column value into multiple columns based on delimiter using PIVOT
 
 Recently I had to work with a table that had all the data in a single comma delimted column. The data looked as following:
 

@@ -1,4 +1,4 @@
-# Split a column value to multiple columns based on delimiter in Snowflake
+# Split a column value into multiple columns based on delimiter in Snowflake
 
 Recently I had to work with a table that had all the data in a single comma delimted column. The data looked as following:
 
@@ -28,3 +28,17 @@ The query will output something like this:
 |-----|--------|---------|---------|---------|---------|---------|
 | 2   | Angela | CSE 580 | CSE 594 | CSE 320 | CSE 510 | CSE 310 |
 | 1   | Bob    | CSE 510 | CSE 594 | CSE 310 |         |         |
+
+
+
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "PIVOT" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

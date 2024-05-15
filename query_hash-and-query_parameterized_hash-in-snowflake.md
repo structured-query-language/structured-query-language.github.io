@@ -54,4 +54,12 @@ inner join snowflake.account_usage.query_history using (query_parameterized_hash
 
 
 # See also
-[Skyline Query](skyline-query-pareto-set-maxima.md)
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "Skyline" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

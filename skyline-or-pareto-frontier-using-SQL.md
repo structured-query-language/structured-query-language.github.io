@@ -19,7 +19,7 @@ Skyline computation is an essential database operation that has many application
 | j        | 2      | 490   | 5                    |
 | k        | 5      | 490   | 1                    |
 
-## SQL 1
+## Option 1
 
 ```sql
 SELECT hotel_id, price, rating, distance_from_center FROM hotels AS o WHERE
@@ -38,7 +38,7 @@ SELECT 1 FROM hotels AS i WHERE
 | i        | 5      | 190   | 1                    |
 
 
-## SQL 2
+## Option 2
 
 ```sql
 SELECT p.*
@@ -57,7 +57,7 @@ WHERE q.price IS NULL AND q.rating IS NULL and q.distance_from_center is NULL;
 | e        | 4      | 100   | 2                    |
 | i        | 5      | 190   | 1                    |
 
-## SQL 3
+## Option 3
 
 ```sql
 WITH ranked AS (

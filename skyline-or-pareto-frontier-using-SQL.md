@@ -20,6 +20,9 @@ The following are few different options for calculating the Skyline or Pareto Fr
 | j        | 2      | 490   | 5                    |
 | k        | 5      | 490   | 1                    |
 
+
+![Screenshot 2024-05-22 at 21-31-38 Online Interactive 3D Scatter Plot](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/0055b866-28ab-49bd-8733-ea76eff77e0b)
+
 ## Option 1
 
 ```sql

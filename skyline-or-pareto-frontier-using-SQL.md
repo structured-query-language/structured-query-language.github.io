@@ -2,6 +2,7 @@
 
 Skyline computation is an essential database operation that has many applications in multi-criteria decision making scenarios such as recommender systems.
 
+The following are few different options for calculating the Skyline or Pareto Frontier or Pareto Front using SQL
 
 ## Hotel Dataset
 
@@ -81,3 +82,16 @@ WHERE rank1 = 1 OR rank2 = 1 OR rank3 = 1;
 |----------|--------|-------|----------------------|-------|-------|-------|
 | i        | 5      | 190   | 1                    | 2     | 1     | 1     |
 | e        | 4      | 100   | 2                    | 1     | 5     | 4     |
+
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "Skyline" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

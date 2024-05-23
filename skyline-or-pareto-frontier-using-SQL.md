@@ -23,7 +23,7 @@ Given a multidimensional data set, where the dimensions correspond to the criter
 
 |![Screenshot 2024-05-22 at 21-31-38 Online Interactive 3D Scatter Plot](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/0055b866-28ab-49bd-8733-ea76eff77e0b)|
 |:--:| 
-|Here Hotel _i_ and _e_ are better or equal to all hotels in all dimensions and strictly better than other hotels in _at least one_ dimension. Thus, _i_ and _e_ form the Skyline in this 3 Dimensional space.|
+|*Figure 1. Here Hotel _i_ and _e_ are better or equal to all hotels in all dimensions and strictly better than other hotels in _at least one_ dimension. Thus, _i_ and _e_ form the Skyline in this 3 Dimensional space.*|
 
 
 ## Skyline using SQL

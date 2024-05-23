@@ -4,9 +4,7 @@ Skyline computation is an essential database operation that has many application
 
 Given a multidimensional data set, where the dimensions correspond to the criteria that need to be balanced, a Skyline query returns a set of interesting data points, aka. skyline points, that are not dominated by any other point in all dimensions. A point _m_ dominates another point _n_, if _m_ is better than or equal to _n_ in all dimensions and strictly better than _n_ in at least one dimension. 
 
-The following are few different options for calculating the Skyline or Pareto Frontier or Pareto Front using SQL
-
-## Hotel Dataset
+## Example Hotel Dataset
 
 | HOTEL_ID | RATING | PRICE | DISTANCE_FROM_CENTER |
 |----------|--------|-------|----------------------|
@@ -26,6 +24,10 @@ The following are few different options for calculating the Skyline or Pareto Fr
 ![Screenshot 2024-05-22 at 21-31-38 Online Interactive 3D Scatter Plot](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/0055b866-28ab-49bd-8733-ea76eff77e0b)
 
 > Here Hotel _i_ and _e_ are better or equal to all hotels in all dimensions and strictly better than other hotels in _at least one_ dimension. Thus, _i_ and _e_ form the Skyline in this 3 Dimensional space.
+
+## Skyline using SQL
+The following are few different options for calculating the Skyline or Pareto Frontier or Pareto Front using SQL
+
 
 ## Option 1
 

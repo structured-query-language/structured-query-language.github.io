@@ -1,0 +1,83 @@
+# Skyline or Pareto Front using SQL
+
+Skyline computation is an essential database operation that has many applications in multi-criteria decision making scenarios such as recommender systems.
+
+
+## Hotel Dataset
+
+| HOTEL_ID | RATING | PRICE | DISTANCE_FROM_CENTER |
+|----------|--------|-------|----------------------|
+| a        | 4      | 200   | 3                    |
+| b        | 5      | 300   | 4                    |
+| c        | 1      | 600   | 5                    |
+| d        | 2      | 700   | 1                    |
+| e        | 4      | 100   | 2                    |
+| f        | 5      | 290   | 3                    |
+| g        | 1      | 190   | 5                    |
+| h        | 1      | 290   | 5                    |
+| i        | 5      | 190   | 1                    |
+| j        | 2      | 490   | 5                    |
+| k        | 5      | 490   | 1                    |
+
+## SQL 1
+
+```sql
+SELECT hotel_id, price, rating, distance_from_center FROM hotels AS o WHERE
+ not EXISTS(
+SELECT 1 FROM hotels AS i WHERE
+  i.price <= o.price AND i.rating >= o.rating and i.distance_from_center <= o.distance_from_center
+  AND (i.price < o.price OR i.rating > o.rating OR i.distance_from_center < o.distance_from_center)
+);
+```
+
+### Query Output
+
+| HOTEL_ID | RATING | PRICE | DISTANCE_FROM_CENTER |
+|----------|--------|-------|----------------------|
+| e        | 4      | 100   | 2                    |
+| i        | 5      | 190   | 1                    |
+
+
+## SQL 2
+
+```sql
+SELECT p.*
+FROM hotels p
+LEFT JOIN hotels q
+  ON (q.price <= p.price AND q.rating >= p.rating AND q.distance_from_center < p.distance_from_center)
+  OR (q.price < p.price AND q.rating >= p.rating AND q.distance_from_center <= p.distance_from_center)
+  OR (q.price <= p.price AND q.rating > p.rating AND q.distance_from_center <= p.distance_from_center)
+WHERE q.price IS NULL AND q.rating IS NULL and q.distance_from_center is NULL;
+```
+
+### Query Output
+
+| HOTEL_ID | RATING | PRICE | DISTANCE_FROM_CENTER |
+|----------|--------|-------|----------------------|
+| e        | 4      | 100   | 2                    |
+| i        | 5      | 190   | 1                    |
+
+## SQL 3
+
+```sql
+WITH ranked AS (
+  SELECT
+    *
+    , dense_rank() OVER (ORDER BY price ASC, rating DESC, distance_from_center ASC ) AS rank1
+    , dense_rank() OVER (ORDER BY rating DESC, price ASC, rating DESC, distance_from_center ASC ) AS rank2
+    , dense_rank() OVER (ORDER BY distance_from_center ASC, rating DESC, price ASC, rating DESC) AS rank3
+
+  FROM hotels
+)
+SELECT *
+FROM ranked
+WHERE rank1 = 1 OR rank2 = 1 OR rank3 = 1;
+```
+
+
+### Query Output
+
+| HOTEL_ID | RATING | PRICE | DISTANCE_FROM_CENTER | RANK1 | RANK2 | RANK3 |
+|----------|--------|-------|----------------------|-------|-------|-------|
+| i        | 5      | 190   | 1                    | 2     | 1     | 1     |
+| e        | 4      | 100   | 2                    | 1     | 5     | 4     |

@@ -1,6 +1,6 @@
 # Skyline or Pareto Front using SQL
 
-Skyline computation is an essential database operation that has many applications in multi-criteria decision making scenarios such as recommender systems. Skyline queries have emerged as an increasingly popular tool for identifying a set of interesting objects that balance different user-specified criteria.
+Skyline computation is an essential database operation that has many applications in multi-criteria decision making scenarios such as recommender systems. As such, Skyline queries have emerged as an increasingly popular tool for identifying a set of interesting objects that balance different user-specified criteria.
 
 The following are few different options for calculating the Skyline or Pareto Frontier or Pareto Front using SQL
 

@@ -4,7 +4,11 @@ Skyline computation is an essential database operation that has many application
 
 Given a multidimensional data set, where the dimensions correspond to the criteria that need to be balanced, a Skyline query returns a set of interesting data points, aka. skyline points, that are not dominated by any other point in all dimensions. A point _m_ dominates another point _n_, if _m_ is better than or equal to _n_ in all dimensions and strictly better than _n_ in at least one dimension. 
 
-## Example Hotel Dataset
+
+## An Illustrative Example
+The best known example use case for a skyline query is a hotel booking scenario where users are looking for hotels. Assume many hotels are available and the user wants to find one based on three criteria: distance to the center, hotel rating and price per night. Further assume that the user is unable to say which of these criteria is more important. So, we need to look for hotels representing a good combination of all three criteria. The skyline consists of all hotels that represent a "good" combinations of the three criteria. For each of the other hotels, there is always at least one hotel in the skyline that is better with respect to the three criteria. So, being presented the skyline, the user gets an overview of the available hotels and can make the final decision with respect to her personal preferences for the three criteria. 
+
+### Example Hotel Dataset
 
 | HOTEL_ID | RATING | PRICE | DISTANCE_FROM_CENTER |
 |----------|--------|-------|----------------------|

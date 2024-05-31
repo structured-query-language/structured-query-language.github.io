@@ -25,6 +25,9 @@ create or alter TABLE HOTELS (
 
 ## Updated Table
 
+1. Primary Key constraint added to the HOTEL_ID
+2. A new column DISTANCE_FROM_AIRPORT added to the table
+
 | name                  | type        | kind   | null? | default | primary key |
 |-----------------------|-------------|--------|-------|---------|-------------|
 | HOTEL_ID              | VARCHAR(10) | COLUMN | Y     |         | Y           |

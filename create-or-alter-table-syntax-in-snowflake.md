@@ -1,6 +1,6 @@
 # CREATE OR ALTER TABLE syntax in Snowflake
 
-Snowflake now support CREATE OR ALTER TABLE syntax, where existing tables can be altered in a single CREATE TABLE statement
+Snowflake now support CREATE OR ALTER TABLE syntax, where existing tables can be altered in a single CREATE TABLE DDL statement
 
 ## Existing Table
 
@@ -11,7 +11,7 @@ Snowflake now support CREATE OR ALTER TABLE syntax, where existing tables can be
 | PRICE                 | NUMBER(3,0) | COLUMN | Y     |         | N           |
 | DISTANCE_FROM_CENTER  | NUMBER(1,0) | COLUMN | Y     |         | N           |
 
-## CREATE OR ALTER TABLE query
+## CREATE OR ALTER TABLE statement
 
 ```sql
 create or alter TABLE HOTELS (

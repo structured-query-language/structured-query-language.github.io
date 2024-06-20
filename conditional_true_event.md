@@ -1,4 +1,4 @@
-# CONDITIONAL_TRUE_EVENT
+# Conditional True Event
 
 `CONDITIONAL_TRUE_EVENT` is a powerful, yet underutilized Window Function in Snowflake. `CONDITIONAL_TRUE_EVENT` let's you cumulatively count the occurrences of a TRUE event in a WINDOW. Under the cover, `CONDITIONAL_TRUE_EVENT` assigns an event window number to each row, starting from 0, and increments the number by 1 when the result of the boolean argument expression evaluates true.
 

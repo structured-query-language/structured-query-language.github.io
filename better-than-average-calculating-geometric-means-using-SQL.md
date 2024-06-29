@@ -55,7 +55,7 @@ the sensitivity of the arithmetic mean can be problematic. The geometric mean mi
 |:--:| 
 |Figure 1: Comparison of Means|
 
-In the above case, you should first confirm that 90 is a valid data point and not an error. Trimming outliers, so long as it is justifiable, is another way to produce more stable mean calculations. Geometric means are also appropriate when summarizing ratios or percentages. This has many applications in medicine, and is considered the “gold standard” for calculating certain health measurements. In the financial industry, this concept is applied when constructing stock indexes and rates of return. The geometric mean is also employed in the art world, to choose aspect ratios film and video. The idea of comparing ratios is expanded when you look at scaled data: if you have data that have different attributes or scales, and you have normalized the results to be presented as ratios to reference values, the geometric mean is the correct mean to use.
+Geometric means are also appropriate when summarizing ratios or percentages. In the financial industry, this concept is applied when constructing stock indexes and rates of return. The geometric mean is also employed in the art world, to choose aspect ratios film and video. The idea of comparing ratios is expanded when you look at scaled data: if you have data that have different attributes or scales, and you have normalized the results to be presented as ratios to reference values, the geometric mean is the correct mean to use.
 
 ## Considerations
 

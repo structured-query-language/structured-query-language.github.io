@@ -36,20 +36,9 @@ data, scaled data, or when averaging ratios. Some common applications include:
 * Repeated measures data
 * Bioequivalence trials
 
-If your data involve rate changes or changes over time, your data may be skewed. Often these data have a lognormal distribution, and the geometric mean describes the center of lognormal data perfectly. In addition to skew, you should also consider the size of your sample. When working with small samples,
-0
-50
-100
-150
-200
-250
-300
-Arithmetic Mean
-Geometric Mean
-Figure 1: Geometric Series with Means Highlighted
-3
+If your data involve rate changes or changes over time, your data may be skewed. Often these data have a lognormal distribution, and the geometric mean describes the center of lognormal data perfectly. 
 
-the sensitivity of the arithmetic mean can be problematic. The geometric mean might be a better central measure, as it will consider all of the data points, but without being subject to the same “pull” that can deteriorate the interpretation of the arithmetic mean (Figure 1):
+In the following example the Arthimetic Mean is _pulled_ towards the higher pay rates. Notice that the Average (Arithemetic Mean) is 266, whereas most employees earn less than 200. Geometric mean might be a better central measure for this dataset, as it will consider all of the data points, but without being subject to the same _pull_ that can deteriorate the interpretation of the arithmetic mean (Figure 1):
 
 |![Arithematic Mean vs  Geometric Mean vs  Harmonic Mean(1)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/ca7bffab-208f-4085-a9f6-93ec4266df00)|
 |:--:| 

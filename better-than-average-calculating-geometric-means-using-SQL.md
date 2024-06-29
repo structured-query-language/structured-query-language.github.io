@@ -51,9 +51,9 @@ Figure 1: Geometric Series with Means Highlighted
 
 the sensitivity of the arithmetic mean can be problematic. The geometric mean might be a better central measure, as it will consider all of the data points, but without being subject to the same “pull” that can deteriorate the interpretation of the arithmetic mean (Figure 1):
 
-![Arithematic Mean vs  Geometric Mean vs  Harmonic Mean](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/c99e2197-fa0a-431b-9cbe-eb997c3c74f7)
+|![Arithematic Mean vs  Geometric Mean vs  Harmonic Mean](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/c99e2197-fa0a-431b-9cbe-eb997c3c74f7)|
 |:--:| 
-|Figure 2: Comparison of Means for a Small Sample (McChesney, 2016)|
+|Figure 1: Comparison of Means|
 
 In the above case, you should first confirm that 90 is a valid data point and not an error. Trimming outliers, so long as it is justifiable, is another way to produce more stable mean calculations. Geometric means are also appropriate when summarizing ratios or percentages. This has many applications in medicine, and is considered the “gold standard” for calculating certain health measurements. In the financial industry, this concept is applied when constructing stock indexes and rates of return. The geometric mean is also employed in the art world, to choose aspect ratios film and video. The idea of comparing ratios is expanded when you look at scaled data: if you have data that have different attributes or scales, and you have normalized the results to be presented as ratios to reference values, the geometric mean is the correct mean to use.
 

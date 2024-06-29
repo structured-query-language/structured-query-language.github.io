@@ -50,9 +50,7 @@ Figure 1: Geometric Series with Means Highlighted
 3
 
 the sensitivity of the arithmetic mean can be problematic. The geometric mean might be a better central measure, as it will consider all of the data points, but without being subject to the same “pull” that can deteriorate the interpretation of the arithmetic mean (Figure 1):
-![Arithematic Mean vs  Geometric Mean vs  Harmonic Mean(1)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/ca7bffab-208f-4085-a9f6-93ec4266df00)
-
-||
+|![Arithematic Mean vs  Geometric Mean vs  Harmonic Mean(1)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/ca7bffab-208f-4085-a9f6-93ec4266df00)|
 |:--:| 
 |Figure 1: Comparison of Means|
 

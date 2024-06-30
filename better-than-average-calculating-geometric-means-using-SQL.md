@@ -33,7 +33,7 @@ Geometric means are also appropriate when summarizing ratios or percentages. In 
 select EXP(SUM(LN(pay))/COUNT(pay)) from employee;
 ```
 
-Alternative if you are using Google BigQuery, you can create User Defined Aggregate Function for Geometric Mean as following:
+Alternatively if you are using Google BigQuery, you can create User Defined Aggregate Function for Geometric Mean as following:
 
 ```sql
 CREATE TEMP AGGREGATE FUNCTION geometric_mean(
@@ -68,7 +68,6 @@ The calculation of the geometric mean requires that all values are non-zero and 
 
 If you have negative numbers, you will need to convert those numbers to a positive value before calculating the geometric mean. You can then assign the resulting geometric mean a negative value. If your data set contains both positive and negative values, you will have to separate them and find the geometric means for each group, and you can then find the weighted average of their individual geometric means to find the total geometric mean for the full data set.
 
-If none of these options appeals to you, you are not alone! There is controversy among statisticians about what is the best method for dealing with these values. You may want to calculate several types of averages and decide what makes the most sense for you and the results you are trying to report.
 
 # Conclusion
 If you are working with non-normal data, you should consider using the geometric mean as the measure of central tendency for your data. The geometric mean is a more robust and accurate way to find your average or expected value for data that is skewed, scaled, or proportional.

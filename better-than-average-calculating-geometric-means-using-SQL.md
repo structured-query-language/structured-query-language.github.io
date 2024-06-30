@@ -25,8 +25,6 @@ Let's take the pay rate for employees in an organization. Most of the Individual
 
 In the above example the Arthimetic Mean is _pulled_ towards the higher pay rates. Notice that the Average (arithemetic mean) is 266, whereas _most employees earn less than 200_. Geometric mean, 196, might be a better central measure for this dataset, as it will consider all of the data points, but without being subject to the same _pull_ that can deteriorate the interpretation of the arithmetic mean (Figure 1).
 
-Geometric means are also appropriate when summarizing ratios or percentages. In the financial industry, this concept is applied when constructing stock indexes and rates of return. The geometric mean is also employed in the art world, to choose aspect ratios film and video. The idea of comparing ratios is expanded when you look at scaled data: if you have data that have different attributes or scales, and you have normalized the results to be presented as ratios to reference values, the geometric mean is the correct mean to use.
-
 ### Geometric Mean Calculation using SQL
 
 ```sql

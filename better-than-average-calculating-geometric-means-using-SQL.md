@@ -19,8 +19,8 @@ There are no hard rules for which mean you should use. Different types of averag
 
 Let's take the pay rate for employees in an organization. Most of the Individual Contributors earn less than 200K. The CFO, VP and Director skew the dataset.
 
-|![Arithematic Mean vs  Geometric Mean vs  Harmonic Mean(1)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/ca7bffab-208f-4085-a9f6-93ec4266df00)|
-|:--:| 
+|![Copy of Arithematic Mean vs  Geometric Mean vs  Harmonic Mean](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/e03d5db0-16c8-42fb-b1c5-1548a4bea38b)|
+|:--:|
 |Figure 1: Comparison of Means|
 
 In the above example the Arthimetic Mean is _pulled_ towards the higher pay rates. Notice that the Average (arithemetic mean) is 266, whereas _most employees earn less than 200_. Geometric mean might be a better central measure for this dataset, as it will consider all of the data points, but without being subject to the same _pull_ that can deteriorate the interpretation of the arithmetic mean (Figure 1).

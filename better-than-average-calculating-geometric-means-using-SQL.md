@@ -33,7 +33,7 @@ Geometric means are also appropriate when summarizing ratios or percentages. In 
 select EXP(SUM(LN(pay))/COUNT(pay)) from employee;
 ```
 
-Alternatively if you are using Google BigQuery, you can create User Defined Aggregate Function for Geometric Mean as following:
+Alternatively if you are using Google BigQuery, you can create [User Defined Aggregate Function](UDAF-in-google-bigquery.md) for Geometric Mean as following:
 
 ```sql
 CREATE TEMP AGGREGATE FUNCTION geometric_mean(

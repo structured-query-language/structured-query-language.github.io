@@ -4,7 +4,7 @@ Dealing with time-series data means dealing with events — pieces of data that 
 
 However, this info changes over time, and you have to keep the full history on it. You need the history so that you can pull in the particular info that was valid for an event as of the time it occurred. 
 
-|![Untitled drawing(21)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/f01e4615-a16f-4647-8bd2-73febbf46cff)|
+|![Untitled drawing(21)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/3d4f40cc-d224-4efe-9033-4fba98c171d5)|
 |:--:|
 |History of the Stock Prices, which can be used to pull in the price that was valid for a given Stock Transaction when it occurred.|
 

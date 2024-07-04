@@ -14,7 +14,7 @@ Geometric means are a type of _average_, or _measure of central tendency_ in a d
 
 |![Untitled drawing(22)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/fcb09362-fc9e-4970-839f-17494595a0e3)|
 |:--:|
-|Geometrically speaking, imagine a rectangle that has two sides of 5 and 20. The area equals 100. The geometric mean tells you the size of the square (which must have equal sides) that produces the same area as the rectangle. For this example, a square with equal sizes of 10 produces the same area as the 5 X 20 rectangle.|
+|Imagine a rectangle that has two sides of 5 and 20. The area equals 100. The geometric mean tells you the size of the square (which must have equal sides) that produces the same area as the rectangle. For this example, a square with equal sizes of 10 produces the same area as the 5 X 20 rectangle.|
 
 
 

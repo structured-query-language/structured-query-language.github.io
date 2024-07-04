@@ -1,6 +1,6 @@
 # User Defined Aggregate Functions (UDAF) in Google Bigquery
 
-User Defined Aggregate Functions (UDAF) are now available in Google BigQuery. Here is an example of defining a UDAF to calculate the Geometric Mean of a column of data. 
+User Defined Aggregate Functions (UDAF) are now available in Google BigQuery. Here is an example of defining a UDAF to calculate the [Geometric Mean](better-than-average-calculating-geometric-means-using-SQL) of a column of data. 
 
 ### Defining the UDAF
 

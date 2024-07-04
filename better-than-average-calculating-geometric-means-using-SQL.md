@@ -12,7 +12,7 @@ While, most databases provide a function to calculate the Arthimetic Mean, none 
 ## What is a geometric mean?
 Geometric means are a type of _average_, or _measure of central tendency_ in a distribution of data points, in the same group as the median, mode, or arithmetic mean. Whereas the arithmetic mean is calculated by summing a series of data points and then dividing that sum by the number of data points, the geometric mean multiplies a series of data points, and then uses the n number of data points to find the nth root of that product. Mathematically, the geometric mean adds depth and stability to the mean.
 
-|![Untitled drawing(24)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/206cd4c0-671b-4539-b612-c24d858a0d1f)|
+|![Untitled drawing(25)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/790787e6-f12d-4db9-8e35-7b1f5c1e0399)|
 |:--:|
 |Imagine a rectangle that has two sides of 5 and 20. The area equals 100. The geometric mean tells you the size of the square (which must have equal sides) that produces the same area as the rectangle. For this example, a square with equal sizes of 10 produces the same area as the 5 X 20 rectangle.|
 

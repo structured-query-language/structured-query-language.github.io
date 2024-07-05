@@ -14,7 +14,7 @@ Geometric means are a type of _average_, or _measure of central tendency_ in a d
 
 |![Untitled drawing(26)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/781ddbbc-7fe0-4e8f-85d7-a3385e0b886d)|
 |:--:|
-|Imagine a rectangle that has two sides of 5 and 20. The area equals 100. The geometric mean tells you the size of the square (which must have equal sides) that produces the same area as the rectangle. For this example, a square with equal sizes of 10 produces the same area as the 5 X 20 rectangle.|
+|_Figure 1._ Imagine a rectangle that has two sides of 5 and 20. The area equals 100. The geometric mean tells you the size of the square (which must have equal sides) that produces the same area as the rectangle. For this example, a square with equal sizes of 10 produces the same area as the 5 X 20 rectangle.|
 
 
 
@@ -23,7 +23,7 @@ There are no hard rules for which mean you should use. Different types of averag
 
 |![Untitled drawing(21)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/dc31bc9e-69e1-4c57-972f-997e6e7b97c4)|
 |:--:|
-|If you have a skewed distribution as above, Geometric Mean may be a better measure of central tendency than the Arithematic Mean.|
+|_Figure 2._ If you have a skewed distribution as above, Geometric Mean may be a better measure of central tendency than the Arithematic Mean.|
 
 
 ### Illustrative Example
@@ -32,7 +32,7 @@ Let's take the pay rate for employees in an organization. Most of the Individual
 
 |![Copy of Arithematic Mean vs  Geometric Mean vs  Harmonic Mean](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/e03d5db0-16c8-42fb-b1c5-1548a4bea38b)|
 |:--:|
-|Figure 1: Comparison of Means|
+|_Figure 3._ Comparison of Means|
 
 In the above example the Arthimetic Mean is _pulled_ towards the higher pay rates. Notice that the Average (arithemetic mean) is 266, whereas _most employees earn less than 200_. Geometric mean, 196, might be a better central measure for this dataset, as it will consider all of the data points, but without being subject to the same _pull_ that can deteriorate the interpretation of the arithmetic mean (Figure 1).
 

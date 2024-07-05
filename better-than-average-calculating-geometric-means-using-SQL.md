@@ -30,7 +30,8 @@ Different types of averages can be used to express slightly different concepts: 
 
 Let's take the pay rate for employees in an organization. Most of the Individual Contributors earn less than 200K. The CFO, VP and Director skew the dataset.
 
-|![Copy of Arithematic Mean vs  Geometric Mean vs  Harmonic Mean](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/e03d5db0-16c8-42fb-b1c5-1548a4bea38b)|
+|![Copy of Arithematic Mean vs  Geometric Mean vs  Harmonic Mean](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/dccdc456-5467-4fd2-a7d7-10e0b9da3976)
+|
 |:--:|
 |_Figure 3._ Comparison of Means|
 

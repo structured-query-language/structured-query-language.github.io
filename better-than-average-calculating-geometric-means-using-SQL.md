@@ -19,7 +19,7 @@ Geometric means are a type of _average_, or _measure of central tendency_ in a d
 
 
 ## When should I use the geometric mean instead of the arithmetic mean?
-There are no hard rules for which mean you should use. Different types of averages can be used to express slightly different concepts: the center of the data, the values most often seen, and/or the typical _expected_ values may or may not all be conveyed by the same measure. Data is rarely perfect, and you may need to look at several different types of averages to decide what works best for what you are trying to communicate with your data. But in general, geometric means are preferable when looking at skewed data, scaled data, or when averaging ratios. 
+Different types of averages can be used to express slightly different concepts: the center of the data, the values most often seen, and/or the typical _expected_ values may or may not all be conveyed by the same measure. Data is rarely perfect, and you may need to look at several different types of averages to decide what works best for what you are trying to communicate with your data. But in general, geometric means are preferable when looking at skewed data, scaled data, or when averaging ratios. 
 
 |![Untitled drawing(21)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/dc31bc9e-69e1-4c57-972f-997e6e7b97c4)|
 |:--:|

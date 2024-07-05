@@ -23,7 +23,7 @@ There are no hard rules for which mean you should use. Different types of averag
 
 |![Untitled drawing(27)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/54521664-aa24-4fee-9779-13de767ca7aa)|
 |:--:|
-|If you have a skewed distribution as above, Geometric Mean may be a better measure of central tendency of the data set.|
+|If you have a skewed distribution as above, Geometric Mean may be a better measure of central tendency than the Arithematic Mean.|
 
 
 ### Illustrative Example

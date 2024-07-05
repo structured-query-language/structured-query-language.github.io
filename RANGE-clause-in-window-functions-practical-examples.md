@@ -5,9 +5,9 @@ RANGE Clause in Window Functions is now available in Snowflake. Here as some pra
 ## Example 1. Running sum of acquitions in the last 28 days
 
 ### Input Table: Acquisitions by Date
-
+|article|qty|date_acquired|
+|:---:|----|------------|
 | A | 3  | 2019-10-11 |
-|---|----|------------|
 | A | 5  | 2019-10-08 |
 | A | 10 | 2019-10-05 |
 | A | 2  | 2019-09-15 |
@@ -40,8 +40,9 @@ from acquisitions;
 
 ### Query Output:
 
+|article|qty|date_acquired|sum_qty_28_days|
+|---|----|------------|----|----|
 | A | 1  | 2019-09-01 | 1  |
-|---|----|------------|----|
 | A | 1  | 2019-09-09 | 2  |
 | A | 2  | 2019-09-15 | 4  |
 | A | 10 | 2019-10-05 | 13 |

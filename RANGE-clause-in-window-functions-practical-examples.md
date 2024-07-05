@@ -1,4 +1,4 @@
-RANGE Clause in Window Functions: Practical Examples
+# RANGE Clause in Window Functions: Practical Examples
 
 RANGE Clause in Window Functions is now available in Snowflake. 
 

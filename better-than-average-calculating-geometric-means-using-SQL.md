@@ -34,7 +34,7 @@ Let's take the pay rate for employees in an organization. Most of the Individual
 |:--:|
 |_Figure 3._ Comparison of Means|
 
-In the above example the Arthimetic Mean is _pulled_ towards the higher pay rates. Notice that the Average (arithemetic mean) is 266, whereas _most employees earn less than 200_. Geometric mean, 196, might be a better central measure for this dataset, as it will consider all of the data points, but without being subject to the same _pull_ that can deteriorate the interpretation of the arithmetic mean (Figure 1).
+In the above example the Arthimetic Mean is _pulled_ towards the higher pay rates. Notice that the Average (arithemetic mean) is 266, whereas _most employees earn less than 200_. Geometric mean, 196, might be a better central measure for this dataset, as it will consider all of the data points, but without being subject to the same _pull_ that can deteriorate the interpretation of the arithmetic mean (Figure 3).
 
 ### Geometric Mean Calculation using SQL
 

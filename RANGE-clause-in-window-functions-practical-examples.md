@@ -2,9 +2,9 @@
 
 RANGE Clause in Window Functions is now available in Snowflake. Here as some practical examples of using RANGE clause in the Window Functions.
 
-# Example 1. Running sum of acquitions in the last 28 days
+## Example 1. Running sum of acquitions in the last 28 days
 
-## Input Table: Acquisitions by Date
+### Input Table: Acquisitions by Date
 
 | A | 3  | 2019-10-11 |
 |---|----|------------|
@@ -26,7 +26,7 @@ RANGE Clause in Window Functions is now available in Snowflake. Here as some pra
 | C | 4  | 2019-09-01 |
 | C | 1  | 2019-08-28 |
 
-## RANGE based Window query to get running sum of acquitions in the last 28 days
+### RANGE based Window query to get running sum of acquitions in the last 28 days
 
 ```sql
 select 
@@ -38,7 +38,7 @@ select
 from acquisitions;
 ```
 
-## Query Output:
+### Query Output:
 
 | A | 1  | 2019-09-01 | 1  |
 |---|----|------------|----|

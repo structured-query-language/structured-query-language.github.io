@@ -1,6 +1,6 @@
 # RANGE Clause in Window Functions: Practical Examples
 
-RANGE Clause in Window Functions is now available in Snowflake. 
+RANGE Clause in Window Functions is now available in Snowflake. Here as some practical examples of using RANGE clause in the Window Functions.
 
 # Example 1. Running sum of acquitions in the last 28 days
 

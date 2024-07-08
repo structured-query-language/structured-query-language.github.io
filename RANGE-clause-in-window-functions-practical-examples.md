@@ -61,3 +61,47 @@ from acquisitions;
 | B | 3  | 2019-10-05 | 8  |
 | B | 2  | 2019-10-08 | 6  |
 | B | 3  | 2019-10-11 | 9  |
+
+
+
+## Example 1. Count of website visits by visitor_id in a 90 day window
+
+### Input Table: Visitor Data (`visitor_data`)
+
+|VISITOR_ID|DATE_VISITED|
+|---|------------|
+| 1 | 2022-04-14 |
+| 3 | 2022-01-13 |
+| 3 | 2022-03-13 |
+| 3 | 2022-05-13 |
+| 5 | 2022-01-01 |
+| 5 | 2022-02-01 |
+| 5 | 2022-05-01 |
+| 5 | 2022-06-01 |
+| 5 | 2022-08-01 |
+
+### SQL Query 
+
+```sql
+select 
+  *
+  , count(*) over (partition by visitor_id
+      order by date_visited
+      range between interval '90 day' preceding and current row
+    ) as count_90_days
+from visitor_data;
+```
+
+### Query Output:
+
+|VISITOR_ID|DATE_VISITED|COUNT_90_DAYS|
+|---|------------|---|
+| 3 | 2022-01-13 | 1 |
+| 3 | 2022-03-13 | 2 |
+| 3 | 2022-05-13 | 2 |
+| 1 | 2022-04-14 | 1 |
+| 5 | 2022-01-01 | 1 |
+| 5 | 2022-02-01 | 2 |
+| 5 | 2022-05-01 | 2 |
+| 5 | 2022-06-01 | 2 |
+| 5 | 2022-08-01 | 2 |

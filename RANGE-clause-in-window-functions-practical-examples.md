@@ -64,7 +64,7 @@ from acquisitions;
 
 
 
-## Example 1. Count of website visits by visitor_id in a 90 day window
+## Example 2. Count of website visits by visitor_id in a 90 day window
 
 ### Input Table: Visitor Data (`visitor_data`)
 

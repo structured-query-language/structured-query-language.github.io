@@ -38,7 +38,11 @@ The best known example use case for a skyline query is a hotel booking scenario 
 
 |![Screenshot 2024-05-22 at 21-31-38 Online Interactive 3D Scatter Plot](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/0055b866-28ab-49bd-8733-ea76eff77e0b)|
 |:--:| 
-|Figure 1. Here Hotel _i_ and _e_ are better or equal to all hotels in all dimensions and strictly better than other hotels in _at least one_ dimension. Thus, _i_ and _e_ form the Skyline in this 3 Dimensional space.|
+|Figure 1. Here Hotels _i_ and _e_ are better or equal to all hotels in all dimensions and strictly better than other hotels in _at least one_ dimension. Thus, _i_ and _e_ form the Skyline in this 3 Dimensional space.|
+
+|![Chart(2)](https://github.com/structured-query-language/structured-query-language.github.io/assets/121721444/1f9538d0-5568-49c9-9ac0-c371fe1a7430)|
+|:-:|
+|Hotels _i_ and _e_ compared hotels _c_ and _f_. While hotel _f_, like hotel _i_, has a rating of _5_, it is more expensinve than hotel _i_ and and farther from the City Center than hotel _i_. So _f_ is not on the Skyline. Hotel _c_ has lower rating, farther from the City Center and pricey, so it is not on the Skyline at all. |
 
 
 ## Skyline using SQL

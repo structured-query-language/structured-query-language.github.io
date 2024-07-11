@@ -38,3 +38,17 @@ order by array_index desc limit 1;
 |geometric_mean|
 |--------------|
 |2.46621207433047|
+
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "Geometric Mean" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+

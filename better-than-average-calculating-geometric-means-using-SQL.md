@@ -81,3 +81,16 @@ If you have negative numbers, you will need to convert those numbers to a positi
 
 # Conclusion
 If you are working with non-normal data, you should consider using the geometric mean as the measure of central tendency for your data. The geometric mean is a more robust and accurate way to find your average or expected value for data that is skewed, scaled, or proportional.
+
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "Geometric Mean" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

@@ -105,3 +105,43 @@ from visitor_data;
 | 5 | 2022-05-01 | 2 |
 | 5 | 2022-06-01 | 2 |
 | 5 | 2022-08-01 | 2 |
+
+
+## Example 3. Webpage Views. Running sum of pageviews by customer in the last 60 days
+
+### Input data
+
+|DATE_VIEWED|VIEWS|CUSTOMER_ID|
+|------------|----|---|
+| 2020-01-01 | 1  | a |
+| 2020-01-15 | 2  | b |
+| 2020-01-20 | 1  | a |
+| 2020-01-25 | 20 | b |
+| 2020-02-15 | 1  | a |
+| 2020-03-15 | 2  | b |
+| 2020-04-15 | 1  | a |
+| 2020-05-15 | 2  | b |
+
+### SQL Query
+
+```sql
+select 
+  *
+  , sum(views) over (partition by customer_id
+order by date_viewed 
+range between interval '59 day' preceding and current row)
+from page_views
+; 
+```
+### Query Output
+
+|DATE_VIEWED|VIEWS|CUSTOMER_ID|ROLLING_SUM_OF_VIEWS_LAST_60_DAYS|
+|------------|----|---|----|
+| 2020-01-01 | 1  | a | 1  |
+| 2020-01-20 | 1  | a | 2  |
+| 2020-02-15 | 1  | a | 3  |
+| 2020-04-15 | 1  | a | 1  |
+| 2020-01-15 | 2  | b | 2  |
+| 2020-01-25 | 20 | b | 22 |
+| 2020-03-15 | 2  | b | 22 |
+| 2020-05-15 | 2  | b | 2  |

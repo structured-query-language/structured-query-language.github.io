@@ -51,3 +51,17 @@ order by session_range
 | saqib   | /plant_a_tree | [2024-03-19T18:43:18, 2024-03-19T18:44:18) | [2024-03-19T18:43:18, 2024-03-19T18:53:18) | 2  |
 | saqib   | /build_a_well | [2024-03-19T18:44:18, 2024-03-19T18:48:18) | [2024-03-19T18:43:18, 2024-03-19T18:53:18) | 2  |
 | saqib   | /donate       | [2024-03-19T18:48:18, 2024-03-19T18:53:18) | [2024-03-19T18:43:18, 2024-03-19T18:53:18) | 2  |
+
+
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "Sessionization" or page.title contains "conditional_true_event") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

@@ -1,8 +1,14 @@
 # Sessionization, or solving the Gaps-and-Islands Problem using conditional_true_event
 
+Sessionization or conventionally _Gaps and Islands_ in Time-series Analysis are terms referring to the same problem of having to reset all parameters of a predictive or retrospective analysis in a time series when the time series has a gap. 
+
 Sessionization is the act of turning event-based data into sessions. It is widely used in several domains, such as: Web Analytics and Trip Analytics. Basically given a "user id" or a "machine id", the question is: how can we recreate sessions? Or more precisely, how do we choose the boundaries of a session? 
 
-A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T`, it defines the start of a new session. Sessionization of event-based data can be easily implemented in Snowflake using the powerful `CONDITIONAL_TRUE_EVENT` Window function. The following query creates session boundaries using `T=50` mins i.e. if more than 50 minutes have elapsed between the events for a given visitor a new Session is defined.
+Whereas, timeseries analysis, usually uses "Gaps and Islands" - if there are no measurements for a relatively extended interval, this causes a "gap"; and a cluster of several measurements, close, time-wise, to each other, causes an "island".
+
+A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T`, it defines the start of a new session. 
+
+Sessionization of event-based data can be easily implemented in Snowflake using the powerful `CONDITIONAL_TRUE_EVENT` Window function. The following query creates session boundaries using `T=50` mins i.e. if more than 50 minutes have elapsed between the events for a given visitor a new Session is defined.
 
 ## Sample Clickstream data
 

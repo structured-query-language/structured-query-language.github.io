@@ -145,3 +145,68 @@ from page_views
 | 2020-01-25 | 20 | b | 22 |
 | 2020-03-15 | 2  | b | 22 |
 | 2020-05-15 | 2  | b | 2  |
+
+## Example 4. Moving Average. Moving Average (MA) of the 3 weeks Windows of data.
+
+### Input data
+
+|report_date|item_id|brand|cycle_length|
+|------------|-----|---------|---|
+| 2023-09-13 | 123 | Apple   | 6 |
+| 2023-09-13 | 500 | Apple   | 5 |
+| 2023-09-20 | 123 | Apple   | 6 |
+| 2023-09-20 | 500 | Apple   | 5 |
+| 2023-09-27 | 123 | Apple   | 6 |
+| 2023-09-27 | 500 | Apple   | 4 |
+| 2023-10-04 | 123 | Apple   | 6 |
+| 2023-10-04 | 500 | Apple   | 4 |
+| 2023-09-13 | 325 | Samsung | 7 |
+| 2023-09-13 | 862 | Samsung | 3 |
+| 2023-09-13 | 455 | Samsung | 5 |
+| 2023-09-20 | 325 | Samsung | 7 |
+| 2023-09-20 | 862 | Samsung | 3 |
+| 2023-09-27 | 455 | Samsung | 5 |
+| 2023-10-04 | 325 | Samsung | 7 |
+| 2023-09-27 | 862 | Samsung | 4 |
+| 2023-10-04 | 455 | Samsung | 7 |
+| 2023-10-11 | 325 | Samsung | 7 |
+| 2023-10-04 | 862 | Samsung | 4 |
+| 2023-10-11 | 455 | Samsung | 7 |
+
+### SQL Query
+
+```sql
+select 
+  *
+  , avg(cycle_length) over (partition by brand
+    order by report_date
+    range between interval '14 days' preceding and current row
+  ) as brand_avg_cycle_length_3_weeks
+from average_cycle
+order by brand, report_date;
+```
+
+### Query Output
+
+|report_date|item_id|brand|cycle_length|brand_avg_cycle_length_3_weeks|
+|------------|-----|---------|---|-------|
+| 2023-09-13 | 500 | Apple   | 5 | 5.500 |
+| 2023-09-13 | 123 | Apple   | 6 | 5.500 |
+| 2023-09-20 | 123 | Apple   | 6 | 5.500 |
+| 2023-09-20 | 500 | Apple   | 5 | 5.500 |
+| 2023-09-27 | 123 | Apple   | 6 | 5.333 |
+| 2023-09-27 | 500 | Apple   | 4 | 5.333 |
+| 2023-10-04 | 123 | Apple   | 6 | 5.166 |
+| 2023-10-04 | 500 | Apple   | 4 | 5.166 |
+| 2023-09-13 | 455 | Samsung | 5 | 5.000 |
+| 2023-09-13 | 862 | Samsung | 3 | 5.000 |
+| 2023-09-13 | 325 | Samsung | 7 | 5.000 |
+| 2023-09-20 | 325 | Samsung | 7 | 5.000 |
+| 2023-09-20 | 862 | Samsung | 3 | 5.000 |
+| 2023-09-27 | 455 | Samsung | 5 | 4.857 |
+| 2023-09-27 | 862 | Samsung | 4 | 4.857 |
+| 2023-10-04 | 325 | Samsung | 7 | 5.285 |
+| 2023-10-04 | 455 | Samsung | 7 | 5.285 |
+| 2023-10-04 | 862 | Samsung | 4 | 5.285 |
+| 2023-10-11 | 325 | Samsung | 7 | 5.857 |
+| 2023-10-11 | 455 | Samsung | 7 | 5.857 |

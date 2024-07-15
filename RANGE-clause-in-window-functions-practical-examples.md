@@ -109,6 +109,10 @@ from visitor_data;
 
 ## Example 3. Webpage Views. Running sum of pageviews by customer in the last 60 days
 
+### Analysis Goal
+
+Take all the items in a brand and looking back 3 weeks including current (so 3 rows for each item) and calculate the average of the cycle length column. 
+
 ### Input data
 
 |DATE_VIEWED|VIEWS|CUSTOMER_ID|
@@ -180,7 +184,7 @@ select
   *
   , avg(cycle_length) over (partition by brand
     order by report_date
-    range between interval '14 days' preceding and current row
+    range between interval '3 weeks' preceding and current row
   ) as brand_avg_cycle_length_3_weeks
 from average_cycle
 order by brand, report_date;

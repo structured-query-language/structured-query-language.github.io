@@ -94,3 +94,17 @@ from clickstream;
 | 1:0        | 2013-09-05 02:33:42.000 | 73                        | 4             |
 
 ![image](https://user-images.githubusercontent.com/121721444/210683352-da2f5ca0-d444-4b77-8dd7-b8e65b7f73ca.png)
+
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "Sessionization" or page.title contains "conditional_true_event" or page.title contains "Conditional True Event") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+

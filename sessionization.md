@@ -1,4 +1,4 @@
-# Sessionization
+# Sessionization, or solving the Gaps-and-Islands Problem using conditional_true_event
 
 Sessionization is the act of turning event-based data into sessions. It is widely used in several domains, such as: Web Analytics and Trip Analytics. Basically given a "user id" or a "machine id", the question is: how can we recreate sessions? Or more precisely, how do we choose the boundaries of a session? 
 

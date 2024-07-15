@@ -8,7 +8,7 @@ Whereas, timeseries analysis, usually uses "Gaps and Islands" - if there are no 
 
 A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T`, it defines the start of a new session. 
 
-Sessionization of event-based data can be easily implemented in Snowflake using the powerful `CONDITIONAL_TRUE_EVENT` Window function. The following query creates session boundaries using `T=50` mins i.e. if more than 50 minutes have elapsed between the events for a given visitor a new Session is defined.
+Sessionization of event-based data can be easily implemented in Snowflake using the powerful [CONDITIONAL_TRUE_EVENT](conditional_true_event.md) Window function. The following query creates session boundaries using `T=50` mins i.e. if more than 50 minutes have elapsed between the events for a given visitor a new Session is defined.
 
 ## Sample Clickstream data
 

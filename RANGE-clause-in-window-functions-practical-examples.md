@@ -109,10 +109,6 @@ from visitor_data;
 
 ## Example 3. Webpage Views. Running sum of pageviews by customer in the last 60 days
 
-### Analysis Goal
-
-Take all the items in a brand and looking back 3 weeks including current (so 3 rows for each item) and calculate the average of the cycle length column. 
-
 ### Input data
 
 |DATE_VIEWED|VIEWS|CUSTOMER_ID|
@@ -150,7 +146,11 @@ from page_views
 | 2020-03-15 | 2  | b | 22 |
 | 2020-05-15 | 2  | b | 2  |
 
-## Example 4. Moving Average. Moving Average (MA) of the 3 weeks Windows of data.
+## Example 4. Moving Average (MA) of the 3 weeks Windows of data.
+
+### Analysis Goal
+
+Take all the items in a brand and looking back 3 weeks including current (so 3 rows for each item) and calculate the average of the cycle length column. 
 
 ### Input data
 

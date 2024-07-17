@@ -1,4 +1,4 @@
-# MAX_BY
+# MAX_BY Analytical Function in Snowflake
 
 When analyzing Clickstream data, one is often interested in the last few pages visited before the visitor exited the site. Snowflake has powerful aggregation function called `max_by` that can be used to get an array of the last few pages visited by `session_id`. 
 

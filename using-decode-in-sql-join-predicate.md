@@ -50,5 +50,13 @@ inner join sat_opportunity_salesforce
 ![image](https://user-images.githubusercontent.com/121721444/215359078-bc4da876-2450-48f7-a77d-37d4deb57e89.png)
 
 
-# Related
-[DECODE](decode.md)
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "DECODE") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

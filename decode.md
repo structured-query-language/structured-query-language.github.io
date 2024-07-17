@@ -1,4 +1,4 @@
-# DECODE
+# DECODE Function in Snowflake
 
 `IFF` is a conditional expression Snowflake function that evaluates to a Single-level `if-then-else` expression. However `IFF` only allows a single condition. What if you need to implement a `if-then-elseif-else-endif`? Most people will opt to use `CASE STATEMENT`. While `CASE STATEMENT` will do the trick, it is not most optimal solution for a `if-then-elseif-else-endif` or even a `if-then-elseif-else-if-else-endif` conditional expression. `DECODE` function is a versatile Snowflake Conditional Expression Function that lets you implement `if-then-elseif-else-if-else-endif` expression without the use of a `CASE STATEMENT`. Here is an example:
 
@@ -62,5 +62,15 @@ order by day_of_week
 
 ![image](https://user-images.githubusercontent.com/121721444/211611863-53c2ee59-9d38-477d-91ba-fcbcc92e556a.png)
 
-# Related
-[Using DECODE in SQL JOIN Predicate](using-decode-in-sql-join-predicate.md)
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "DECODE") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+

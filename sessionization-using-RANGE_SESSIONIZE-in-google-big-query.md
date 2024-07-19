@@ -1,4 +1,4 @@
-# Sessionization using RANGE_SESSIONIZE in Google BigQuery
+# Sessionization, or solving the Gaps-and-Islands Problem using RANGE_SESSIONIZE in Google BigQuery
 
 Google recently added a new Table Function called `RANGE_SESSIONIZE` to Google BigQuery. `RANGE_SESSIONIZE` allows you to sessionize temporal data. Timestamps from events that either meet or overlap form one session.
 

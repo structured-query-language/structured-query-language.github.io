@@ -214,3 +214,86 @@ order by brand, report_date;
 | 2023-10-04 | 862 | Samsung | 4 | 5.285 |
 | 2023-10-11 | 325 | Samsung | 7 | 5.857 |
 | 2023-10-11 | 455 | Samsung | 7 | 5.857 |
+
+
+
+
+## Example 5. Rolling Average of the 3 days Window of data.
+
+### Analysis Goal
+Get the rolling average of three days as per sales of the item.
+
+### Input Table
+
+| sales_date | daily_sales|salesman|items|
+|------------|-----------|--------|------|
+| 2021-12-12 | 12000.30  | Max    | KCR  |
+| 2021-12-12 | 32.30     | Max    | Crux |
+| 2021-12-12 | 13000.30  | Max    | Xray |
+| 2021-12-13 | 14000.30  | Kyle   | KCR  |
+| 2021-12-13 | 14000.30  | Kyle   | Crux |
+| 2021-12-13 | 99000.30  | Kyle   | XRay |
+| 2021-12-14 | 2340.30   | Peter  | XRay |
+| 2021-12-14 | 1200.30   | Peter  | Crux |
+| 2021-12-14 | 22000.30  | Peter  | KCR  |
+| 2021-12-15 | 132000.30 | Remo   | Crux |
+| 2021-12-15 | 124000.30 | Rexy   | KCR  |
+| 2021-12-15 | 120500.30 | Tom    | Xray |
+| 2021-12-16 | 122000.30 | Felis  | Crux |
+| 2021-12-16 | 120300.30 | Felis  | KCR  |
+| 2021-12-16 | 120040.30 | Max    | Xray |
+| 2021-12-17 | 120005.30 | Rubert | KCR  |
+| 2021-12-17 | 120.30    | Travis | Crux |
+| 2021-12-18 | 200.30    | Peter  | XRay |
+| 2021-12-18 | 200.30    | Peter  | Crux |
+| 2021-12-18 | 200.30    | Peter  | KCR  |
+| 2021-12-19 | 200.30    | Peter  | XRay |
+| 2021-12-19 | 500.30    | Peter  | KCR  |
+| 2021-12-19 | 500.30    | Peter  | CRUX |
+| 2021-12-20 | 200.30    | Peter  | XRay |
+| 2021-12-20 | 500.30    | Peter  | KCR  |
+| 2021-12-20 | 500.30    | Peter  | CRUX |
+
+### SQL Query
+
+```sql
+select 
+  items
+  , sales_date
+  , avg(daily_sales) over (partition by items 
+      order by sales_date
+      range between interval '2 days' preceding and current row
+  ) as three_day_moving_average
+from sales_info
+```
+
+### Query Output
+
+|items|sales_date |three_day_rolling_average|
+|------|------------|--------------|
+| XRay | 2021-12-13 | 99000.30000  |
+| XRay | 2021-12-14 | 50670.30000  |
+| XRay | 2021-12-18 | 200.30000    |
+| XRay | 2021-12-19 | 200.30000    |
+| XRay | 2021-12-20 | 200.30000    |
+| Xray | 2021-12-12 | 13000.30000  |
+| Xray | 2021-12-15 | 120500.30000 |
+| Xray | 2021-12-16 | 120270.30000 |
+| CRUX | 2021-12-19 | 500.30000    |
+| CRUX | 2021-12-20 | 500.30000    |
+| KCR  | 2021-12-12 | 12000.30000  |
+| KCR  | 2021-12-13 | 13000.30000  |
+| KCR  | 2021-12-14 | 16000.30000  |
+| KCR  | 2021-12-15 | 53333.63333  |
+| KCR  | 2021-12-16 | 88766.96666  |
+| KCR  | 2021-12-17 | 121435.30000 |
+| KCR  | 2021-12-18 | 80168.63333  |
+| KCR  | 2021-12-19 | 40235.30000  |
+| KCR  | 2021-12-20 | 400.30000    |
+| Crux | 2021-12-12 | 32.30000     |
+| Crux | 2021-12-13 | 7016.30000   |
+| Crux | 2021-12-14 | 5077.63333   |
+| Crux | 2021-12-15 | 49066.96666  |
+| Crux | 2021-12-16 | 85066.96666  |
+| Crux | 2021-12-17 | 84706.96666  |
+| Crux | 2021-12-18 | 40773.63333  |

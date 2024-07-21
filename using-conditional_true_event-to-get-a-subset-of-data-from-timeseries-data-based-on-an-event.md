@@ -63,3 +63,14 @@ qualify conditional_true_event(event = 0) over (order by period asc) = 2;
 | 2020-01-13 | 12 |
 
 
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "conditional_true_event" or page.title contains "Conditional True Event") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

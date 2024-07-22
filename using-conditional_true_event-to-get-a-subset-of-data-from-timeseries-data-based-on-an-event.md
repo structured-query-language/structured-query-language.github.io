@@ -2,7 +2,7 @@
 
 When working with Timeseries data it is common to retrieve a subset of data based on the occurance of event. For e.g. you may need to get the data between occurance of two observations or eliminate all pre-event observations in the table when a particular event is observed. 
 
-conditional_true_event can be used to achieve this. Example
+[conditional_true_event](conditional_true_event.md) can be used to achieve this. Example
 
 ## Input Data
 
@@ -66,7 +66,7 @@ qualify conditional_true_event(event = 0) over (order by period asc) = 2;
 # See also
 <ul id="recent-articles">
 {% for page in site.pages %}
-    {% if (page.title contains "conditional_true_event" or page.title contains "Conditional True Event") %}
+    {% if (page.title contains "conditional_true_event" or page.title contains "Conditional True Event" or page.title contains "timeseries") %}
     <li>
     <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
     </li>

@@ -16,7 +16,7 @@
 		<lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
 		{% assign feed_items = site.feed_items | default: 10 %}
 		{% for post in site.pages limit:feed_items %}
-		   {% if post.url contails ".html" %}
+		   {% if post.url contains ".html" %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				{% if post.author.name %}

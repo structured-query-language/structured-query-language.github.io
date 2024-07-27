@@ -7,6 +7,9 @@ Sessionization is the act of turning event-based data into sessions. It is widel
 Whereas, timeseries analysis, usually uses "Gaps and Islands" - if there are no measurements for a relatively extended interval, this causes a "gap"; and a cluster of several measurements, close, time-wise, to each other, causes an "island".
 
 A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T`, it defines the start of a new session. 
+![Untitled drawing(21)](https://github.com/user-attachments/assets/e2fd7f3a-d510-4f43-8db6-9f873690a2eb)
+
+
 
 Sessionization of event-based data can be easily implemented in Snowflake using the powerful [CONDITIONAL_TRUE_EVENT](conditional_true_event.md) Window function. The following query creates session boundaries using `T=50` mins i.e. if more than 50 minutes have elapsed between the events for a given visitor a new Session is defined.
 

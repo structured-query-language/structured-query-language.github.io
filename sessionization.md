@@ -6,7 +6,7 @@ Sessionization is the act of turning event-based data into sessions. It is widel
 
 Whereas, timeseries analysis, usually uses "Gaps and Islands" - if there are no measurements for a relatively extended interval, this causes a "gap"; and a cluster of several measurements, close, time-wise, to each other, causes an "island".
 
-|![Untitled drawing(22)](https://github.com/user-attachments/assets/6d998454-7437-4257-9c90-7ab939fddac9)|
+|![Untitled drawing(21)](https://github.com/user-attachments/assets/ebe3deab-1e7d-480b-929a-846c25bec286)|
 |:--:|
 |_Figure 2._ A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T=50`, it defines the start of a new session. 
 

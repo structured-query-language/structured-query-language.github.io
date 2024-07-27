@@ -11,8 +11,9 @@ Whereas, timeseries analysis, usually uses "Gaps and Islands" - if there are no 
 |_Figure 2._ A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T=50`, it defines the start of a new session. 
 
 
+## An illustrative example
 
-
+For the sake of this analysis, we’ll use a popular variation of a time-based definition: a “session timeout” length, or a maximum length of time between events that still qualifies a user as “active.” This is useful because it lets you analyze user behavior contained to a period of active usage, but it can also be difficult to nail down since users often multi-task among many apps.
 
 Sessionization of event-based data can be easily implemented in Snowflake using the powerful [CONDITIONAL_TRUE_EVENT](conditional_true_event.md) Window function. The following query creates session boundaries using `T=50` mins i.e. if more than 50 minutes have elapsed between the events for a given visitor a new Session is defined.
 

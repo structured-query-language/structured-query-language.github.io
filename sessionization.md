@@ -8,7 +8,7 @@ Whereas, timeseries analysis, usually uses "Gaps and Islands" - if there are no 
 
 |![Untitled drawing(21)](https://github.com/user-attachments/assets/ecdad674-9e7b-4568-bdf5-a15dc96233d4)|
 |:--:|
-|_Figure 2._ A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T=50`, it defines the start of a new session. 
+|_Figure 1._ A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T=50`, it defines the start of a new session. 
 
 
 ## An illustrative example

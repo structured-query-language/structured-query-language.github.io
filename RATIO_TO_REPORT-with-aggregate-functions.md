@@ -33,3 +33,14 @@ group by sales_associate;
 | Angela    | 33.3333           | 32.7869           |
 | Bob       | 16.6667           | 40.9836           |
 
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "RATIO_TO_REPORT" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

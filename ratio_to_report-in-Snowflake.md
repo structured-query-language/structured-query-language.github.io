@@ -1,4 +1,5 @@
 # RATIO_TO_REPORT in Snowflake
+
 `RATIO_TO_REPORT` is a powerful #snowflakedb Window function that lets you calculate the ratio of a value to the sum of the values in a window. The following query uses the `RATIO_TO_REPORT` function to calculate the percentage of the sales by channel (online vs. store) for each day.
 
 ### Raw Order Data
@@ -67,3 +68,17 @@ group by transaction_date, channel;
 | 2022-12-01       | store   | 30               | 50                     | 60%                |
 | 2022-12-01       | online  | 20               | 50                     | 40%                |
 | 2022-12-02       | store   | 100              | 100                    | 100%               |
+
+
+
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "RATIO_TO_REPORT" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

@@ -1,6 +1,6 @@
 # RATIO_TO_REPORT in Snowflake
 
-`RATIO_TO_REPORT` is a powerful #snowflakedb Window function that lets you calculate the ratio of a value to the sum of the values in a window. The following query uses the `RATIO_TO_REPORT` function to calculate the percentage of the sales by channel (online vs. store) for each day.
+`RATIO_TO_REPORT` is a powerful Snowflake Window function that lets you calculate the ratio of a value to the sum of the values in a window. The following query uses the `RATIO_TO_REPORT` function to calculate the percentage of the sales by channel (online vs. store) for each day.
 
 ### Raw Order Data
 

@@ -10,13 +10,13 @@ Whereas, timeseries analysis, usually uses "Gaps and Islands" - if there are no 
 |:--:|
 |_Figure 1._ A session, for example, can be defined by threshold time such as if the next action is in a range of time greater than `T=50`, it defines the start of a new session. 
 
-## Why do you nee sessionization?
+## Why do you need sessionization?
 
 Sessionization has many use cases: web traffic patterns, cohort analysis, attribution, etc. Sessions make it easier to group and analyze events and actions users take which helps us understand the customer journey and their interactions with your product. This allows you to optimize your marketing campaigns and user flows to increase conversion rates and bring in more business.
 
 ## How do you sessionize in SQL?
 
-You can use the `CONDITIONAL_TRUE_EVENT` function to easily sessionize events in one line of SQL code.
+You can use the [CONDITIONAL_TRUE_EVENT](conditional_true_event.md) function to easily sessionize events in one line of SQL code.
 
 1. First, you'll need to structure your data so there is one row per event.
 2. Next, you'll need to get the timestamp of the previous event for each event, partitioned by _visitor identifier_ or _username_.

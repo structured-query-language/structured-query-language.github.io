@@ -1,6 +1,6 @@
 # Calculating percentages using RATIO_TO_REPORT
 
-`RATIO_TO_REPORT` Window function can be used to calculate percentage of the entire dataset or partitioned data.
+`RATIO_TO_REPORT` SQL analytic function can be used to calculate percentage of the entire dataset or partitioned data. `RATIO_TO_REPORT` returns a value between 0 and 1 which indicates the weight of a numerical value in respect to the sum of all numerical values in the same partition. If multiplied by 100, the value of `ratio_to_report` can be interpreted as percentage.
 
 ## An illustrative example
 

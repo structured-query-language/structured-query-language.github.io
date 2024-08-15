@@ -55,3 +55,14 @@ group by 1
 | 9            | Anna            | 199          |
 | 10           | Anna            | 50           |
 | 11           | Anna            | 20           |
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "MAX_BY"  or page.title contains "MIN_BY") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

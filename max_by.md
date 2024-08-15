@@ -66,3 +66,14 @@ group by session_id;
 | f597f443-4098-4ee4-9538-7076e114085c | campaigns.html               | 19:13:19        |
 | f597f443-4098-4ee4-9538-7076e114085c | plant_a_tree_campaign_b.html | 19:13:31        |
 | f597f443-4098-4ee4-9538-7076e114085c | donate.html                  | 19:13:38        |
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "MAX_BY"  or page.title contains "MIN_BY") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

@@ -40,7 +40,7 @@ from orders;
 # See also
 <ul id="recent-articles">
 {% for page in site.pages %}
-    {% if (page.title contains "max_by"  or page.title contains "min_by") %}
+    {% if (page.title contains "MAX_BY"  or page.title contains "MIN_BY") %}
     <li>
     <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
     </li>

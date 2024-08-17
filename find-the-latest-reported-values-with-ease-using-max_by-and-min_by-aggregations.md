@@ -4,7 +4,7 @@
 
 ## Basic Example
 
-`MIN_BY` and `MAX_BY` functions allow you to find the minimum or maximum value in a given column based on the values in another column. For example, if you have a table with three columns, order_number, sales associate and order_amount, you can use the min_by(order_number, order_amount) to find the row with the order with the lowest price for each sales associate:
+`MIN_BY` and `MAX_BY` functions allow you to find the minimum or maximum value in a given column based on the values in another column. For example, if you have a table with three columns, order_number, sales associate and order_amount, you can use the `min_by(order_number, order_amount)` to find the row with the order with the lowest order_amount for each sales associate:
 
 ###  Input Table
 

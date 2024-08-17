@@ -39,6 +39,8 @@ group by all;
 |Anna|8|
 
 
+### Query explaination
+
 `max_by(returned_value, maximized_value)` and `min_by(returned_value, minimized_value)` return the value of the first column for which the value of the second column is maximized or minimized. If multiple rows maximize or minimize the result of the second column, the output will be non-deterministic.
 
 ## Advaced example

@@ -13,7 +13,7 @@
 		<sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
-		<lastBuildDate>{{ site.time }}</lastBuildDate>
+		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 		{% assign feed_items = site.feed_items | default: 10 %}
 		{% for post in site.pages limit:feed_items %}
 		   {% if post.url contains ".html" %}
@@ -27,7 +27,7 @@
 				{% else %}
 					<description>{{ post.content | xml_escape }}</description>
 				{% endif %}
-				<pubDate>{{ site.time }}</pubDate>
+				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>

@@ -14,7 +14,7 @@
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-		{% assign feed_items = site.feed_items | default: 10 %}
+		{% assign feed_items = 20 %}
 		{% for post in site.pages limit:feed_items %}
 		   {% if post.url contains ".html" %}
 			<item>

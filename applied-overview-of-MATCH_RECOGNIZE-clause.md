@@ -1,6 +1,6 @@
 # Applied overview of MATCH_RECOGNIZE clause
 
-SQL MATCH_RECOGNIZE clause can perform Pattern Matching over a set of rows. MATCH_RECOGNIZE does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern
+SQL `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern
 
 To demonstrate the power of `MATCH_RECOGNIZE` we will use the Unemployment by State data set from BLS.
 
@@ -15,9 +15,9 @@ Analysis Approach
 We will use MATCH_RECOGNIZE to find the decreasing Unemployment Rate pattern PARTITIONed by State
 Enter MATCH_RECOGNIZE
 
-The MATCH_RECOGNIZE clause is used to search for a pattern in single field value spanning over multiple records. This clause enables you to define patterns using regular expressions and aggregate methods to verify and extract values from the match.
+The `MATCH_RECOGNIZE` clause is used to search for a pattern in single field value spanning over multiple records. This clause enables you to define patterns using regular expressions and aggregate methods to verify and extract values from the match.
 
-The following example shows the basic structure of a MATCH_RECOGNIZE clause:
+The following example shows the basic structure of a `MATCH_RECOGNIZE` clause:
 
 ```sql
 select state, months_of_decreasing_unemployment, streak_start_date, streak_end_date
@@ -59,11 +59,11 @@ MATCH_RECOGNIZE (
 
 ## PARTITION BY
 
-PARTITION BY allows the match to be keyed and partitioned over a column name. A match will happen over every unique key specified by the partition statement. This enables a single query to be matched over all the keys and generate separate matches, one to every key.
+`PARTITION BY` allows the match to be keyed and partitioned over a column name. A match will happen over every unique key specified by the partition statement. This enables a single query to be matched over all the keys and generate separate matches, one to every key.
 
 ## MEASURES
 
-MEASURES is used to define the projected values from the match using aggregate methods. For example, LAST(YEARMONTH) AS STREAK_END_DATE will output the last YEARMONTH value that was found over all events that matched pattern named DECREASE into field name STREAK_END_DATE.
+`MEASURES` is used to define the projected values from the match using aggregate methods. For example, LAST(YEARMONTH) AS STREAK_END_DATE will output the last YEARMONTH value that was found over all events that matched pattern named DECREASE into field name STREAK_END_DATE.
 
 ## PATTERN
 
@@ -111,7 +111,7 @@ The following aggregate methods can be used in MEASURES and DEFINE:
 
 ## Query Output
 
-The above MATCH_RECOGNIZE query will produce the following results, which show the States with a Streak decreasing Unemployment Rate.
+The above `MATCH_RECOGNIZE` query will produce the following results, which show the States with a Streak decreasing Unemployment Rate.
 Rhode Island has a decreasing Unemployment Rate start July 2021.
 
 We see that Rhode Island has a decreasing Unemployment Rate starting July 2021.

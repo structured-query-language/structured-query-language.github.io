@@ -262,3 +262,16 @@ DEFINE
 | R       | 2023-10-01 | 5                      |
 | R       | 2023-11-01 | 4                      |
 | R       | 2023-12-01 | 3                      |
+
+
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "MATCH_RECOGNIZE" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+

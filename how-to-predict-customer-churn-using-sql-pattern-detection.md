@@ -1,4 +1,4 @@
-# How to Predict Customer Churn Using SQL Pattern Detection
+# How to Predict Customer Churn Using SQL Pattern Detection - MATCH_RECOGNIZE
 
 I recently had a opportunity to work with usage data for a SaaS based Cloud IDE. This Cloud IDE is used by major companies globally. Our goal of the analysis was to figure out if we can predict Customer Churn using the Usage data for the last few months. The nature of the IDE is that the usage at a Customer fluctuates drastically based on the project requirements. However we wanted to identify the Customer with Downtrend in Usage. A sustained Downtrend in Usage _could_ indicate the Customer phasing out the Cloud IDEA and/or switching to a different IDE. 
 

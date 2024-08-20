@@ -19,13 +19,12 @@
 		   {% if post.url contains ".html" %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
-				{% if post.author.name %}
-					<dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
-				{% endif %}
+					<dc:creator>Saqib Ali</dc:creator>
+		
 				{% if post.excerpt %}
-					<description>{{ post.excerpt | xml_escape }}</description>
+					<description></description>
 				{% else %}
-					<description>{{ post.content | xml_escape }}</description>
+					<description></description>
 				{% endif %}
 				<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>

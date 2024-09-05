@@ -10,7 +10,7 @@ select
 from SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY
 ```
 
-This View can be joined with `QUERY_HISTORY` View using `query_parameterized_hash` as JOIN Key to get an average of the Snowflake Credits consumed for a given query.
+This View can be joined with `QUERY_HISTORY` View using [query_parameterized_hash](query_hash-and-query_parameterized_hash-in-snowflake.md) as JOIN Key to get an average of the Snowflake Credits consumed for a given query.
 
 ```sql
 select 
@@ -22,5 +22,7 @@ from SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY
 inner join SNOWFLAKE.ACCOUNT_USAGE.query_history using (query_parameterized_hash)
 group by all;
 ```
-![carbon(8)](https://github.com/user-attachments/assets/3ca2007e-5650-4e1d-a0fb-8d2749ce1a6e)
+|![carbon(8)](https://github.com/user-attachments/assets/3ca2007e-5650-4e1d-a0fb-8d2749ce1a6e)|
+|:-:|
+|Using `query_parameterized_hash` to JOIN `QUERY_ATTRIBUTION_HISTORY` and `QUERY_HISTORY` |
 

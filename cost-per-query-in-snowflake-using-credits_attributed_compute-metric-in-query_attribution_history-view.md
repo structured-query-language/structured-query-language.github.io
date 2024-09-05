@@ -27,7 +27,7 @@ group by all
 order by number_of_executions desc;
 ```
 
-|![carbon(11)](https://github.com/user-attachments/assets/40a2dec0-e5f0-4294-946d-567996b4bf4b)|
+|![carbon(12)](https://github.com/user-attachments/assets/1769d425-e546-4d5a-bda1-06242c06904a)|
 |:-:|
-|Using `query_parameterized_hash` to JOIN `QUERY_ATTRIBUTION_HISTORY` and `QUERY_HISTORY` |
+|Using `query_parameterized_hash` to JOIN `QUERY_ATTRIBUTION_HISTORY` and `QUERY_HISTORY` to get an average of the Snowflake Credits consumed for recurrent queries |
 

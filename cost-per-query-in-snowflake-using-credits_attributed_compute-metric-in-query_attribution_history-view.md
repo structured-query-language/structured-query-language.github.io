@@ -15,14 +15,18 @@ This View can be joined with `QUERY_HISTORY` View using [query_parameterized_has
 ```sql
 select 
   query_parameterized_hash
+  , query_history.warehouse_size
   , avg(credits_attributed_compute)
   , max(credits_attributed_compute)
   , min(credits_attributed_compute)
+  , left(any_value(query_history.query_text), 80) as query_text
 from SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY
 inner join SNOWFLAKE.ACCOUNT_USAGE.query_history using (query_parameterized_hash)
 group by all;
+order by credits_attributed_compute desc;
 ```
-|![carbon(8)](https://github.com/user-attachments/assets/3ca2007e-5650-4e1d-a0fb-8d2749ce1a6e)|
+
+|![carbon(9)](https://github.com/user-attachments/assets/94d0b35d-e188-47bd-aa41-70c44b081831)|
 |:-:|
 |Using `query_parameterized_hash` to JOIN `QUERY_ATTRIBUTION_HISTORY` and `QUERY_HISTORY` |
 

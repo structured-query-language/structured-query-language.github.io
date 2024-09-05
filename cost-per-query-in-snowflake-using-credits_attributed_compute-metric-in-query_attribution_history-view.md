@@ -10,7 +10,7 @@ select
 from SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY
 ```
 
-This View can be joined with `QUERY_HISTORY` View using [query_parameterized_hash](query_hash-and-query_parameterized_hash-in-snowflake.md) as JOIN Key to get an average of the Snowflake Credits consumed for a given query.
+This View can be joined with `QUERY_HISTORY` View using [query_parameterized_hash](query_hash-and-query_parameterized_hash-in-snowflake.md) as JOIN Key to get an average of the Snowflake Credits consumed for recurrent queries.
 
 ```sql
 select 

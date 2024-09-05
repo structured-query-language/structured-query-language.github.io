@@ -1,4 +1,4 @@
-# Cost per Query in Snowflake using credits_attributed_compute metric in query_attribution_history View
+# Identifying expensive queries in Snowflake using credits_attributed_compute metric in query_attribution_history View
 
 Snowflake has introduced a new View `QUERY_ATTRIBUTION_HISTORY` in `SNOWFLAKE.ACCOUNT_USAGE`. This View holds the Snowflake Credits consumption attributed to a Query execution for recurrent queries as following: 
 

@@ -16,18 +16,20 @@ This View can be joined with `QUERY_HISTORY` View using [query_parameterized_has
 select 
   query_parameterized_hash
   , query_history.warehouse_size
-  , avg(credits_attributed_compute)
-  , max(credits_attributed_compute)
-  , min(credits_attributed_compute)
+  , avg(credits_attributed_compute) as avg_credits_attributed_compute
+  , max(credits_attributed_compute) as max_credits_attributed_compute
+  , min(credits_attributed_compute) as min_credits_attributed_compute
   , count(*) as number_of_executions
   , left(any_value(query_history.query_text), 80) as query_text
 from SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY
 inner join SNOWFLAKE.ACCOUNT_USAGE.query_history using (query_parameterized_hash, start_time)
 group by all
-order by number_of_executions desc;
+having avg_credits_attributed_compute > 0
+order by number_of_executions * avg_credits_attributed_compute desc;
+order by credits_attributed_compute desc;
 ```
 
-|![carbon(12)](https://github.com/user-attachments/assets/1769d425-e546-4d5a-bda1-06242c06904a)|
+|![carbon(13)](https://github.com/user-attachments/assets/7a1a62fb-0736-4031-b532-c89f8b0e9f3c)|
 |:-:|
 |Using `query_parameterized_hash` to JOIN `QUERY_ATTRIBUTION_HISTORY` and `QUERY_HISTORY` to get an average of the Snowflake Credits consumed for recurrent queries |
 

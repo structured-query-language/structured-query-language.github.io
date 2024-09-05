@@ -19,14 +19,15 @@ select
   , avg(credits_attributed_compute)
   , max(credits_attributed_compute)
   , min(credits_attributed_compute)
+  , count(*) as number_of_executions
   , left(any_value(query_history.query_text), 80) as query_text
 from SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY
-inner join SNOWFLAKE.ACCOUNT_USAGE.query_history using (query_parameterized_hash)
-group by all;
-order by credits_attributed_compute desc;
+inner join SNOWFLAKE.ACCOUNT_USAGE.query_history using (query_parameterized_hash, start_time)
+group by all
+order by number_of_executions desc;
 ```
 
-|![carbon(10)](https://github.com/user-attachments/assets/f7661c5a-b1c0-43b5-a501-ba818a414358)|
+|![carbon(11)](https://github.com/user-attachments/assets/40a2dec0-e5f0-4294-946d-567996b4bf4b)|
 |:-:|
 |Using `query_parameterized_hash` to JOIN `QUERY_ATTRIBUTION_HISTORY` and `QUERY_HISTORY` |
 

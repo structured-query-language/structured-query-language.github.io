@@ -1,4 +1,4 @@
-# Finding a Gap in Timeseries data and or Gaps and Islands using SQL
+# Finding a Gap in Timeseries data and or Gaps-and-Islands using SQL
 
 A common problem in analyzing a Log data from applications is to create sessions from logged user activity. A user may use the app for couple of hours in day and then come back to it the next day. The log will register the user activity, but the logs will not tell us when the session end for the day, and a new session started the next day. Typically a sessions are based on _m_ minutes of activity and _n_ minutes of no activity. _n_ could be minutes, for example. This is also known as [Gaps-and-Islands](sessionization.md) problem in Computer Science.
 
@@ -112,3 +112,17 @@ from app_log;
 | Angela | 2020-08-07 20:30:00.000 | 10 | 0 |
 | Angela | 2020-08-07 20:40:00.000 | 10 | 0 |
 | Angela | 2020-08-07 20:50:00.000 | 10 | 0 |
+
+
+
+
+# See also
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if (page.title contains "Sessionization" or page.title contains "conditional_true_event" or page.title contains "Conditional True Event" or page.title contains "MATCH_RECOGNIZE" or page.title contains "Gaps-and-Islands") %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

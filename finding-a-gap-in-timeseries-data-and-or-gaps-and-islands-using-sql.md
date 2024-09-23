@@ -1,6 +1,6 @@
 # Finding a Gap in Timeseries data and / or Gaps-and-Islands using SQL
 
-A common problem in analyzing a Log data from applications is to create sessions from logged user activity. A user may use the app for couple of hours in day and then come back to it the next day. The log will register the user activity, but the logs will not tell us when the session end for the day, and a new session started the next day. Typically a sessions are based on _m_ minutes of activity and _n_ minutes of no activity. _n_ could be minutes, for example. This is also known as [Gaps-and-Islands](sessionization.md) problem in Computer Science.
+A common problem in analyzing a Log data from applications is to create sessions from logged user activity. A user may use the app for couple of hours in day and then come back to it the next day. The log will register the user activity, but the logs will not tell us when the session ended for the day, and a new session started the next day. Typically a sessions are based on _m_ minutes of activity followed by _n_ minutes of no activity. _n_ could be 10 minutes, for example. This is also known as [Gaps-and-Islands](sessionization.md) problem in Computer Science.
 
 ## Sample log data
 
@@ -34,7 +34,7 @@ From the above App Log, let's say we need to display
 2. begin_timestamp (begin of the session)
 3. end_timestamp (end of the session)
 
-We will define the _session_ to be 10 mins i.e. If there is no activity for 10 minutes, the session should be considered as ended.
+We will define the _end of a session_ to be 10+ minutes i.e. If there is no activity for more than 10 minutes, the session should be considered as ended.
 
 ### MATCH_RECOGNIZE Query to create sessions
 

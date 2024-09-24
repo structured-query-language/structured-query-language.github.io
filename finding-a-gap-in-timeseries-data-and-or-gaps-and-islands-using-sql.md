@@ -26,7 +26,7 @@ A common problem in analyzing a Log data from applications is to create sessions
 | Scott  | 2020-08-07 22:20:00.000 |
 | Scott  | 2020-08-07 22:30:00.000 |
 
-### Desired output
+### Analysis Goal / Desired Output
 
 From the above App Log, let's say we need to display
 
@@ -40,7 +40,7 @@ From the above App Log, let's say we need to display
 
 We will define the _end of a session_ to be 10+ minutes i.e. If there is no activity for more than 10 minutes, the session should be considered as ended.
 
-### MATCH_RECOGNIZE Query to create sessions
+## Using MATCH_RECOGNIZE to Sessionize
 
 Below we will use SQL's [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) to _sessionize_ this data
 
@@ -73,7 +73,7 @@ FROM   app_log
 | Bob    | 2020-08-07 20:50:00.000 | 2020-08-07 21:10:00.000 |
 | Angela | 2020-08-07 20:10:00.000 | 2020-08-07 20:50:00.000 |
 
-### CONDITIONAL_TRUE_EVENT Query to create sessions
+## Using CONDITIONAL_TRUE_EVENT to Sessionize
 
 Another way to _sessionize_ this App Log is to use [CONDITIONAL_TRUE_EVENT](conditional_true_event.md) in SQL
 

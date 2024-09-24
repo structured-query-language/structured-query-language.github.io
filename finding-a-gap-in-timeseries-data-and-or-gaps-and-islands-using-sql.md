@@ -34,6 +34,10 @@ From the above App Log, let's say we need to display
 2. begin_timestamp (begin of the session)
 3. end_timestamp (end of the session)
 
+|![user-sessions](https://github.com/user-attachments/assets/84350eff-9394-45e0-8250-3fad502d1787)|
+|:--:| 
+|*Figure 1*. Sessionized User Activity. No activity for 10 minutes or more indicates and end of session.|
+
 We will define the _end of a session_ to be 10+ minutes i.e. If there is no activity for more than 10 minutes, the session should be considered as ended.
 
 ### MATCH_RECOGNIZE Query to create sessions

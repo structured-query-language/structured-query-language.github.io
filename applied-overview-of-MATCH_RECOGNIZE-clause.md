@@ -1,6 +1,6 @@
 # Applied overview of MATCH_RECOGNIZE clause
 
-SQL `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern
+Pattern recognition is a common use case in data processing. Detecting trend reversals, identifying anomalies, and finding sequences in data are all examples of pattern recognition problems. In SQL, Row Pattern Recognition (RPR) became part of the SQL standard in 2016 and `MATCH_RECOGNIZE` was introduced. SQL `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern
 
 To demonstrate the power of `MATCH_RECOGNIZE` we will use the Unemployment by State data set from BLS.
 

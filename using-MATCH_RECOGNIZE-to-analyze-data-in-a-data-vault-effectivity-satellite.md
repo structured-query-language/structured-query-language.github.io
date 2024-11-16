@@ -29,7 +29,7 @@ The structure of an [Effectivity Satellite](data-vault-effectivity-satellite.md)
 
 ## MATCH_RECOGNIZE and pattern recognition
 
-In relational systems, a row pattern recognition task is to detect a sequence of ordered rows from an input table that match a specified pattern. For example, a financial service provider needs to identify sequences of suspicious transactions that match known patterns of criminal activities; an e-commerce site analyzes the steps taken by customers from landing through a social media referrer to a successful purchase. The MATCH_RECOGNIZE clause in SQL allows users to search for patterns in rows of data using a powerful and expressive syntax that is based on RegEx.
+In relational systems, a row pattern recognition task is to detect a sequence of ordered rows from an input table that match a specified pattern. For example, a financial service provider needs to identify sequences of suspicious transactions that match known patterns of criminal activities; an e-commerce site analyzes the steps taken by customers from landing through a social media referrer to a successful purchase. The [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause in SQL allows users to search for patterns in rows of data using a powerful and expressive syntax that is based on RegEx.
 
 One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-satellite.md) is to use SQL's [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause.
 
@@ -38,7 +38,7 @@ One way to analyze data in an [Effectivity Satellite](data-vault-effectivity-sat
 2. Match longitudinal data against those patterns
 3. Identify records that match the patterns
 
-In the MATCH_RECOGNIZE clause the pattern is constructed from basic building blocks, called pattern variables, to which operators (quantifiers and other modifiers) like Kleene Star `*` and Kleene Plus `+`  and  can be applied. The whole pattern must be enclosed in paranthesis. For example a pattern can be defined as following:
+In the [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause the pattern is constructed from basic building blocks, called pattern variables, to which operators (quantifiers and other modifiers) like Kleene Star `*` and Kleene Plus `+`  and  can be applied. The whole pattern must be enclosed in paranthesis. For example a pattern can be defined as following:
 ```
 (paid+ free)
 ```

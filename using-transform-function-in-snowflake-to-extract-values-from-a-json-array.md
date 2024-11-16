@@ -38,20 +38,22 @@ We can using the TRANSFORM function to apply a Lambda Fuction to each element in
 
 ```sql
 SELECT
-    order_id,
-    TRANSFORM(
+    order_id
+    , TRANSFORM(
        parse_json(orders.coupon_json_array)::ARRAY,
        promo OBJECT -> promo:"Coupon"
-    ) as coupons_applied
+    ) as coupons_applied_array
+    ,  ARRAY_TO_STRING(coupons_applied_array, ', ')
 FROM orders;
 ```
 
-| order_id | coupons_applied               |
-|----------|-------------------------------|
-| 111      | [   "bbb",   "aaa" ]          |
-| 222      | [   "ccc" ]                   |
-| 333      | [   "ccc",   "aaa",   "eee" ] |
-| 444      |                               |
+| order_id | coupons_applied_array         | coupons_applied |
+|----------|-------------------------------|-----------------|
+| 111      | [   "bbb",   "aaa" ]          | bbb, aaa        |
+| 222      | [   "ccc" ]                   | ccc             |
+| 333      | [   "ccc",   "aaa",   "eee" ] | ccc, aaa, eee   |
+| 444      |                               |                 |
+| 444      |                               |                 |
 
 ### Using the Lateral Flatten
 

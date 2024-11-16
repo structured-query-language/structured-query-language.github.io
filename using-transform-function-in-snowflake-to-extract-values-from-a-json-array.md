@@ -34,7 +34,7 @@ order_id | coupons_applied
 
 ### Using the TRANSFORM function with a Lamba expression
 
-We can using the TRANSFORM function to apply a Lambda Fuction to each element in the JSON array to extract the Coupon as following:
+We can utilize the TRANSFORM function to apply a Lambda Fuction `promo OBJECT -> promo:"Coupon"` to each element in the JSON array to extract the Coupon as following:
 
 ```sql
 SELECT
@@ -67,4 +67,4 @@ from orders
 group by all
 ```
 
-How this will be a lot slower compare to using the TRANSFORM function.
+However this will be a lot slower compare to using the TRANSFORM function.

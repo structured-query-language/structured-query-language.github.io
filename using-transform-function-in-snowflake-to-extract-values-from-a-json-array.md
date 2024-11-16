@@ -32,6 +32,8 @@ order_id | coupons_applied
 444 |  
 444 |  
 
+### Using the TRANSFORM function with a Lamba expression
+
 We can using the TRANSFORM function to apply a Lambda Fuction to each element in the JSON array to extract the Coupon as following:
 
 ```sql
@@ -50,3 +52,17 @@ FROM orders;
 | 222      | [   "ccc" ]                   |
 | 333      | [   "ccc",   "aaa",   "eee" ] |
 | 444      |                               |
+
+### Using the Lateral Flatten
+
+The same can be achieved using the Lateral Flatten in Snowflake:
+
+```sql
+
+select order_id, listagg (f.value:Coupon, ', ')
+from orders
+, lateral flatten(input => parse_json(orders.coupon_json_array)::variant, OUTER => TRUE) as f
+group by all
+```
+
+How this will be a lot slower compare to using the TRANSFORM function.

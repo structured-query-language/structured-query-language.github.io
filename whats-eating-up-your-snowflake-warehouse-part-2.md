@@ -12,11 +12,11 @@ select * from customers where full_name = 'Ali';
 
 ## match_recognize
 
-Armed with `query_parameterized_hash` we will write a `match_recognize` query to identify queries that are getting worse progressively.  Snowflake’s `MATCH_RECOGNIZE` clause can perform Pattern Matching over a set of rows. `MATCH_RECOGNIZE` does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern. In our case, we need a identify a sequence of execution of the same query where the execution time is increasing each time the query is executed.
+Armed with `query_parameterized_hash` we will write a [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query to identify queries that are getting worse progressively.  Snowflake’s [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause can perform Pattern Matching over a set of rows. [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) does this by assigning labels to events, finding the events within an ordered partition, and pulling out any sequences that match the given pattern. In our case, we need a identify a sequence of execution of the same query where the execution time is increasing each time the query is executed.
 
 ### match_recognize SQL query
 
-The following `match_recognize` can be used to identify queries that are progessively getting worse rapidly. 
+The following [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) can be used to identify queries that are progessively getting worse rapidly. 
 
 ```sql
 with query_history as (
@@ -45,7 +45,7 @@ order by query_parameterized_hash, start_time asc;
 ;
 ```
 
-The `MATCH_RECOGNIZE` clause has several different parts. The `DEFINE` part contains the variable definition, which can later be used in the other parts. We defined the following variables:
+The [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) clause has several different parts. The `DEFINE` part contains the variable definition, which can later be used in the other parts. We defined the following variables:
 
 1. `UPTREND` – We defined as the `execution_time_in_mins` greater than the previous execution of the same query. We are also ignoring small increases of 5% or less in execution times by multiplying by `1.05`.
  
@@ -53,7 +53,7 @@ The `pattern` we used is the following: `UPTREND{3,}$`
 
 It means that we are looking for queries that whose execution time increased in progression 3 or more times, and the `$` indicates that latest execution time is also slower that the previous one
 
-The above `match_recognize` query will produce the following output:
+The above [MATCH_RECOGNIZE](applied-overview-of-MATCH_RECOGNIZE-clause.md) query will produce the following output:
 
 |query_parameterized_hash|query_text|execution_time_in_mins|start_time|
 |------------------------|----------|----------------------|----------|

@@ -1,4 +1,4 @@
-# Unpivot multiple columns in Snowflake
+# UNPIVOT multiple columns in Snowflake
 
 ## Example 1: Unpivot 3 Columns
 Suppose you have a Wide Table format Performance Ratings data as following:

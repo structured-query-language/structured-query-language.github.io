@@ -72,4 +72,15 @@ where split(name, '_')[0] = split(email, '_')[0]
 | Steph Andersson | Anders Bloom      | anders@fun.com  |
 | Steph Andersson | Stephen McDonalds | Stephen@fun.com |
 
+# See also:
+<ul id="recent-articles">
+{% for page in site.pages %}
+    {% if page.title contains "PIVOT" %}
+    <li>
+    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
+
 

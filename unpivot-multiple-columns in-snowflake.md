@@ -1,5 +1,6 @@
 # Unpivot multiple columns in Snowflake
 
+## Example 1: Unpivot 3 Columns
 Suppose you have a Wide Table format Performance Ratings data as following:
 
 | NAME         | ACTING_RATING | ACTING_COMMENTS | COMEDY_RATING | COMEDY_COMMENTS | MUSICAL_PERFORMANCE_RATING | MUSICAL_PERFORMANCE_COMMENTS |
@@ -26,9 +27,7 @@ and you need to convert it to a Long Table Format as following
 | Harpo Marx   | COMEDY_RATING              | 4            | Nice                    | COMEDY_COMMENTS              |                      |
 | Harpo Marx   | MUSICAL_PERFORMANCE_RATING | 4            | Best performance Award! | MUSICAL_PERFORMANCE_COMMENTS |                      |
 
-This can be achieve by using the UNPIVOT function or the UNION ALL in Snowflake
-
-## Using UNPIVOT
+This can be achieve by using the UNPIVOT function as following
 
 ```sql
 select 
@@ -45,21 +44,32 @@ where split(skill, '_')[0] = split(skill_comments, '_')[0];
 
 ```
 
+## Example 2: Unpivot 2 Columns
+Suppose you have a Wide Table format Children Guardian contact information as following:
 
-## Using UNION ALL
+| CHILD_NAME      | GUARDIAN1_NAME   | GUARDIAN2_NAME    | GUARDIAN1_EMAIL | GUARDIAN2_EMAIL |
+|-----------------|------------------|-------------------|-----------------|-----------------|
+| Lynn Evans      | Amrika Hernandez | Steve Evans       | amrika@fun.com  | steve@fun.com   |
+| Steph Andersson | Anders Bloom     | Stephen McDonalds | anders@fun.com  | Stephen@fun.com |
+
+You can use the following SQL to transpose this into a long table format as following:
 
 ```sql
+select child_name, guardian_name, guardian_email
+from student_guardian_info
+unpivot include nulls (guardian_name for name in (guardian1_name, guardian2_name))
+unpivot include nulls (guardian_email for email in (guardian1_email, guardian2_email))
+--Following where clause is added to filter the unmatched rows
+where split(name, '_')[0] = split(email, '_')[0]
 
-select NAME
-  , 'ACTING_RATING' as SKILL, ACTING_RATING as SKILL_RATING, ACTING_COMMENTS as SKILL_COMMENTS
-from performer_ratings
-union all
-select NAME
-  , 'COMEDY_RATING', COMEDY_RATING, COMEDY_COMMENTS
-from performer_ratings
-union all
-select NAME
-  , 'MUSICAL_PERFORMANCE_RATING', MUSICAL_PERFORMANCE_RATING, MUSICAL_PERFORMANCE_COMMENTS
-from performer_ratings
-;
 ```
+
+
+| CHILD_NAME      | GUARDIAN_NAME     | GUARDIAN_EMAIL  |
+|-----------------|-------------------|-----------------|
+| Lynn Evans      | Amrika Hernandez  | amrika@fun.com  |
+| Lynn Evans      | Steve Evans       | steve@fun.com   |
+| Steph Andersson | Anders Bloom      | anders@fun.com  |
+| Steph Andersson | Stephen McDonalds | Stephen@fun.com |
+
+

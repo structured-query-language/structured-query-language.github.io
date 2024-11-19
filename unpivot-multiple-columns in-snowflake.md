@@ -49,12 +49,11 @@ where split(skill, '_')[0] = split(skill_comments, '_')[0];
 ```
 
 ## Example 2: Unpivot 2 Columns
-Suppose you have a Wide Table format Children Guardian contact information as following:
+Suppose you have a Wide Table format Children Guardian contact information that you want to convert to a Long Table format
 
-| CHILD_NAME      | GUARDIAN1_NAME   | GUARDIAN2_NAME    | GUARDIAN1_EMAIL | GUARDIAN2_EMAIL |
-|-----------------|------------------|-------------------|-----------------|-----------------|
-| Lynn Evans      | Amrika Hernandez | Steve Evans       | amrika@fun.com  | steve@fun.com   |
-| Steph Andersson | Anders Bloom     | Stephen McDonalds | anders@fun.com  | Stephen@fun.com |
+|![Untitled drawing(23)](https://github.com/user-attachments/assets/632b638b-23f6-4a83-98c6-fce8c7b79967)|
+|:--:|
+|Transposing Guardian Contact Information to a Long table format which is easier to analyze.|
 
 You can use the following SQL to transpose this into a long table format as following:
 

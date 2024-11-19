@@ -7,7 +7,7 @@
 ## Example 1: Unpivot 3 Columns
 Suppose you have a Wide Table format Performance Ratings data as following:
 
-| NAME         | ACTING_RATING | ACTING_COMMENTS | COMEDY_RATING | COMEDY_COMMENTS | MUSICAL_PERFORMANCE_RATING | MUSICAL_PERFORMANCE_COMMENTS |
+| NAME         | ACTING_RATING | ACTING COMMENTS | COMEDY RATING | COMEDY COMMENTS | MUSICAL_PERFORMANCE RATING | MUSICAL_PERFORMANCE COMMENTS |
 |--------------|---------------|-----------------|---------------|-----------------|----------------------------|------------------------------|
 | Groucho Marx | 4             | Awesome         | 3             | Super           | 4                          | Really good                  |
 | Harpo Marx   | 4             | Awesome         | 4             | Awesome         | 4                          |                              |

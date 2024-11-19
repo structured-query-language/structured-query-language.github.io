@@ -1,5 +1,9 @@
 # UNPIVOT multiple columns in Snowflake
 
+|![Untitled drawing(21)](https://github.com/user-attachments/assets/50bf7be7-2d27-41e9-a3ed-3e5b81041402)|
+|:--:|
+|Transposing Wide Table into a Long Table using UNPIVOT|
+
 ## Example 1: Unpivot 3 Columns
 Suppose you have a Wide Table format Performance Ratings data as following:
 

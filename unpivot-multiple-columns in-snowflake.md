@@ -1,6 +1,6 @@
 # UNPIVOT multiple columns in Snowflake
 
-|![Untitled drawing(21)](https://github.com/user-attachments/assets/50bf7be7-2d27-41e9-a3ed-3e5b81041402)|
+|![Untitled drawing(22)](https://github.com/user-attachments/assets/390dec7d-97a4-403a-87cd-9aece7ae1025)|
 |:--:|
 |Transposing Wide Table into a Long Table using UNPIVOT|
 

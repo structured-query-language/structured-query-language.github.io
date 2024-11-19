@@ -7,7 +7,7 @@
 ## Example 1: Unpivot 3 Columns
 Suppose you have a Wide Table format Performance Ratings data as following:
 
-| NAME         | ACTING_RATING | ACTING COMMENTS | COMEDY RATING | COMEDY COMMENTS | MUSICAL_PERFORMANCE RATING | MUSICAL_PERFORMANCE COMMENTS |
+| NAME         | ACTING_RATING | ACTING COMMENTS | COMEDY RATING | COMEDY COMMENTS | MUSICAL PERFORMANCE RATING | MUSICAL PERFORMANCE COMMENTS |
 |--------------|---------------|-----------------|---------------|-----------------|----------------------------|------------------------------|
 | Groucho Marx | 4             | Awesome         | 3             | Super           | 4                          | Really good                  |
 | Harpo Marx   | 4             | Awesome         | 4             | Awesome         | 4                          |                              |
@@ -16,20 +16,20 @@ Suppose you have a Wide Table format Performance Ratings data as following:
 
 and you need to convert it to a Long Table Format as following
 
-| NAM          | SKILL                      | SKILL_RATING | COMMENTS                | SKILL_COMMENTS               | SPLIT(SKILL, '-')[1] |
-|--------------|----------------------------|--------------|-------------------------|------------------------------|----------------------|
-| Groucho Marx | ACTING_RATING              | 4            | Awesome                 | ACTING_COMMENTS              |                      |
-| Groucho Marx | COMEDY_RATING              | 3            | Super                   | COMEDY_COMMENTS              |                      |
-| Groucho Marx | MUSICAL_PERFORMANCE_RATING | 4            | Really good             | MUSICAL_PERFORMANCE_COMMENTS |                      |
-| Harpo Marx   | ACTING_RATING              | 4            | Awesome                 | ACTING_COMMENTS              |                      |
-| Harpo Marx   | COMEDY_RATING              | 4            | Awesome                 | COMEDY_COMMENTS              |                      |
-| Harpo Marx   | MUSICAL_PERFORMANCE_RATING | 4            |                         | MUSICAL_PERFORMANCE_COMMENTS |                      |
-| Groucho Marx | ACTING_RATING              | 4            |                         | ACTING_COMMENTS              |                      |
-| Groucho Marx | COMEDY_RATING              | 3            | Thumbs up               | COMEDY_COMMENTS              |                      |
-| Groucho Marx | MUSICAL_PERFORMANCE_RATING | 4            | Nice                    | MUSICAL_PERFORMANCE_COMMENTS |                      |
-| Harpo Marx   | ACTING_RATING              | 4            | Best Acting             | ACTING_COMMENTS              |                      |
-| Harpo Marx   | COMEDY_RATING              | 4            | Nice                    | COMEDY_COMMENTS              |                      |
-| Harpo Marx   | MUSICAL_PERFORMANCE_RATING | 4            | Best performance Award! | MUSICAL_PERFORMANCE_COMMENTS |                      |
+| NAM          | SKILL                      | SKILL_RATING | COMMENTS                | SKILL_COMMENTS               | 
+|--------------|----------------------------|--------------|-------------------------|------------------------------|
+| Groucho Marx | ACTING_RATING              | 4            | Awesome                 | ACTING_COMMENTS              |                      
+| Groucho Marx | COMEDY_RATING              | 3            | Super                   | COMEDY_COMMENTS              |                      
+| Groucho Marx | MUSICAL_PERFORMANCE_RATING | 4            | Really good             | MUSICAL_PERFORMANCE_COMMENTS |                      
+| Harpo Marx   | ACTING_RATING              | 4            | Awesome                 | ACTING_COMMENTS              |                      
+| Harpo Marx   | COMEDY_RATING              | 4            | Awesome                 | COMEDY_COMMENTS              |                      
+| Harpo Marx   | MUSICAL_PERFORMANCE_RATING | 4            |                         | MUSICAL_PERFORMANCE_COMMENTS |                      
+| Groucho Marx | ACTING_RATING              | 4            |                         | ACTING_COMMENTS              |                      
+| Groucho Marx | COMEDY_RATING              | 3            | Thumbs up               | COMEDY_COMMENTS              |                      
+| Groucho Marx | MUSICAL_PERFORMANCE_RATING | 4            | Nice                    | MUSICAL_PERFORMANCE_COMMENTS |                      
+| Harpo Marx   | ACTING_RATING              | 4            | Best Acting             | ACTING_COMMENTS              |                      
+| Harpo Marx   | COMEDY_RATING              | 4            | Nice                    | COMEDY_COMMENTS              |                      
+| Harpo Marx   | MUSICAL_PERFORMANCE_RATING | 4            | Best performance Award! | MUSICAL_PERFORMANCE_COMMENTS |                      
 
 This can be achieve by using the UNPIVOT function as following
 

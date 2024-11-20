@@ -1,4 +1,4 @@
-# Using TRANSFORM function in Snowflake to extract values from a json array
+# Using TRANSFORM function in Snowflake to extract values from a JSON array
 
 TRANSFORM function in Snowflake can be used for advanced array transformations. You can apply a function or lambda expression to each element in an array and return a new array with the transformed values. Here's the basic syntax:
 

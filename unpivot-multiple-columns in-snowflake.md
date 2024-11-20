@@ -7,7 +7,7 @@ Data can be organized in different ways, for example, in a short/wide or tall/sk
 |:--:|
 |Transposing Wide Table into a Long Table using UNPIVOT for easier analysis|
 
-## Example 1: Unpivot 3 Columns
+## Multi-column Unpivot example 1
 Suppose you have a Wide Table format Performance Ratings that you need to covert to a Long Table format:
 
 |<img src="https://github.com/user-attachments/assets/fe058626-62c3-4155-a2aa-288b6c84c798" width="75%">|
@@ -31,7 +31,8 @@ where split(skill, '_')[0] = split(skill_comments, '_')[0];
 
 ```
 
-## Example 2: Unpivot 2 Columns
+## Multi-column Unpivot example 2
+
 Suppose you have a Wide Table format Children Guardian contact information that you want to convert to a Long Table format
 
 |<img src="https://github.com/user-attachments/assets/632b638b-23f6-4a83-98c6-fce8c7b79967" width="75%">|

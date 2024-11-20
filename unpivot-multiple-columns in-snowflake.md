@@ -34,7 +34,7 @@ where split(skill, '_')[0] = split(skill_comments, '_')[0];
 ## Example 2: Unpivot 2 Columns
 Suppose you have a Wide Table format Children Guardian contact information that you want to convert to a Long Table format
 
-|![Untitled drawing(23)](https://github.com/user-attachments/assets/632b638b-23f6-4a83-98c6-fce8c7b79967)|
+|<img src="https://github.com/user-attachments/assets/632b638b-23f6-4a83-98c6-fce8c7b79967" width="75%">|
 |:--:|
 |Transposing Guardian Contact Information to a Long table format which is easier to analyze.|
 

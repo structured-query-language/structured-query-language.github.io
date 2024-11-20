@@ -10,7 +10,7 @@ Data can be organized in different ways, for example, in a short/wide or tall/sk
 ## Example 1: Unpivot 3 Columns
 Suppose you have a Wide Table format Performance Ratings that you need to covert to a Long Table format:
 
-|![Copy of Untitled drawing(3)](https://github.com/user-attachments/assets/fe058626-62c3-4155-a2aa-288b6c84c798)|
+|<img src="https://github.com/user-attachments/assets/fe058626-62c3-4155-a2aa-288b6c84c798" width="75%">|
 |:--:|
 |Unpivoting to convert Skill Rating and Skill Comments to a Flattened view of the data as Key-value pairs|
 

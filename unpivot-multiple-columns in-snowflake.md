@@ -4,7 +4,7 @@ Data can be organized in different ways, for example, in a short/wide or tall/sk
 
 |    |![Untitled drawing(22)](https://github.com/user-attachments/assets/390dec7d-97a4-403a-87cd-9aece7ae1025)|     |
 |:--:|:--:|:--:|
-|Transposing Wide Table into a Long Table using UNPIVOT for easier analysis|||
+||Transposing Wide Table into a Long Table using UNPIVOT for easier analysis||
 
 ## Example 1: Unpivot 3 Columns
 Suppose you have a Wide Table format Performance Ratings that you need to covert to a Long Table format:

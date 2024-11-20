@@ -5,7 +5,7 @@ Data can be organized in different ways, for example, in a short/wide or tall/sk
 
 |<img src="https://github.com/user-attachments/assets/390dec7d-97a4-403a-87cd-9aece7ae1025" width="75%">|
 |:--:|
-|Transposing Wide Table into a Long Table using UNPIVOT for easier analysis|
+|When you unpivot, you unpack the attribute-value pairs and re-orient them into flattened columns for easier analysis|
 
 ## Multi-column Unpivot example 1
 Suppose you have a Wide Table format Performance Ratings that you need to covert to a Long Table format:

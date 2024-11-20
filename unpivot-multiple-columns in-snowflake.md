@@ -33,7 +33,7 @@ where split(skill, '_')[0] = split(skill_comments, '_')[0];
 
 ## Multi-column Unpivot example 2
 
-Suppose you have a Wide Table format Children Guardian contact information that you want to convert to a Long Table format
+In this example we have a Wide Table with Children Guardian contact information. We have two guardians listed for each child, and an email address for each guardian.  Instead of two columns for guardians names and two for email addresses, we would like to reduce this to one of each: Child Name, Guardian Name, Guardian Email Address as following:
 
 |<img src="https://github.com/user-attachments/assets/632b638b-23f6-4a83-98c6-fce8c7b79967" width="75%">|
 |:--:|

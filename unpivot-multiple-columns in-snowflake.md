@@ -7,31 +7,11 @@ Data can be organized in different ways, for example, in a short/wide or tall/sk
 |Transposing Wide Table into a Long Table using UNPIVOT for easier analysis|
 
 ## Example 1: Unpivot 3 Columns
-Suppose you have a Wide Table format Performance Ratings data as following:
+Suppose you have a Wide Table format Performance Ratings that you need to covert to a Long Table format:
 
-| NAME         | ACTING_RATING | ACTING COMMENTS | COMEDY RATING | COMEDY COMMENTS | MUSICAL PERFORMANCE RATING | MUSICAL PERFORMANCE COMMENTS |
-|--------------|---------------|-----------------|---------------|-----------------|----------------------------|------------------------------|
-| Groucho Marx | 4             | Awesome         | 3             | Super           | 4                          | Really good                  |
-| Harpo Marx   | 4             | Awesome         | 4             | Awesome         | 4                          |                              |
-| Groucho Marx | 4             |                 | 3             | Thumbs up       | 4                          | Nice                         |
-| Harpo Marx   | 4             | Best Acting     | 4             | Nice            | 4                          | Best performance Award!      |
-
-and you need to convert it to a Long Table Format as following
-
-| NAM          | SKILL                      | SKILL_RATING | COMMENTS                | SKILL_COMMENTS               | 
-|--------------|----------------------------|--------------|-------------------------|------------------------------|
-| Groucho Marx | ACTING_RATING              | 4            | Awesome                 | ACTING_COMMENTS              |                      
-| Groucho Marx | COMEDY_RATING              | 3            | Super                   | COMEDY_COMMENTS              |                      
-| Groucho Marx | MUSICAL_PERFORMANCE_RATING | 4            | Really good             | MUSICAL_PERFORMANCE_COMMENTS |                      
-| Harpo Marx   | ACTING_RATING              | 4            | Awesome                 | ACTING_COMMENTS              |                      
-| Harpo Marx   | COMEDY_RATING              | 4            | Awesome                 | COMEDY_COMMENTS              |                      
-| Harpo Marx   | MUSICAL_PERFORMANCE_RATING | 4            |                         | MUSICAL_PERFORMANCE_COMMENTS |                      
-| Groucho Marx | ACTING_RATING              | 4            |                         | ACTING_COMMENTS              |                      
-| Groucho Marx | COMEDY_RATING              | 3            | Thumbs up               | COMEDY_COMMENTS              |                      
-| Groucho Marx | MUSICAL_PERFORMANCE_RATING | 4            | Nice                    | MUSICAL_PERFORMANCE_COMMENTS |                      
-| Harpo Marx   | ACTING_RATING              | 4            | Best Acting             | ACTING_COMMENTS              |                      
-| Harpo Marx   | COMEDY_RATING              | 4            | Nice                    | COMEDY_COMMENTS              |                      
-| Harpo Marx   | MUSICAL_PERFORMANCE_RATING | 4            | Best performance Award! | MUSICAL_PERFORMANCE_COMMENTS |                      
+|![Copy of Untitled drawing(3)](https://github.com/user-attachments/assets/fe058626-62c3-4155-a2aa-288b6c84c798)|
+|:--:|
+|Unpivoting to convert Skill Rating and Skill Comments to a Flattened view of the data as Key-value pairs|
 
 This can be achieve by using the UNPIVOT function as following
 

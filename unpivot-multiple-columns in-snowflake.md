@@ -3,7 +3,7 @@
 Data can be organized in different ways, for example, in a short/wide or tall/skinny/narrow/long format, but still contain the same information. It  is often easier to visualize data organized in a long table format, that is, when the values are collected in just a few value columns. Unpivoting is one way to transform data from a wide table to a long table format. This unpivoted data can then be consumed by Tablue, Looker, Power BI etc for building visualizations.
 
 
-|<img src="https://github.com/user-attachments/assets/390dec7d-97a4-403a-87cd-9aece7ae1025" width="100" height="100">|
+|<img src="https://github.com/user-attachments/assets/390dec7d-97a4-403a-87cd-9aece7ae1025" width=50%>|
 |:--:|
 |Transposing Wide Table into a Long Table using UNPIVOT for easier analysis|
 

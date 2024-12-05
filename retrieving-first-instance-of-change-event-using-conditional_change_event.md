@@ -8,14 +8,18 @@ This can be a very powerful function to use when analyzing events data or time-s
 |:--:|
 |We need to retrieve the first `status_date` by Support Engineer per Case Status change|
 
-```
+```sql
 with support_cases as (
   select *
-  , conditional_change_event (status || support_engineer) over (partition by case_number order by update_date asc) as dense_sequence
+  , conditional_change_event (status || support_engineer)
+      over (partition by case_number order by update_date asc) as dense_sequence
   from support_case
 )
 select * from support_cases
 qualify row_number() over (partition by case_number, dense_sequence order by update_date)  = 1;
 ```
 
+|![Screen Shot 2024-12-05 at 8 12 20 AM](https://github.com/user-attachments/assets/fc8661f4-4bea-4a15-8bea-5cdcc65a67ea)|
+|:--:|
+|First `status_date` by Support Engineer per Case Status chang|
 

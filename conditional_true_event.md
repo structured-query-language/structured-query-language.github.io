@@ -63,7 +63,7 @@ where symbol='SNOW';
 # See also
 <ul id="recent-articles">
 {% for page in site.pages %}
-    {% if (page.title contains "Sessionization" or page.title contains "conditional_true_event" or page.title contains "Conditional True Event") %}
+    {% if (page.title contains "Sessionization" or page.title contains "conditional_true_event" or page.title contains "Conditional True Event" or page.title contains "Conditional Change Event") or page.title contains "conditional_change_event"%}
     <li>
     <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
     </li>

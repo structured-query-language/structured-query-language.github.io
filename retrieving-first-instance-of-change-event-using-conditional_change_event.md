@@ -16,6 +16,7 @@ with support_cases as (
   from support_case
 );
 ```
+
 |![Screen Shot 2024-12-05 at 6 42 19 PM](https://github.com/user-attachments/assets/53f8ed05-4681-4154-a451-7cda5ee3c254)|
 |:--:|
 |`change_rank_number` increases each time the Support Engineer + Status combination changes|

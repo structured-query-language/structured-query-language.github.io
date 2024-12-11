@@ -1,7 +1,7 @@
 # Saqib Chart
 A Saqib Chart is used to visually analyze the cumulative stock trend over a period of time. It does this by charting out the Number of Consecutive Increases (positive) and Consecutive Descreases (negative) bar chart lines.
 
-|![Screen Shot 2024-12-11 at 11 34 16 AM](https://github.com/user-attachments/assets/ffd9a288-023f-4f74-a39e-446400f99818)|
+|![Screen Shot 2024-12-11 at 11 51 14 AM](https://github.com/user-attachments/assets/77c580c6-703a-431f-8298-0ad750d78a79)|
 |:--:|
 |[Saqib Chart](saqib-chart.md) for Roblox shows that the stock experiences a much higher number of Consecutive Increases than Consecutive Decreases|
 

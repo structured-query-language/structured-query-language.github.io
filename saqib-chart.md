@@ -3,9 +3,14 @@ A Saqib Chart is used to visually analyze the cumulative stock trend over a peri
 
 |![Screen Shot 2024-12-11 at 11 34 16 AM](https://github.com/user-attachments/assets/ffd9a288-023f-4f74-a39e-446400f99818)|
 |:--:|
-|[Saqib Chart](saqib-chart.md) for Roblox shows that a much higher number of Consecutive Increases than Consecutive Decreases|
+|[Saqib Chart](saqib-chart.md) for Roblox shows that the stock experiences a much higher number of Consecutive Increases than Consecutive Decreases|
 
 
 |![Screen Shot 2024-12-11 at 11 34 16 AM](https://github.com/user-attachments/assets/e68253c0-4400-491f-8ac2-c20ede8ec028)|
 |:--:|
 |[Saqib Chart](saqib-chart.md) Saqib Chart for Atlassian Stock shows that the stock experiences about the same number of Consecuting Increases and Consecutive Decreases|
+
+|![Screen Shot 2024-12-11 at 11 59 29 AM](https://github.com/user-attachments/assets/2d7b3296-6fdd-4755-b9ab-994ae4bcbfdd)|
+|:--:|
+|[Saqib Chart](saqib-chart.md) Saqib Chart for HubSpot Stock shows that the stock experiences much higher number of Consecutive Increases than Consecutive Decreases|
+

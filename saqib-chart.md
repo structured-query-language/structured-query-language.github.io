@@ -3,4 +3,4 @@ A Saqib Chart is used to visually analyze the cumulative stock trend over a peri
 
 |![Screen Shot 2024-12-11 at 11 34 16 AM](https://github.com/user-attachments/assets/e68253c0-4400-491f-8ac2-c20ede8ec028)|
 |:--:|
-|Saqib Chart for Atlassian Stock|
+|Saqib Chart for Atlassian Stock shows that the stock about the same number of Consecuting Increases and Consecutive Decreases|

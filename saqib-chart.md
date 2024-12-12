@@ -5,6 +5,10 @@ A Saqib Chart is used to visually analyze the cumulative trend over a period of 
 |:--:|
 |[Saqib Chart](saqib-chart.md) for the Roblox Stock shows that the stock experiences a much higher number of Consecutive Increases than Consecutive Decreases|
 
+|![Screen Shot 2024-12-11 at 8 32 20 PM](https://github.com/user-attachments/assets/5074b127-abf0-425b-a11c-0ec0c0f38361)|
+|:--:|
+|[Saqib Chart](saqib-chart.md) for the Blueprint Medicines Corp shows that the stock experiences higher number of Consecutive Decreases than Consecutive Increases|
+
 
 |![Screen Shot 2024-12-11 at 11 34 16 AM](https://github.com/user-attachments/assets/e68253c0-4400-491f-8ac2-c20ede8ec028)|
 |:--:|

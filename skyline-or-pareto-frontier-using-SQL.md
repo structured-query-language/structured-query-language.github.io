@@ -10,7 +10,7 @@
     █▁█▅▁█ ▃▃▁✧▇▃✧ ▁▁  ▁▅█  ▁ ✦███▁ ██▅  ✦      ▇  █ ▇   
     ██████▅███▅██▅▁██▁▁███▁▅█▁▅████▅███▁▁▅▁▅▅▅▁▁█▁▁█▁█▁▁▁
 ```
-Skyline computation is an essential database operation that has many applications in multi-criteria decision making scenarios such as recommender systems. As such, Skyline queries have emerged as an increasingly popular tool for identifying a set of interesting objects that balance different user-specified criteria.
+Skyline computation is an essential database operation that has many applications in multi-criteria decision making scenarios such as recommender systems. With the growth of data, efficiently finding interesting data within large datasets has become essential. Skyline queries are a method to select a subset of data by returning tuples that are not dominated by any other tuple. A tuple _t_ dominates another tuple _s_ if t is not worse than _s_ in any attribute and is strictly better in at least one. As such, Skyline queries have emerged as an increasingly popular tool for identifying a set of interesting objects that balance different user-specified criteria.
 
 Given a multidimensional data set, where the dimensions correspond to the criteria that need to be balanced, a Skyline query returns a set of interesting data points, aka. skyline points, that are not dominated by any other point in all dimensions. A point _m_ dominates another point _n_, if _m_ is better than or equal to _n_ in all dimensions and strictly better than _n_ in at least one dimension. 
 

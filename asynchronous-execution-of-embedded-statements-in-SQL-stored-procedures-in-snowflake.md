@@ -1,4 +1,4 @@
-# Asynchronous execution of embedded statements in SQL stored procedures in Snowflake
+# Asynchronous execution of statements in SQL stored procedures in Snowflake
 
 Snowflake supports `async`/`await` syntactic sugar that allows asynchronous, non-blocking stored procedures to be structured in a way similar to an ordinary synchronous stored procedures.
 

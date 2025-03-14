@@ -9,6 +9,4 @@ remote_theme: jekyll/minima
 minima:
   skin: solarized
   
-header_pages:
-
 repository: https://github.com/structured-query-language/structured-query-language.github.io

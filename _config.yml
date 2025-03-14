@@ -10,6 +10,5 @@ minima:
   skin: solarized
   
 header_pages:
-  - README.md
 
 repository: https://github.com/structured-query-language/structured-query-language.github.io

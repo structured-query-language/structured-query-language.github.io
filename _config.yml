@@ -3,6 +3,6 @@ title: Query Optimization in Snowflake (QOSF)
 
 titles_from_headings:
   enabled: true
-  strip_title: true
+  strip_title: false
   
 repository: https://github.com/structured-query-language/structured-query-language.github.io

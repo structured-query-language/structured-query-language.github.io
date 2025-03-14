@@ -4,3 +4,14 @@ title: Query Optimization in Snowflake (QOSF)
 titles_from_headings:
   enabled: true
   strip_title: true
+  
+remote_theme: jekyll/minima
+minima:
+  skin: solarized
+  social_links:
+    - { platform: github,         user_url: "https://github.com/structured-query-language/structured-query-language.github.io" }
+
+header_pages:
+  - README.md
+
+repository: https://github.com/structured-query-language/structured-query-language.github.io

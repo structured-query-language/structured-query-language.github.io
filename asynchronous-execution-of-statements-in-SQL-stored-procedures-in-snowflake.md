@@ -16,7 +16,7 @@ LANGUAGE SQL
     BEGIN
       ASYNC (INSERT INTO customer_emails VALUES (:customer_id, :email_address));
       ASYNC (INSERT INTO order_emails VALUES (:order_number, :email_address)) ;
-      AWAIT ALL;
+      --AWAIT ALL;
     END
 ;
 

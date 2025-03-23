@@ -1,4 +1,4 @@
-# Finding a Gap in Timeseries data and / or Gaps-and-Islands using SQL
+# SQL islands and gaps
 
 A common problem in analyzing a Log data from applications is to create sessions from logged user activity. A user may use the app for couple of hours in day and then come back to it the next day. The log will register the user activity, but the logs will not tell us when the session ended for the day, and a new session started the next day. Typically a sessions are based on _m_ minutes of activity followed by _n_ minutes of no activity. _n_ could be 10 minutes, for example. This is also known as [Gaps-and-Islands](sessionization.md) problem in Computer Science.
 

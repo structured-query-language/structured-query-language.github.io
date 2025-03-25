@@ -1,5 +1,4 @@
-# Getting Foreign Keys on Tables in Snowflake
-
+# Snowflake foreign keys
 
 ## Entity Relationship (ER) Diagram with Primary Keys and Foreign Key constraints
 

@@ -114,7 +114,7 @@ WHERE rank1 = 1 OR rank2 = 1 OR rank3 = 1;
 
 
 ## Conclusion
-The skyline query processing is widely adopted in many applications that require multi-criteria decision making such asmarket research, location based systems, web services study, etc. The skyline operator filters out a set of interesting points based on a group of evaluation criteria from a large set of points. A point is considered as interesting, if there does not exist a point that is at least as good in all criteria and better in at least one criterion. SQL can be used to perform a Skyline Query on multi-demension datasets stored in Relational Database. We saw 3 differents ways SQL can be used to write the Skyline Query.
+The skyline query processing is widely adopted in many applications that require multi-criteria decision making such asmarket research, location based systems, web services study, etc. The skyline operator filters out a set of interesting points based on a group of evaluation criteria from a large set of points. A point is considered as interesting, if there does not exist a point that is at least as good in all criteria and better in at least one criterion. SQL can be used to perform a Skyline Query on multi-demension datasets stored in Relational Database. We saw 3 differents ways SQL can be used to write a Skyline Query.
 
 
 # See also

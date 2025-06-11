@@ -1,6 +1,6 @@
 # Retrieving first instance of change event using conditional_change_event
 
-Conditional Change Event (`CONDITIONAL_CHANGE_EVENT`) is a versatile Snowflake function that returns a window event number for each row when the value of the expression is different from the value in the previous row.
+Conditional Change Event (`CONDITIONAL_CHANGE_EVENT`) is a versatile Snowflake function that returns a window event number for each row when the value of the expression is different from the value in the previous row. In other words, this function assigns an event window number to each row, starting from 0, and increments by 1 when the result of evaluating the argument expression on the current row differs from that on the previous row.
 
 This can be a very powerful function to use when analyzing events data or time-series data. For e.g. if you need to retrieve the first `update_date` by Support Engineer per Case Status change in the following data:
 
